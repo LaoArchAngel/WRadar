@@ -1,0 +1,107 @@
+E:\Users\Lao\Documents\Visual Studio 2010\Projects\RadarAndOMTester\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+E:\Users\Lao\Documents\Visual Studio 2010\Projects\RadarAndOMTester\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+E:\Users\Lao\Documents\Visual Studio 2010\Projects\RadarAndOMTester\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+E:\Users\Lao\Documents\Visual Studio 2010\Projects\RadarAndOMTester\WindowsFormsApplication1\bin\Debug\BlackRain.dll
+E:\Users\Lao\Documents\Visual Studio 2010\Projects\RadarAndOMTester\WindowsFormsApplication1\bin\Debug\BlackMagic.dll
+E:\Users\Lao\Documents\Visual Studio 2010\Projects\RadarAndOMTester\WindowsFormsApplication1\bin\Debug\fasmdll_managed.dll
+E:\Users\Lao\Documents\Visual Studio 2010\Projects\RadarAndOMTester\WindowsFormsApplication1\bin\Debug\BlackRain.pdb
+E:\Users\Lao\Documents\Visual Studio 2010\Projects\RadarAndOMTester\WindowsFormsApplication1\bin\Debug\BlackRain.xml
+E:\Users\Lao\Documents\Visual Studio 2010\Projects\RadarAndOMTester\WindowsFormsApplication1\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\Users\Lao\Documents\Visual Studio 2010\Projects\RadarAndOMTester\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Radar.resources
+E:\Users\Lao\Documents\Visual Studio 2010\Projects\RadarAndOMTester\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
+E:\Users\Lao\Documents\Visual Studio 2010\Projects\RadarAndOMTester\WindowsFormsApplication1\obj\x86\Debug\GenerateResource.read.1.tlog
+E:\Users\Lao\Documents\Visual Studio 2010\Projects\RadarAndOMTester\WindowsFormsApplication1\obj\x86\Debug\ResGen.read.1.tlog
+E:\Users\Lao\Documents\Visual Studio 2010\Projects\RadarAndOMTester\WindowsFormsApplication1\obj\x86\Debug\GenerateResource.write.1.tlog
+E:\Users\Lao\Documents\Visual Studio 2010\Projects\RadarAndOMTester\WindowsFormsApplication1\obj\x86\Debug\ResGen.write.1.tlog
+E:\Users\Lao\Documents\Visual Studio 2010\Projects\RadarAndOMTester\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.exe
+E:\Users\Lao\Documents\Visual Studio 2010\Projects\RadarAndOMTester\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.pdb
+E:\RadarAndOMTester\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+E:\RadarAndOMTester\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.exe
+E:\RadarAndOMTester\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.pdb
+E:\RadarAndOMTester\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+E:\RadarAndOMTester\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+E:\RadarAndOMTester\WindowsFormsApplication1\bin\Debug\BlackRain.dll
+E:\RadarAndOMTester\WindowsFormsApplication1\bin\Debug\fasmdll_managed.dll
+E:\RadarAndOMTester\WindowsFormsApplication1\bin\Debug\BlackMagic.dll
+E:\RadarAndOMTester\WindowsFormsApplication1\bin\Debug\BlackRain.pdb
+E:\RadarAndOMTester\WindowsFormsApplication1\bin\Debug\BlackRain.xml
+E:\RadarAndOMTester\WindowsFormsApplication1\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\RadarAndOMTester\WindowsFormsApplication1\obj\x86\Debug\Radar.Blips.WoWBlip.resources
+E:\RadarAndOMTester\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
+E:\RadarAndOMTester\WindowsFormsApplication1\obj\x86\Debug\Radar.csproj.GenerateResource.Cache
+E:\RadarAndOMTester\WindowsFormsApplication1\obj\x86\Debug\Radar.RadarObj.resources
+I:\RadarAndOMTester\Radar\bin\Debug\WindowsFormsApplication1.exe.config
+I:\RadarAndOMTester\Radar\obj\x86\Debug\WindowsFormsApplication1.exe
+I:\RadarAndOMTester\Radar\obj\x86\Debug\WindowsFormsApplication1.pdb
+E:\RadarAndOMTester\Radar\bin\Debug\Radar.exe.config
+H:\Data\RadarAndOMTester\Radar\bin\Debug\Radar.exe.config
+E:\Data\RadarAndOMTester\Radar\bin\Debug\Radar.exe.config
+G:\Data\RadarAndOMTester\Radar\bin\Debug\Radar.exe.config
+G:\Data\RadarAndOMTester\Radar\bin\Debug\Radar.exe
+G:\Data\RadarAndOMTester\Radar\bin\Debug\Radar.pdb
+G:\Data\RadarAndOMTester\Radar\bin\Debug\BlackRain.dll
+G:\Data\RadarAndOMTester\Radar\bin\Debug\BlackMagic.dll
+G:\Data\RadarAndOMTester\Radar\bin\Debug\fasmdll_managed.dll
+G:\Data\RadarAndOMTester\Radar\bin\Debug\BlackRain.pdb
+G:\Data\RadarAndOMTester\Radar\bin\Debug\BlackRain.xml
+G:\Data\RadarAndOMTester\Radar\obj\x86\Debug\ResolveAssemblyReference.cache
+G:\Data\RadarAndOMTester\Radar\obj\x86\Debug\Radar.Blips.WowBlip.resources
+G:\Data\RadarAndOMTester\Radar\obj\x86\Debug\Radar.RadarObj.resources
+G:\Data\RadarAndOMTester\Radar\obj\x86\Debug\Radar.Properties.Resources.resources
+G:\Data\RadarAndOMTester\Radar\obj\x86\Debug\GenerateResource-ResGen.read.1.tlog
+G:\Data\RadarAndOMTester\Radar\obj\x86\Debug\GenerateResource.read.1.tlog
+G:\Data\RadarAndOMTester\Radar\obj\x86\Debug\ResGen.read.1.tlog
+G:\Data\RadarAndOMTester\Radar\obj\x86\Debug\GenerateResource-ResGen.write.1.tlog
+G:\Data\RadarAndOMTester\Radar\obj\x86\Debug\GenerateResource.write.1.tlog
+G:\Data\RadarAndOMTester\Radar\obj\x86\Debug\ResGen.write.1.tlog
+G:\Data\RadarAndOMTester\Radar\obj\x86\Debug\Radar.exe
+G:\Data\RadarAndOMTester\Radar\obj\x86\Debug\Radar.pdb
+G:\Data\RadarAndOMTester\Radar\obj\x86\Debug\Radar.FRadarScreen.resources
+E:\Data\RadarAndOMTester\Radar\obj\x86\Debug\Radar.exe
+E:\Data\RadarAndOMTester\Radar\obj\x86\Debug\Radar.pdb
+E:\Data\RadarAndOMTester\Radar\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\Data\RadarAndOMTester\Radar\obj\x86\Debug\Radar.Blips.WowBlip.resources
+E:\Data\RadarAndOMTester\Radar\obj\x86\Debug\Radar.FRadarScreen.resources
+E:\Data\RadarAndOMTester\Radar\obj\x86\Debug\Radar.RadarObj.resources
+E:\Data\RadarAndOMTester\Radar\obj\x86\Debug\Radar.Properties.Resources.resources
+E:\Data\RadarAndOMTester\Radar\obj\x86\Debug\Radar.csproj.GenerateResource.Cache
+D:\Users\Lao\Documents\Visual Studio 2010\Projects\RadarAndOMTester\Radar\bin\Debug\Radar.exe.config
+D:\Users\Lao\Documents\Visual Studio 2010\Projects\RadarAndOMTester\Radar\obj\x86\Debug\Radar.exe
+D:\Users\Lao\Documents\Visual Studio 2010\Projects\RadarAndOMTester\Radar\obj\x86\Debug\Radar.pdb
+D:\Users\Lao\Documents\Visual Studio 2010\Projects\RadarAndOMTester\Radar\bin\Debug\Radar.exe
+D:\Users\Lao\Documents\Visual Studio 2010\Projects\RadarAndOMTester\Radar\bin\Debug\Radar.pdb
+D:\Users\Lao\Documents\Visual Studio 2010\Projects\RadarAndOMTester\Radar\bin\Debug\BlackRain.dll
+D:\Users\Lao\Documents\Visual Studio 2010\Projects\RadarAndOMTester\Radar\bin\Debug\BlackMagic.dll
+D:\Users\Lao\Documents\Visual Studio 2010\Projects\RadarAndOMTester\Radar\bin\Debug\fasmdll_managed.dll
+D:\Users\Lao\Documents\Visual Studio 2010\Projects\RadarAndOMTester\Radar\bin\Debug\BlackRain.pdb
+D:\Users\Lao\Documents\Visual Studio 2010\Projects\RadarAndOMTester\Radar\bin\Debug\BlackRain.xml
+D:\Users\Lao\Documents\Visual Studio 2010\Projects\RadarAndOMTester\Radar\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Users\Lao\Documents\Visual Studio 2010\Projects\RadarAndOMTester\Radar\obj\x86\Debug\Radar.Blips.WowBlip.resources
+D:\Users\Lao\Documents\Visual Studio 2010\Projects\RadarAndOMTester\Radar\obj\x86\Debug\Radar.Properties.Resources.resources
+D:\Users\Lao\Documents\Visual Studio 2010\Projects\RadarAndOMTester\Radar\obj\x86\Debug\ResGen.read.1.tlog
+D:\Users\Lao\Documents\Visual Studio 2010\Projects\RadarAndOMTester\Radar\obj\x86\Debug\ResGen.write.1.tlog
+\\Leviathan\d$\Users\Lao\Documents\Visual Studio 2010\Projects\RadarAndOMTester\Radar\bin\Debug\Radar.exe.config
+\\Leviathan\d$\Users\Lao\Documents\Visual Studio 2010\Projects\RadarAndOMTester\Radar\obj\x86\Debug\Radar.exe
+\\Leviathan\d$\Users\Lao\Documents\Visual Studio 2010\Projects\RadarAndOMTester\Radar\obj\x86\Debug\Radar.pdb
+\\Leviathan\d$\Users\Lao\Documents\Visual Studio 2010\Projects\RadarAndOMTester\Radar\bin\Debug\Radar.exe
+\\Leviathan\d$\Users\Lao\Documents\Visual Studio 2010\Projects\RadarAndOMTester\Radar\bin\Debug\Radar.pdb
+\\Leviathan\d$\Users\Lao\Documents\Visual Studio 2010\Projects\RadarAndOMTester\Radar\bin\Debug\BlackRain.dll
+\\Leviathan\d$\Users\Lao\Documents\Visual Studio 2010\Projects\RadarAndOMTester\Radar\bin\Debug\BlackMagic.dll
+\\Leviathan\d$\Users\Lao\Documents\Visual Studio 2010\Projects\RadarAndOMTester\Radar\bin\Debug\fasmdll_managed.dll
+\\Leviathan\d$\Users\Lao\Documents\Visual Studio 2010\Projects\RadarAndOMTester\Radar\bin\Debug\BlackRain.pdb
+\\Leviathan\d$\Users\Lao\Documents\Visual Studio 2010\Projects\RadarAndOMTester\Radar\bin\Debug\BlackRain.xml
+\\Leviathan\d$\Users\Lao\Documents\Visual Studio 2010\Projects\RadarAndOMTester\Radar\obj\x86\Debug\ResolveAssemblyReference.cache
+\\Leviathan\d$\Users\Lao\Documents\Visual Studio 2010\Projects\RadarAndOMTester\Radar\obj\x86\Debug\Radar.Blips.WowBlip.resources
+\\Leviathan\d$\Users\Lao\Documents\Visual Studio 2010\Projects\RadarAndOMTester\Radar\obj\x86\Debug\Radar.FRadarScreen.resources
+\\Leviathan\d$\Users\Lao\Documents\Visual Studio 2010\Projects\RadarAndOMTester\Radar\obj\x86\Debug\Radar.RadarObj.resources
+\\Leviathan\d$\Users\Lao\Documents\Visual Studio 2010\Projects\RadarAndOMTester\Radar\obj\x86\Debug\Radar.Properties.Resources.resources
+\\Leviathan\d$\Users\Lao\Documents\Visual Studio 2010\Projects\RadarAndOMTester\Radar\obj\x86\Debug\GenerateResource-ResGen.read.1.tlog
+\\Leviathan\d$\Users\Lao\Documents\Visual Studio 2010\Projects\RadarAndOMTester\Radar\obj\x86\Debug\GenerateResource.read.1.tlog
+\\Leviathan\d$\Users\Lao\Documents\Visual Studio 2010\Projects\RadarAndOMTester\Radar\obj\x86\Debug\ResGen.read.1.tlog
+\\Leviathan\d$\Users\Lao\Documents\Visual Studio 2010\Projects\RadarAndOMTester\Radar\obj\x86\Debug\GenerateResource-ResGen.write.1.tlog
+\\Leviathan\d$\Users\Lao\Documents\Visual Studio 2010\Projects\RadarAndOMTester\Radar\obj\x86\Debug\GenerateResource.write.1.tlog
+\\Leviathan\d$\Users\Lao\Documents\Visual Studio 2010\Projects\RadarAndOMTester\Radar\obj\x86\Debug\ResGen.write.1.tlog
+D:\Users\Lao\Documents\Visual Studio 2010\Projects\RadarAndOMTester\Radar\obj\x86\Debug\Radar.Screen.Radar.resources
+D:\Users\Lao\Documents\Visual Studio 2010\Projects\RadarAndOMTester\Radar\bin\Debug\Settings\Sounds\msonar.wav
+D:\Users\Lao\Documents\Visual Studio 2010\Projects\RadarAndOMTester\Radar\bin\Debug\Settings\Sounds\sonar2.wav
+D:\Users\Lao\Documents\Visual Studio 2010\Projects\RadarAndOMTester\Radar\obj\x86\Debug\Radar.Utilities.WowObjectDetails.resources

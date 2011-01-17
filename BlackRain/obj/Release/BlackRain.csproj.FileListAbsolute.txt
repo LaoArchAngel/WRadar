@@ -1,0 +1,21 @@
+G:\Data\RadarAndOMTester\BlackRain\obj\Release\ResolveAssemblyReference.cache
+G:\Data\RadarAndOMTester\BlackRain\obj\Release\BlackRain.GUI.Log.resources
+G:\Data\RadarAndOMTester\BlackRain\obj\Release\BlackRain.GUI.SelectProcess.resources
+G:\Data\RadarAndOMTester\BlackRain\obj\Release\GenerateResource-ResGen.read.1.tlog
+G:\Data\RadarAndOMTester\BlackRain\obj\Release\GenerateResource-ResGen.write.1.tlog
+G:\Data\RadarAndOMTester\BlackRain\bin\Release\BlackRain.dll
+G:\Data\RadarAndOMTester\BlackRain\bin\Release\BlackRain.pdb
+G:\Data\RadarAndOMTester\BlackRain\bin\Release\BlackMagic.dll
+G:\Data\RadarAndOMTester\BlackRain\obj\Release\BlackRain.dll
+G:\Data\RadarAndOMTester\BlackRain\obj\Release\BlackRain.pdb
+D:\Users\Lao\Documents\Visual Studio 2010\Projects\RadarAndOMTester\BlackRain\bin\Release\BlackRain.dll
+D:\Users\Lao\Documents\Visual Studio 2010\Projects\RadarAndOMTester\BlackRain\bin\Release\BlackRain.pdb
+D:\Users\Lao\Documents\Visual Studio 2010\Projects\RadarAndOMTester\BlackRain\bin\Release\BlackMagic.dll
+D:\Users\Lao\Documents\Visual Studio 2010\Projects\RadarAndOMTester\BlackRain\bin\Release\fasmdll_managed.dll
+D:\Users\Lao\Documents\Visual Studio 2010\Projects\RadarAndOMTester\BlackRain\obj\Release\ResolveAssemblyReference.cache
+D:\Users\Lao\Documents\Visual Studio 2010\Projects\RadarAndOMTester\BlackRain\obj\Release\BlackRain.GUI.Log.resources
+D:\Users\Lao\Documents\Visual Studio 2010\Projects\RadarAndOMTester\BlackRain\obj\Release\BlackRain.GUI.SelectProcess.resources
+D:\Users\Lao\Documents\Visual Studio 2010\Projects\RadarAndOMTester\BlackRain\obj\Release\ResGen.read.1.tlog
+D:\Users\Lao\Documents\Visual Studio 2010\Projects\RadarAndOMTester\BlackRain\obj\Release\ResGen.write.1.tlog
+D:\Users\Lao\Documents\Visual Studio 2010\Projects\RadarAndOMTester\BlackRain\obj\Release\BlackRain.dll
+D:\Users\Lao\Documents\Visual Studio 2010\Projects\RadarAndOMTester\BlackRain\obj\Release\BlackRain.pdb

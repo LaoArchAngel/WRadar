@@ -1,0 +1,6 @@
+<Modules>
+  <Module PersistentId="FF96B417-63D1-4226-858F-D766ABF989AF" ModuleId="Radar" />
+  <Module PersistentId="ECB797DC-902E-404A-B9BB-5356BC6AFFC4" ModuleId="BlackRain" />
+  <Module PersistentId="d:Miscellaneous Files" ModuleId="System.Windows.Forms" />
+  <Module PersistentId="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" ModuleId="System.Windows.Forms_1" />
+</Modules>

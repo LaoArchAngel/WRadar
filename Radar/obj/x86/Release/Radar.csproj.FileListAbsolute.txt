@@ -1,0 +1,20 @@
+G:\Data\RadarAndOMTester\Radar\bin\Release\Radar.exe.config
+G:\Data\RadarAndOMTester\Radar\bin\Release\Radar.exe
+G:\Data\RadarAndOMTester\Radar\bin\Release\Radar.pdb
+G:\Data\RadarAndOMTester\Radar\bin\Release\BlackRain.dll
+G:\Data\RadarAndOMTester\Radar\bin\Release\BlackMagic.dll
+G:\Data\RadarAndOMTester\Radar\bin\Release\fasmdll_managed.dll
+G:\Data\RadarAndOMTester\Radar\bin\Release\BlackRain.pdb
+G:\Data\RadarAndOMTester\Radar\bin\Release\BlackRain.xml
+G:\Data\RadarAndOMTester\Radar\obj\x86\Release\ResolveAssemblyReference.cache
+G:\Data\RadarAndOMTester\Radar\obj\x86\Release\Radar.Blips.WowBlip.resources
+G:\Data\RadarAndOMTester\Radar\obj\x86\Release\Radar.FRadarScreen.resources
+G:\Data\RadarAndOMTester\Radar\obj\x86\Release\Radar.RadarObj.resources
+G:\Data\RadarAndOMTester\Radar\obj\x86\Release\Radar.Properties.Resources.resources
+G:\Data\RadarAndOMTester\Radar\obj\x86\Release\GenerateResource-ResGen.read.1.tlog
+G:\Data\RadarAndOMTester\Radar\obj\x86\Release\GenerateResource-ResGen.write.1.tlog
+G:\Data\RadarAndOMTester\Radar\obj\x86\Release\Radar.exe
+G:\Data\RadarAndOMTester\Radar\obj\x86\Release\Radar.pdb
+D:\Users\Lao\Documents\Visual Studio 2010\Projects\RadarAndOMTester\Radar\bin\Release\Radar.exe.config
+D:\Users\Lao\Documents\Visual Studio 2010\Projects\RadarAndOMTester\Radar\obj\x86\Release\Radar.exe
+D:\Users\Lao\Documents\Visual Studio 2010\Projects\RadarAndOMTester\Radar\obj\x86\Release\Radar.pdb

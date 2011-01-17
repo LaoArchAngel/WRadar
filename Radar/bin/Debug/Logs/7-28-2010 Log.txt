@@ -1,0 +1,2 @@
+[8:59:36 PM:132] CurrentManager found at 0xCE2CA70
+[8:59:36 PM:141] [Player] Local GUID: 2

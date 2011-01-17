@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FF96B417-63D1-4226-858F-D766ABF989AF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Radar</RootNamespace>
+    <AssemblyName>WRadar</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Radar.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Blips\WowDynamicObjectBlip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Blips\WowBlip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Blips\WowBlip.Designer.cs">
+      <DependentUpon>WowBlip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Blips\WowGOBlip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Blips\WowMeBlip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Blips\WowPlayerBlip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Blips\WowUnitBlip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Screen\Radar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screen\Radar.Designer.cs">
+      <DependentUpon>Radar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\Colors.cs" />
+    <Compile Include="Settings\Persistance.cs" />
+    <Compile Include="Settings\Screen.cs" />
+    <Compile Include="Settings\Sounds\List.cs" />
+    <Compile Include="Settings\Tracking.cs" />
+    <Compile Include="Tracking\Trackable.cs" />
+    <Compile Include="Tracking\TrackingList.cs" />
+    <Compile Include="Utilities\MathFunctions.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities\ReadOnlyPropertyGrid.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Utilities\ReadOnlyPropertyGrid.Designer.cs">
+      <DependentUpon>ReadOnlyPropertyGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities\TrackableEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Utilities\TrackableEditor.Designer.cs">
+      <DependentUpon>TrackableEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities\Tracking.cs" />
+    <Compile Include="Utilities\TrackingListEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Utilities\TrackingListEditor.Designer.cs">
+      <DependentUpon>TrackingListEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities\WowObjectDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Utilities\WowObjectDetails.Designer.cs">
+      <DependentUpon>WowObjectDetails.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Blips\WowBlip.resx">
+      <DependentUpon>WowBlip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Screen\Radar.resx">
+      <DependentUpon>Radar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Utilities\TrackableEditor.resx">
+      <DependentUpon>TrackableEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Utilities\TrackingListEditor.resx">
+      <DependentUpon>TrackingListEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Utilities\WowObjectDetails.resx">
+      <DependentUpon>WowObjectDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Utilities\ObjectQueries.cs" />
+    <Compile Include="Utilities\Radar.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Radar.ico" />
+    <Content Include="Settings\Sounds\msonar.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Settings\Sounds\sonar2.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BlackRain\BlackRain.csproj">
+      <Project>{ECB797DC-902E-404A-B9BB-5356BC6AFFC4}</Project>
+      <Name>BlackRain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

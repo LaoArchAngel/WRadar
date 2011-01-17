@@ -1,0 +1,12 @@
+E:\Project\WindowsFormsApplication1\obj\x86\Release\ResolveAssemblyReference.cache
+E:\Project\WindowsFormsApplication1\obj\x86\Release\ResGen.read.1.tlog
+E:\Project\WindowsFormsApplication1\obj\x86\Release\ResGen.write.1.tlog
+E:\Project\WindowsFormsApplication1\obj\x86\Release\WindowsFormsApplication1.Form1.resources
+E:\Project\WindowsFormsApplication1\obj\x86\Release\WindowsFormsApplication1.Properties.Resources.resources
+E:\Project\WindowsFormsApplication1\bin\Release\WindowsFormsApplication1.exe.config
+E:\Project\WindowsFormsApplication1\bin\Release\WindowsFormsApplication1.exe
+E:\Project\WindowsFormsApplication1\bin\Release\WindowsFormsApplication1.pdb
+E:\Project\WindowsFormsApplication1\bin\Release\BlackRain.dll
+E:\Project\WindowsFormsApplication1\bin\Release\BlackRain.pdb
+E:\Project\WindowsFormsApplication1\obj\x86\Release\WindowsFormsApplication1.exe
+E:\Project\WindowsFormsApplication1\obj\x86\Release\WindowsFormsApplication1.pdb

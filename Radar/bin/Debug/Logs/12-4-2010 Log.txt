@@ -1,0 +1,4 @@
+[6:11:06 PM:60] CurrentManager found at 0x4C2C033
+[6:11:06 PM:193] ReadUInt64 failed.
+[6:11:06 PM:199] Exception in ObjectManager: ReadUInt failed.
+[7:07:14 PM:307] Exception in ObjectManager: Object reference not set to an instance of an object.
