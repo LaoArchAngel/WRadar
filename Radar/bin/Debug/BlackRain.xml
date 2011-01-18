@@ -4,6 +4,81 @@
         <name>BlackRain</name>
     </assembly>
     <members>
+        <member name="T:BlackRain.GUI.Log">
+            <summary>
+            A generic UI item used to display logs.
+            </summary>
+        </member>
+        <member name="M:BlackRain.GUI.Log.#ctor">
+            <summary>
+            Ctor.
+            </summary>
+        </member>
+        <member name="M:BlackRain.GUI.Log.AppendMessage(System.Windows.Forms.RichTextBox,System.String,System.Drawing.Color)">
+            <summary>
+            Writes a message to the specified RichTextBox.
+            </summary>
+            <param name="textBox"></param>
+            <param name="message">The <see cref="T:System.String">message</see> to be written.</param>
+            <param name="col"></param>
+        </member>
+        <member name="F:BlackRain.GUI.Log.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:BlackRain.GUI.Log.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:BlackRain.GUI.Log.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:BlackRain.Common.Offsets">
+            <summary>
+            A collection of offsets used for memory reading and writing.
+            </summary>
+        </member>
+        <member name="T:BlackRain.Common.Offsets.ObjectManager">
+            <summary>
+            Memory locations specific to the ObjectManager.
+            </summary>
+        </member>
+        <member name="T:BlackRain.Common.Offsets.ObjectType">
+            <summary>
+            Types available for a <see cref="T:BlackRain.Common.Offsets.WowObject"/>
+            </summary>
+        </member>
+        <member name="T:BlackRain.Common.Offsets.WowPlayer">
+            <summary>
+            Memory locations specific to the WowPlayer type.
+            </summary>
+        </member>
+        <member name="T:BlackRain.Common.Offsets.WowPlayerMe">
+            <summary>
+            Memory locations specific to the WowPlayerMe type.
+            </summary>
+        </member>
+        <member name="T:BlackRain.Common.Offsets.WowObject">
+            <summary>
+            Memory locations specific to the WowObject type.
+            </summary>
+        </member>
+        <member name="T:BlackRain.Common.Offsets.WowGameObject">
+            <summary>
+            Memory locations specific to the WowGameObject type.
+            </summary>
+        </member>
+        <member name="T:BlackRain.Common.Objects.WowCorpse">
+            <summary>
+            Player corpses.
+            </summary>
+        </member>
         <member name="T:BlackRain.Common.Objects.WowUnit">
             <summary>
             An unit, such as an NPC, but also a player.
@@ -302,6 +377,246 @@
             Gets the class of the unit.
             </summary>
         </member>
+        <member name="M:BlackRain.Common.Objects.WowCorpse.#ctor(System.UInt32)">
+            <summary>
+            Ctor.
+            </summary>
+            <param name="baseAddress"></param>
+        </member>
+        <member name="P:BlackRain.Common.Objects.WowCorpse.Owner">
+            <summary>
+            The corpse's owner.
+            </summary>
+        </member>
+        <member name="P:BlackRain.Common.Objects.WowCorpse.DisplayID">
+            <summary>
+            The Corpses Display ID.
+            </summary>
+        </member>
+        <member name="T:BlackRain.Common.Utilities">
+            <summary>
+            A class with utilities that can be used.
+            </summary>
+        </member>
+        <member name="P:BlackRain.Common.Utilities.ApplicationPath">
+            <summary>
+            Gets the application path.
+            <value>The application path.</value>
+            </summary>
+        </member>
+        <member name="P:BlackRain.Common.Utilities.Version">
+            <summary>
+            Gets the application version.
+            </summary>
+        </member>
+        <member name="T:BlackRain.Common.Logging">
+            <summary>
+            This class handles all logging done for OpenBot. From simple output, to writing to files, to logging exceptions
+            and user messages. It is event based, and thread safe.
+            </summary>
+            <example>Logging.WriteDebug("Oh noes! We failed again!");</example>
+            1/14/2009 7:31 PM
+        </member>
+        <member name="M:BlackRain.Common.Logging.Write(System.String,System.Object[])">
+            <summary>
+            Writes the specified message to the message queue.
+            </summary>
+            <param name="format">The format.</param>
+            <param name="args">The args.</param>
+            1/14/2009 7:33 PM
+        </member>
+        <member name="M:BlackRain.Common.Logging.Write(System.Drawing.Color,System.String,System.Object[])">
+            <summary>
+            Writes the specified message to the message queue.
+            </summary>
+            <param name="color">The color to write the message in.</param>
+            <param name="format">The format.</param>
+            <param name="args">The args.</param>
+            1/14/2009 7:33 PM
+        </member>
+        <member name="M:BlackRain.Common.Logging.WriteDebug(System.String,System.Object[])">
+            <summary>
+            Writes the specified debug message to the message queue. [Default Color: Red]
+            Debug messages are not shown to the end user by default. (They can be turned on via settings)
+            </summary>
+            <param name="format">The format.</param>
+            <param name="args">The args.</param>
+            1/14/2009 7:40 PM
+        </member>
+        <member name="M:BlackRain.Common.Logging.WriteDebug(System.Drawing.Color,System.String,System.Object[])">
+            <summary>
+            Writes the debug message in the specific color.
+            Debug messages are not shown to the end user by default. (They can be turned on via settings)
+            </summary>
+            <param name="color">The color to write in.</param>
+            <param name="format"></param>
+            <param name="args"></param>
+        </member>
+        <member name="M:BlackRain.Common.Logging.WriteException(System.Exception)">
+            <summary>
+            Writes the specified exception to the message queue. [Default Color: Red]
+            Debug messages are not shown to the end user by default. (They can be turned on via settings)
+            </summary>
+            <param name="ex">The exception that will be logged.</param>
+        </member>
+        <member name="M:BlackRain.Common.Logging.WriteException(System.Drawing.Color,System.Exception)">
+            <summary>
+            Writes the specified exception to the message queue.
+            Debug messages are not shown to the end user by default. (They can be turned on via settings)
+            </summary>
+            <param name="color">The color to write the message in.</param>
+            <param name="ex">The exception that will be logged.</param>
+        </member>
+        <member name="M:BlackRain.Common.Logging.LogMessage(System.String,System.Object[])">
+            <summary>
+            Logs the specified message to the logging queue. This will not fire any
+            message events. It will go straight to the log file without question.
+            </summary>
+            <param name="format">The format param of string.Format</param>
+            <param name="args">The args param of string.Format</param>
+        </member>
+        <member name="M:BlackRain.Common.Logging.LogException(System.Exception)">
+            <summary>
+            Logs the specified exception into the log queue.
+            </summary>
+            <param name="ex">The exception to be logged.</param>
+        </member>
+        <member name="P:BlackRain.Common.Logging.LogOnWrite">
+            <summary>
+            Gets or sets a value indicating whether every Write action should also be logged.
+            </summary>
+            <value><c>true</c> if [log on write]; otherwise, <c>false</c>.</value>
+            1/14/2009 7:40 PM
+        </member>
+        <member name="E:BlackRain.Common.Logging.OnWrite">
+            <summary>
+            Occurs when [on write].
+            </summary>
+        </member>
+        <member name="E:BlackRain.Common.Logging.OnDebug">
+            <summary>
+            Occurs when [on debug].
+            </summary>
+        </member>
+        <member name="T:BlackRain.Common.Logging.DebugDelegate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:BlackRain.Common.Logging.WriteDelegate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:BlackRain.Common.Objects.WowContainer">
+            <summary>
+            Contains information about WowContainers.
+            </summary>
+        </member>
+        <member name="M:BlackRain.Common.Objects.WowContainer.#ctor(System.UInt32)">
+            <summary>
+            Ctor
+            </summary>
+            <param name="baseAddress"></param>
+        </member>
+        <member name="P:BlackRain.Common.Objects.WowContainer.Slots">
+            <summary>
+            The amount of slots this container has.
+            </summary>
+        </member>
+        <member name="P:BlackRain.Common.Objects.WowContainer.InSlot">
+            <summary>
+            The slot this container occupies on the character.
+            </summary>
+        </member>
+        <member name="T:BlackRain.Common.Objects.WowItem">
+            <summary>
+            An item.
+            </summary>
+        </member>
+        <member name="M:BlackRain.Common.Objects.WowItem.#ctor(System.UInt32)">
+            <summary>
+            Ctor.
+            </summary>
+            <param name="baseAddress"></param>
+        </member>
+        <member name="P:BlackRain.Common.Objects.WowItem.Durability">
+            <summary>
+            The item's remaining durability.
+            </summary>
+        </member>
+        <member name="P:BlackRain.Common.Objects.WowItem.MaximumDurability">
+            <summary>
+            The item's maximum durability.
+            </summary>
+        </member>
+        <member name="P:BlackRain.Common.Objects.WowItem.StackCount">
+            <summary>
+            The amount of items stacked.
+            </summary>
+        </member>
+        <member name="P:BlackRain.Common.Objects.WowItem.Charges">
+            <summary>
+            The amount of charges this item has.
+            </summary>
+        </member>
+        <member name="P:BlackRain.Common.Objects.WowItem.HasCharges">
+            <summary>
+            Does the item have charges?
+            </summary>
+        </member>
+        <member name="T:BlackRain.Common.Objects.WowPlayer">
+            <summary>
+            Represents a player.
+            </summary>
+        </member>
+        <member name="M:BlackRain.Common.Objects.WowPlayer.#ctor(System.UInt32)">
+            <summary>
+            Ctor
+            </summary>
+            <param name="baseAddress"></param>
+        </member>
+        <member name="P:BlackRain.Common.Objects.WowPlayer.Experience">
+            <summary>
+            The player's experience points.
+            </summary>
+        </member>
+        <member name="P:BlackRain.Common.Objects.WowPlayer.NextLevel">
+            <summary>
+            The experience the player requires to advance to the next level.
+            </summary>
+        </member>
+        <member name="P:BlackRain.Common.Objects.WowPlayer.GuildID">
+            <summary>
+            The ID of the guild the player resides in.
+            </summary>
+        </member>
+        <member name="P:BlackRain.Common.Objects.WowPlayer.RestExperience">
+            <summary>
+            The amount of experience the player has rested.
+            <!-- You can calculate the double experience rate, and thus shorten the time to the next level when using this in a calculation. -->
+            </summary>
+        </member>
+        <member name="P:BlackRain.Common.Objects.WowPlayer.Ghost">
+            <summary>
+            Determines if the player is a Ghost. i.e: dead, and released from corpse.
+            </summary>
+        </member>
+        <member name="P:BlackRain.Common.Objects.WowPlayer.Combat">
+            <summary>
+            Returns true if in combat, false if not.
+            </summary>
+        </member>
+        <member name="P:BlackRain.Common.Objects.WowPlayer.Name">
+            <summary>
+            The name of the player.
+            </summary>
+        </member>
+        <member name="P:BlackRain.Common.Objects.WowPlayer.Mounted">
+            <summary>
+            Returns true if the unit is mounted, false if not.
+            </summary>
+        </member>
         <member name="T:BlackRain.Common.Objects.WowGameObject">
             <summary>
             A Game Object, such as a herb, but also a treasure box.
@@ -511,11 +826,6 @@
             Basic form to select a Wow process.
             </summary>
         </member>
-        <member name="M:BlackRain.GUI.SelectProcess.#ctor">
-            <summary>
-            Ctor.
-            </summary>
-        </member>
         <member name="F:BlackRain.GUI.SelectProcess.components">
             <summary>
             Required designer variable.
@@ -533,73 +843,50 @@
             the contents of this method with the code editor.
             </summary>
         </member>
-        <member name="T:BlackRain.Common.Objects.WowPlayer">
+        <member name="M:BlackRain.GUI.SelectProcess.#ctor">
             <summary>
-            Represents a player.
+            Ctor.
             </summary>
         </member>
-        <member name="M:BlackRain.Common.Objects.WowPlayer.#ctor(System.UInt32)">
+        <member name="T:BlackRain.Common.Objects.WowPlayerMe">
+            <summary>
+            Represents your player (character).
+            </summary>
+        </member>
+        <member name="M:BlackRain.Common.Objects.WowPlayerMe.#ctor(System.UInt32)">
             <summary>
             Ctor
             </summary>
             <param name="baseAddress"></param>
         </member>
-        <member name="P:BlackRain.Common.Objects.WowPlayer.Experience">
+        <member name="P:BlackRain.Common.Objects.WowPlayerMe.Zone">
             <summary>
-            The player's experience points.
+            Your character's current Zone.
             </summary>
         </member>
-        <member name="P:BlackRain.Common.Objects.WowPlayer.NextLevel">
+        <member name="P:BlackRain.Common.Objects.WowPlayerMe.SubZone">
             <summary>
-            The experience the player requires to advance to the next level.
+            Your character's current SubZone.
             </summary>
         </member>
-        <member name="P:BlackRain.Common.Objects.WowPlayer.GuildID">
+        <member name="P:BlackRain.Common.Objects.WowPlayerMe.Copper">
             <summary>
-            The ID of the guild the player resides in.
+            Your character's money.
             </summary>
         </member>
-        <member name="P:BlackRain.Common.Objects.WowPlayer.RestExperience">
+        <member name="P:BlackRain.Common.Objects.WowPlayerMe.Silver">
             <summary>
-            The amount of experience the player has rested.
-            <!-- You can calculate the double experience rate, and thus shorten the time to the next level when using this in a calculation. -->
+            Gets the silver.
             </summary>
+            <value>The silver.</value>
+            19/10/2010 17:57
         </member>
-        <member name="P:BlackRain.Common.Objects.WowPlayer.Ghost">
+        <member name="P:BlackRain.Common.Objects.WowPlayerMe.Gold">
             <summary>
-            Determines if the player is a Ghost. i.e: dead, and released from corpse.
+            Gets the gold.
             </summary>
-        </member>
-        <member name="P:BlackRain.Common.Objects.WowPlayer.Combat">
-            <summary>
-            Returns true if in combat, false if not.
-            </summary>
-        </member>
-        <member name="P:BlackRain.Common.Objects.WowPlayer.Name">
-            <summary>
-            The name of the player.
-            </summary>
-        </member>
-        <member name="P:BlackRain.Common.Objects.WowPlayer.Mounted">
-            <summary>
-            Returns true if the unit is mounted, false if not.
-            </summary>
-        </member>
-        <member name="T:BlackRain.Common.Utilities">
-            <summary>
-            A class with utilities that can be used.
-            </summary>
-        </member>
-        <member name="P:BlackRain.Common.Utilities.ApplicationPath">
-            <summary>
-            Gets the application path.
-            <value>The application path.</value>
-            </summary>
-        </member>
-        <member name="P:BlackRain.Common.Utilities.Version">
-            <summary>
-            Gets the application version.
-            </summary>
+            <value>The gold.</value>
+            19/10/2010 17:57
         </member>
         <member name="T:BlackRain.Common.Objects.WowDynamicObject">
             <summary>
@@ -625,77 +912,6 @@
         <member name="P:BlackRain.Common.Objects.WowDynamicObject.Radius">
             <summary>
             The radius of the dynamic object.
-            </summary>
-        </member>
-        <member name="T:BlackRain.Common.Offsets">
-            <summary>
-            A collection of offsets used for memory reading and writing.
-            </summary>
-        </member>
-        <member name="T:BlackRain.Common.Offsets.ObjectManager">
-            <summary>
-            Memory locations specific to the ObjectManager.
-            </summary>
-        </member>
-        <member name="T:BlackRain.Common.Offsets.ObjectType">
-            <summary>
-            Types available for a <see cref="T:BlackRain.Common.Offsets.WowObject"/>
-            </summary>
-        </member>
-        <member name="T:BlackRain.Common.Offsets.WowPlayer">
-            <summary>
-            Memory locations specific to the WowPlayer type.
-            </summary>
-        </member>
-        <member name="T:BlackRain.Common.Offsets.WowPlayerMe">
-            <summary>
-            Memory locations specific to the WowPlayerMe type.
-            </summary>
-        </member>
-        <member name="T:BlackRain.Common.Offsets.WowObject">
-            <summary>
-            Memory locations specific to the WowObject type.
-            </summary>
-        </member>
-        <member name="T:BlackRain.Common.Offsets.WowGameObject">
-            <summary>
-            Memory locations specific to the WowGameObject type.
-            </summary>
-        </member>
-        <member name="T:BlackRain.Common.Objects.WowItem">
-            <summary>
-            An item.
-            </summary>
-        </member>
-        <member name="M:BlackRain.Common.Objects.WowItem.#ctor(System.UInt32)">
-            <summary>
-            Ctor.
-            </summary>
-            <param name="baseAddress"></param>
-        </member>
-        <member name="P:BlackRain.Common.Objects.WowItem.Durability">
-            <summary>
-            The item's remaining durability.
-            </summary>
-        </member>
-        <member name="P:BlackRain.Common.Objects.WowItem.MaximumDurability">
-            <summary>
-            The item's maximum durability.
-            </summary>
-        </member>
-        <member name="P:BlackRain.Common.Objects.WowItem.StackCount">
-            <summary>
-            The amount of items stacked.
-            </summary>
-        </member>
-        <member name="P:BlackRain.Common.Objects.WowItem.Charges">
-            <summary>
-            The amount of charges this item has.
-            </summary>
-        </member>
-        <member name="P:BlackRain.Common.Objects.WowItem.HasCharges">
-            <summary>
-            Does the item have charges?
             </summary>
         </member>
         <member name="T:BlackRain.Common.Point">
@@ -960,222 +1176,6 @@
             Gets a value indicating whether this instance is valid.
             </summary>
             <value><c>true</c> if this instance is valid; otherwise, <c>false</c>.</value>
-        </member>
-        <member name="T:BlackRain.GUI.Log">
-            <summary>
-            A generic UI item used to display logs.
-            </summary>
-        </member>
-        <member name="F:BlackRain.GUI.Log.components">
-            <summary>
-            Required designer variable.
-            </summary>
-        </member>
-        <member name="M:BlackRain.GUI.Log.Dispose(System.Boolean)">
-            <summary>
-            Clean up any resources being used.
-            </summary>
-            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        </member>
-        <member name="M:BlackRain.GUI.Log.InitializeComponent">
-            <summary>
-            Required method for Designer support - do not modify
-            the contents of this method with the code editor.
-            </summary>
-        </member>
-        <member name="M:BlackRain.GUI.Log.#ctor">
-            <summary>
-            Ctor.
-            </summary>
-        </member>
-        <member name="M:BlackRain.GUI.Log.AppendMessage(System.Windows.Forms.RichTextBox,System.String,System.Drawing.Color)">
-            <summary>
-            Writes a message to the specified RichTextBox.
-            </summary>
-            <param name="textBox"></param>
-            <param name="message">The <see cref="T:System.String">message</see> to be written.</param>
-            <param name="col"></param>
-        </member>
-        <member name="T:BlackRain.Common.Objects.WowCorpse">
-            <summary>
-            Player corpses.
-            </summary>
-        </member>
-        <member name="M:BlackRain.Common.Objects.WowCorpse.#ctor(System.UInt32)">
-            <summary>
-            Ctor.
-            </summary>
-            <param name="baseAddress"></param>
-        </member>
-        <member name="P:BlackRain.Common.Objects.WowCorpse.Owner">
-            <summary>
-            The corpse's owner.
-            </summary>
-        </member>
-        <member name="P:BlackRain.Common.Objects.WowCorpse.DisplayID">
-            <summary>
-            The Corpses Display ID.
-            </summary>
-        </member>
-        <member name="T:BlackRain.Common.Objects.WowPlayerMe">
-            <summary>
-            Represents your player (character).
-            </summary>
-        </member>
-        <member name="M:BlackRain.Common.Objects.WowPlayerMe.#ctor(System.UInt32)">
-            <summary>
-            Ctor
-            </summary>
-            <param name="baseAddress"></param>
-        </member>
-        <member name="P:BlackRain.Common.Objects.WowPlayerMe.Zone">
-            <summary>
-            Your character's current Zone.
-            </summary>
-        </member>
-        <member name="P:BlackRain.Common.Objects.WowPlayerMe.SubZone">
-            <summary>
-            Your character's current SubZone.
-            </summary>
-        </member>
-        <member name="P:BlackRain.Common.Objects.WowPlayerMe.Copper">
-            <summary>
-            Your character's money.
-            </summary>
-        </member>
-        <member name="P:BlackRain.Common.Objects.WowPlayerMe.Silver">
-            <summary>
-            Gets the silver.
-            </summary>
-            <value>The silver.</value>
-            19/10/2010 17:57
-        </member>
-        <member name="P:BlackRain.Common.Objects.WowPlayerMe.Gold">
-            <summary>
-            Gets the gold.
-            </summary>
-            <value>The gold.</value>
-            19/10/2010 17:57
-        </member>
-        <member name="T:BlackRain.Common.Logging">
-            <summary>
-            This class handles all logging done for OpenBot. From simple output, to writing to files, to logging exceptions
-            and user messages. It is event based, and thread safe.
-            </summary>
-            <example>Logging.WriteDebug("Oh noes! We failed again!");</example>
-            1/14/2009 7:31 PM
-        </member>
-        <member name="M:BlackRain.Common.Logging.Write(System.String,System.Object[])">
-            <summary>
-            Writes the specified message to the message queue.
-            </summary>
-            <param name="format">The format.</param>
-            <param name="args">The args.</param>
-            1/14/2009 7:33 PM
-        </member>
-        <member name="M:BlackRain.Common.Logging.Write(System.Drawing.Color,System.String,System.Object[])">
-            <summary>
-            Writes the specified message to the message queue.
-            </summary>
-            <param name="color">The color to write the message in.</param>
-            <param name="format">The format.</param>
-            <param name="args">The args.</param>
-            1/14/2009 7:33 PM
-        </member>
-        <member name="M:BlackRain.Common.Logging.WriteDebug(System.String,System.Object[])">
-            <summary>
-            Writes the specified debug message to the message queue. [Default Color: Red]
-            Debug messages are not shown to the end user by default. (They can be turned on via settings)
-            </summary>
-            <param name="format">The format.</param>
-            <param name="args">The args.</param>
-            1/14/2009 7:40 PM
-        </member>
-        <member name="M:BlackRain.Common.Logging.WriteDebug(System.Drawing.Color,System.String,System.Object[])">
-            <summary>
-            Writes the debug message in the specific color.
-            Debug messages are not shown to the end user by default. (They can be turned on via settings)
-            </summary>
-            <param name="color">The color to write in.</param>
-            <param name="format"></param>
-            <param name="args"></param>
-        </member>
-        <member name="M:BlackRain.Common.Logging.WriteException(System.Exception)">
-            <summary>
-            Writes the specified exception to the message queue. [Default Color: Red]
-            Debug messages are not shown to the end user by default. (They can be turned on via settings)
-            </summary>
-            <param name="ex">The exception that will be logged.</param>
-        </member>
-        <member name="M:BlackRain.Common.Logging.WriteException(System.Drawing.Color,System.Exception)">
-            <summary>
-            Writes the specified exception to the message queue.
-            Debug messages are not shown to the end user by default. (They can be turned on via settings)
-            </summary>
-            <param name="color">The color to write the message in.</param>
-            <param name="ex">The exception that will be logged.</param>
-        </member>
-        <member name="M:BlackRain.Common.Logging.LogMessage(System.String,System.Object[])">
-            <summary>
-            Logs the specified message to the logging queue. This will not fire any
-            message events. It will go straight to the log file without question.
-            </summary>
-            <param name="format">The format param of string.Format</param>
-            <param name="args">The args param of string.Format</param>
-        </member>
-        <member name="M:BlackRain.Common.Logging.LogException(System.Exception)">
-            <summary>
-            Logs the specified exception into the log queue.
-            </summary>
-            <param name="ex">The exception to be logged.</param>
-        </member>
-        <member name="P:BlackRain.Common.Logging.LogOnWrite">
-            <summary>
-            Gets or sets a value indicating whether every Write action should also be logged.
-            </summary>
-            <value><c>true</c> if [log on write]; otherwise, <c>false</c>.</value>
-            1/14/2009 7:40 PM
-        </member>
-        <member name="E:BlackRain.Common.Logging.OnWrite">
-            <summary>
-            Occurs when [on write].
-            </summary>
-        </member>
-        <member name="E:BlackRain.Common.Logging.OnDebug">
-            <summary>
-            Occurs when [on debug].
-            </summary>
-        </member>
-        <member name="T:BlackRain.Common.Logging.DebugDelegate">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="T:BlackRain.Common.Logging.WriteDelegate">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="T:BlackRain.Common.Objects.WowContainer">
-            <summary>
-            Contains information about WowContainers.
-            </summary>
-        </member>
-        <member name="M:BlackRain.Common.Objects.WowContainer.#ctor(System.UInt32)">
-            <summary>
-            Ctor
-            </summary>
-            <param name="baseAddress"></param>
-        </member>
-        <member name="P:BlackRain.Common.Objects.WowContainer.Slots">
-            <summary>
-            The amount of slots this container has.
-            </summary>
-        </member>
-        <member name="P:BlackRain.Common.Objects.WowContainer.InSlot">
-            <summary>
-            The slot this container occupies on the character.
-            </summary>
         </member>
     </members>
 </doc>

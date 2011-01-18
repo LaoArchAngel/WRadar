@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 
@@ -10,11 +11,18 @@ namespace Radar.Settings
 		#region Fields
 
 		private static float _zoom = 2.5F;
+	    //private static GraphicsPath _pathPointer;
 
 		#endregion
 
 		#region Properties
 
+        /// <summary>
+        /// Gets or sets whether the radar is in exclusive mode.
+        /// </summary>
+        /// <remarks>Exclusive mode is when the user only wants the radar to pain the tracked objects.</remarks>
+        public static bool Exclusive { get; set; }
+        
         public static bool HUDMode { get; set; }
 
 		/// <summary>

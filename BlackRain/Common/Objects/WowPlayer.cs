@@ -75,19 +75,19 @@ namespace BlackRain.Common.Objects
             {
                 try
                 {
-                    uint nMask = ObjectManager.ReadRelative<uint>((uint)Offsets.WowPlayer.NameStore + (uint)Offsets.WowPlayer.NameMask);
-                    uint nBase = ObjectManager.ReadRelative<uint>((uint)Offsets.WowPlayer.NameStore + (uint)Offsets.WowPlayer.NameBase);
+                    var nMask = ObjectManager.ReadRelative<uint>((uint)Offsets.WowPlayer.NameStore + (uint)Offsets.WowPlayer.NameMask);
+                    var nBase = ObjectManager.ReadRelative<uint>((uint)Offsets.WowPlayer.NameStore + (uint)Offsets.WowPlayer.NameBase);
 
-                    ulong nShortGUID = this.GUID & 0xFFFFFFFF; // only need part of the GUID
-                    ulong nOffset = 0xC * (nMask & nShortGUID);
+                    var nShortGUID = this.GUID & 0xFFFFFFFF; // only need part of the GUID
+                    var nOffset = 0xC * (nMask & nShortGUID);
 
-                    uint nCurrentObject = ObjectManager.Memory.ReadUInt((uint)(nBase + (12 * (nMask & nShortGUID)) + 0x8));
+                    var nCurrentObject = ObjectManager.Memory.ReadUInt((uint)(nBase + nOffset + 0x8));
                     nOffset = ObjectManager.Memory.ReadUInt((uint)(nBase + nOffset));
 
                     if ((nCurrentObject & 0x1) == 0x1)
                         return "Unknown Player";
 
-                    uint nTestAgainstGUID = ObjectManager.Memory.ReadUInt((nCurrentObject));
+                    var nTestAgainstGUID = ObjectManager.Memory.ReadUInt((nCurrentObject));
 
                     while (nTestAgainstGUID != nShortGUID)
                     {
@@ -96,10 +96,10 @@ namespace BlackRain.Common.Objects
                         if ((nCurrentObject & 0x1) == 0x1)
                             return "Unknown Player";
 
-                        nTestAgainstGUID = ObjectManager.Memory.ReadUInt((uint)(nCurrentObject));
+                        nTestAgainstGUID = ObjectManager.Memory.ReadUInt(nCurrentObject);
                     }
 
-                    return ObjectManager.Memory.ReadASCIIString((uint)(nCurrentObject + (uint)Offsets.WowPlayer.NameString), 40);
+                    return ObjectManager.Memory.ReadASCIIString(nCurrentObject + (uint)Offsets.WowPlayer.NameString, 40);
 
                 }
                 catch (Exception)

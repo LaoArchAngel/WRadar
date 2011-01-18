@@ -105,6 +105,9 @@ namespace Radar.Blips
         /// <param name="paintEventArgs">Arguments from the parent's paint event.</param>
         protected override void OnPaint(PaintEventArgs paintEventArgs)
         {
+            if(Settings.Screen.Exclusive && !Tracked)
+                return;
+
             var g = new GraphicsPath();
             var matrix = new Matrix();
             paintEventArgs.Graphics.SmoothingMode = SmoothingMode.HighQuality;

@@ -195,6 +195,14 @@ namespace BlackRain.Common.Objects
                     var currentObject =
                         new WowObject(Memory.ReadUInt(CurrentManager + (uint) Offsets.ObjectManager.FirstObject));
 
+                    if (currentObject.BaseAddress == uint.MinValue || currentObject.BaseAddress%2 != uint.MinValue)
+                    {
+                        Memory = null;
+                        Me = null;
+                        Initialize(WowProcess);
+                        return;
+                    }
+
                     while (currentObject.BaseAddress != uint.MinValue && currentObject.BaseAddress%2 == uint.MinValue)
                     {
                         switch (currentObject.Type)

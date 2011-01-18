@@ -46,6 +46,11 @@ namespace Radar.Utilities
         /// <param name="tp">Shows the name of <see cref="blip"/> if it impliments <see cref="INamed"/></param>
         public static void DrawWowBlip(WowBlip blip, Control screen, ToolTip tp)
         {
+            if (Settings.Screen.Exclusive && !blip.Tracked)
+            {
+                return;
+            }
+
             var x = MathFunctions.RelativeCoordinate(ObjectManager.Me.X, blip.BlipObject.X, screen.Width/2F);
             var y = MathFunctions.RelativeCoordinate(ObjectManager.Me.Y, blip.BlipObject.Y, screen.Height/2F);
             var p = new Point(y, x);

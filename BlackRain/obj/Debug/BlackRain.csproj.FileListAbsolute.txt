@@ -54,3 +54,12 @@ D:\Users\Lao\Documents\Visual Studio 2010\Projects\RadarAndOMTester\BlackRain\ob
 \\Leviathan\d$\Users\Lao\Documents\Visual Studio 2010\Projects\RadarAndOMTester\BlackRain\obj\Debug\ResGen.write.1.tlog
 \\Leviathan\d$\Users\Lao\Documents\Visual Studio 2010\Projects\RadarAndOMTester\BlackRain\obj\Debug\BlackRain.dll
 \\Leviathan\d$\Users\Lao\Documents\Visual Studio 2010\Projects\RadarAndOMTester\BlackRain\obj\Debug\BlackRain.pdb
+D:\Users\Lao\Documents\Visual Studio 2010\Projects\WRadar\WRadar\BlackRain\bin\Debug\BlackRain.dll
+D:\Users\Lao\Documents\Visual Studio 2010\Projects\WRadar\WRadar\BlackRain\bin\Debug\BlackRain.pdb
+D:\Users\Lao\Documents\Visual Studio 2010\Projects\WRadar\WRadar\BlackRain\obj\Debug\ResolveAssemblyReference.cache
+D:\Users\Lao\Documents\Visual Studio 2010\Projects\WRadar\WRadar\BlackRain\obj\Debug\BlackRain.GUI.Log.resources
+D:\Users\Lao\Documents\Visual Studio 2010\Projects\WRadar\WRadar\BlackRain\obj\Debug\BlackRain.GUI.SelectProcess.resources
+D:\Users\Lao\Documents\Visual Studio 2010\Projects\WRadar\WRadar\BlackRain\obj\Debug\ResGen.read.1.tlog
+D:\Users\Lao\Documents\Visual Studio 2010\Projects\WRadar\WRadar\BlackRain\obj\Debug\ResGen.write.1.tlog
+D:\Users\Lao\Documents\Visual Studio 2010\Projects\WRadar\WRadar\BlackRain\obj\Debug\BlackRain.dll
+D:\Users\Lao\Documents\Visual Studio 2010\Projects\WRadar\WRadar\BlackRain\obj\Debug\BlackRain.pdb
