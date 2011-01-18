@@ -262,19 +262,6 @@
   </CompletionStatisticsManager>
   <RecentFiles>
     <RecentFiles>
-      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/f:RadarObj.Designer.cs" caret="0" fromTop="0" />
-      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/f:Program.cs" caret="0" fromTop="0" />
-      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/d:Blips/f:WowBlip.Designer.cs" caret="1718" fromTop="22" />
-      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/d:Blips/f:WowGOBlip.cs" caret="713" fromTop="29" />
-      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/d:Tracking/f:Names.cs" caret="451" fromTop="22" />
-      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/d:BlackRaidUtils/d:Common/d:Objects/f:WoWObjectUtils.cs" caret="348" fromTop="14" />
-      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/d:BlackRaidUtils/d:Common/d:Objects/f:WoWUnitUtils.cs" caret="410" fromTop="17" />
-      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/d:BlackRaidUtils/d:Common/d:Objects/f:WoWPlayerUtils.cs" caret="0" fromTop="0" />
-      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/f:RadarObj.cs" caret="8372" fromTop="25" />
-      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/d:Utilities/f:ObjectQueries.cs" caret="148" fromTop="7" />
-      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/d:Settings/f:Colors.cs" caret="0" fromTop="0" />
-      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/d:Settings/f:Screen.cs" caret="250" fromTop="15" />
-      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/d:Utilities/f:MathFunctions.cs" caret="363" fromTop="9" />
       <File id="ECB797DC-902E-404A-B9BB-5356BC6AFFC4/d:Common/f:Offsets.cs" caret="1651" fromTop="36" />
       <File id="ECB797DC-902E-404A-B9BB-5356BC6AFFC4/d:Common/d:Objects/f:WowContainer.cs" caret="0" fromTop="0" />
       <File id="ECB797DC-902E-404A-B9BB-5356BC6AFFC4/d:Common/d:Objects/f:WowCorpse.cs" caret="0" fromTop="0" />
@@ -285,20 +272,9 @@
       <File id="ECB797DC-902E-404A-B9BB-5356BC6AFFC4/d:Common/d:Objects/f:WowPlayerMe.cs" caret="0" fromTop="0" />
       <File id="ECB797DC-902E-404A-B9BB-5356BC6AFFC4/d:Common/d:Contracts/f:INamed.cs" caret="210" fromTop="7" />
       <File id="ECB797DC-902E-404A-B9BB-5356BC6AFFC4/d:Common/d:Objects/f:WowUnit.cs" caret="258" fromTop="8" />
-      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/f:RadarUtils.cs" caret="896" fromTop="17" />
-      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/d:Blips/f:WowBlip.cs" caret="3165" fromTop="8" />
-      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/d:Utilities/f:Radar.cs" caret="779" fromTop="11" />
       <File id="ECB797DC-902E-404A-B9BB-5356BC6AFFC4/d:Common/d:Objects/f:ObjectManager.cs" caret="6131" fromTop="24" />
-      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/f:RadarScreen.cs" caret="4258" fromTop="31" />
     </RecentFiles>
     <RecentEdits>
-      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/f:RadarScreen.cs" caret="287" fromTop="15" />
-      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/d:Utilities/f:MathFunctions.cs" caret="361" fromTop="9" />
-      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/f:RadarScreen.cs" caret="326" fromTop="24" />
-      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/d:Utilities/f:Radar.cs" caret="409" fromTop="13" />
-      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/d:Utilities/f:Radar.cs" caret="70" fromTop="1" />
-      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/d:Utilities/f:Radar.cs" caret="774" fromTop="15" />
-      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/d:Utilities/f:Radar.cs" caret="629" fromTop="11" />
       <File id="ECB797DC-902E-404A-B9BB-5356BC6AFFC4/d:Common/d:Objects/f:ObjectManager.cs" caret="886" fromTop="21" />
       <File id="ECB797DC-902E-404A-B9BB-5356BC6AFFC4/d:Common/f:Offsets.cs" caret="3525" fromTop="22" />
       <File id="ECB797DC-902E-404A-B9BB-5356BC6AFFC4/d:Common/d:Objects/f:ObjectManager.cs" caret="1326" fromTop="13" />
@@ -309,19 +285,6 @@
       <File id="ECB797DC-902E-404A-B9BB-5356BC6AFFC4/d:Common/d:Objects/f:WowGameObject.cs" caret="229" fromTop="6" />
       <File id="ECB797DC-902E-404A-B9BB-5356BC6AFFC4/d:Common/d:Contracts/f:INamed.cs" caret="210" fromTop="10" />
       <File id="ECB797DC-902E-404A-B9BB-5356BC6AFFC4/d:Common/d:Objects/f:WowUnit.cs" caret="251" fromTop="7" />
-      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/f:RadarUtils.cs" caret="881" fromTop="17" />
-      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/d:Blips/f:WowBlip.cs" caret="3165" fromTop="8" />
-      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/f:RadarScreen.cs" caret="326" fromTop="14" />
-      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/f:RadarScreen.cs" caret="326" fromTop="10" />
-      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/f:RadarScreen.cs" caret="40" fromTop="0" />
-      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/f:RadarScreen.cs" caret="326" fromTop="0" />
-      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/f:RadarScreen.cs" caret="4263" fromTop="5" />
-      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/f:RadarScreen.cs" caret="4263" fromTop="2" />
-      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/f:RadarScreen.cs" caret="3781" fromTop="13" />
-      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/f:RadarScreen.cs" caret="3920" fromTop="17" />
-      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/f:RadarScreen.cs" caret="3689" fromTop="8" />
-      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/f:RadarScreen.cs" caret="4229" fromTop="31" />
-      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/f:RadarScreen.cs" caret="3491" fromTop="3" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
