@@ -105,7 +105,7 @@ namespace Radar.Blips
         /// <param name="paintEventArgs">Arguments from the parent's paint event.</param>
         protected override void OnPaint(PaintEventArgs paintEventArgs)
         {
-            if(Settings.Screen.Exclusive && !Tracked)
+            if(Settings.Screen.Exclusive && !Tracked && !BlipObject.IsMe)
                 return;
 
             var g = new GraphicsPath();

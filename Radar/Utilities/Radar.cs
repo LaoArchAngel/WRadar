@@ -2,7 +2,6 @@
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
-using System.Threading;
 using System.Windows.Forms;
 using System.Linq;
 using BlackRain.Common.Contracts;
@@ -26,16 +25,16 @@ namespace Radar.Utilities
         /// <param name="screen">The screen containing the blips.</param>
         public static void CleanBlips(Control screen)
         {
-            screen.SuspendLayout();
             var blips =
                 screen.Controls.OfType<WowBlip>().Where(
-                    x => !ObjectManager.Objects.Exists(y => y.GUID == x.BlipObject.GUID));
+                    x =>
+                    !ObjectManager.Objects.Exists(y => (y.GUID == x.BlipObject.GUID)) ||
+                    (Settings.Screen.Exclusive && !x.Tracked) && !(x is WowMeBlip));
 
             foreach (var wowBlip in blips)
             {
                 screen.Controls.Remove(wowBlip);
             }
-            screen.ResumeLayout();
         }
 
         /// <summary>
@@ -46,15 +45,20 @@ namespace Radar.Utilities
         /// <param name="tp">Shows the name of <see cref="blip"/> if it impliments <see cref="INamed"/></param>
         public static void DrawWowBlip(WowBlip blip, Control screen, ToolTip tp)
         {
-            if (Settings.Screen.Exclusive && !blip.Tracked)
+            var current = GetWowBlipByGuid(screen, blip.BlipObject.GUID);
+
+            if (Settings.Screen.Exclusive && !(blip.BlipObject.IsMe))
             {
-                return;
+                if (current == null && !blip.Tracked)
+                    return;
+
+                if (current != null && !current.Tracked)
+                    return;
             }
 
             var x = MathFunctions.RelativeCoordinate(ObjectManager.Me.X, blip.BlipObject.X, screen.Width/2F);
             var y = MathFunctions.RelativeCoordinate(ObjectManager.Me.Y, blip.BlipObject.Y, screen.Height/2F);
             var p = new Point(y, x);
-            var current = GetWowBlipByGuid(screen, blip.BlipObject.GUID);
 
             if (current != null)
             {
@@ -66,11 +70,6 @@ namespace Radar.Utilities
             screen.Controls.Add(blip);
 
             blip.Location = p;
-
-            if (blip.Tracked)
-            {
-                //blip.Tracking.Sound.Play();
-            }
 
             if (blip.BlipObject is INamed)
             {
@@ -112,6 +111,11 @@ namespace Radar.Utilities
 
             // If Me is not set, something is wrong.
             if (ObjectManager.Me == null) return;
+            if (ObjectManager.Me.GUID == 0)
+            {
+                ObjectManager.Reset();
+                return;
+            }
 
             CleanBlips(screen);
 
@@ -154,7 +158,7 @@ namespace Radar.Utilities
             if (target != null) target.BringToFront();
             if (me != null) me.BringToFront();
 
-            screen.Refresh();
+            //screen.Refresh();
         }
 
         /// <summary>

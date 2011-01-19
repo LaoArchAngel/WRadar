@@ -120,4 +120,7 @@
 	<data name="WowMeBlip_FillContextMenu_Tracking">
 		<value xml:space="preserve">Tracking</value>
 	</data>
+	<data name="WowMeBlip_FillContextMenu_Exclusive_Mode">
+		<value xml:space="preserve">Exclusive Mode</value>
+	</data>
 </root>

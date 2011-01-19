@@ -9,16 +9,11 @@
   </SettingsComponent>
   <RecentFiles>
     <RecentFiles>
-      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/d:Settings/f:Tracking.cs" caret="438" fromTop="20" />
-      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/d:Tracking/f:TrackingList.cs" caret="1730" fromTop="33" />
-      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/f:Program.cs" caret="412" fromTop="18" />
       <File id="FF96B417-63D1-4226-858F-D766ABF989AF/d:Settings/f:Colors.cs" caret="773" fromTop="16" />
       <File id="FF96B417-63D1-4226-858F-D766ABF989AF/f:app.config" caret="0" fromTop="0" />
       <File id="FF96B417-63D1-4226-858F-D766ABF989AF/d:Tracking/f:Trackable.cs" caret="432" fromTop="17" />
-      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/d:Properties/f:Resources.resx" caret="0" fromTop="0" />
       <File id="FF96B417-63D1-4226-858F-D766ABF989AF/d:Blips/f:WowBlip.Designer.cs" caret="2912" fromTop="26" />
       <File id="FF96B417-63D1-4226-858F-D766ABF989AF/d:Utilities/f:TrackingListEditor.Designer.cs" caret="6673" fromTop="109" />
-      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/d:Utilities/f:Tracking.cs" caret="229" fromTop="9" />
       <File id="ECB797DC-902E-404A-B9BB-5356BC6AFFC4/d:Common/f:Point.cs" caret="0" fromTop="0" />
       <File id="ECB797DC-902E-404A-B9BB-5356BC6AFFC4/d:Common/d:Objects/f:WowCorpse.cs" caret="712" fromTop="23" />
       <File id="ECB797DC-902E-404A-B9BB-5356BC6AFFC4/d:Common/f:Utilities.cs" caret="0" fromTop="0" />
@@ -26,51 +21,56 @@
       <File id="FF96B417-63D1-4226-858F-D766ABF989AF/d:Utilities/f:TrackableEditor.cs" caret="0" fromTop="0" />
       <File id="FF96B417-63D1-4226-858F-D766ABF989AF/d:Utilities/f:TrackingListEditor.cs" caret="2251" fromTop="5" />
       <File id="FF96B417-63D1-4226-858F-D766ABF989AF/d:Screen/f:Radar.Designer.cs" caret="4019" fromTop="96" />
-      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/d:Blips/f:WowUnitBlip.cs" caret="1776" fromTop="21" />
-      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/d:Blips/f:WowPlayerBlip.cs" caret="972" fromTop="30" />
-      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/d:Blips/f:WowMeBlip.cs" caret="684" fromTop="16" />
       <File id="ECB797DC-902E-404A-B9BB-5356BC6AFFC4/d:Common/d:Objects/f:WowUnit.cs" caret="9175" fromTop="15" />
-      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/d:Blips/f:WowGOBlip.cs" caret="699" fromTop="26" />
       <File id="ECB797DC-902E-404A-B9BB-5356BC6AFFC4/d:Common/d:Objects/f:WowPlayer.cs" caret="2172" fromTop="6" />
       <File id="FF96B417-63D1-4226-858F-D766ABF989AF/d:Settings/f:Persistance.cs" caret="0" fromTop="0" />
-      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/d:Screen/f:Radar.cs" caret="2602" fromTop="22" />
-      <File id="ECB797DC-902E-404A-B9BB-5356BC6AFFC4/d:Common/d:Objects/f:ObjectManager.cs" caret="6533" fromTop="24" />
-      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/d:Blips/f:WowBlip.cs" caret="1912" fromTop="9" />
+      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/d:Blips/f:WowPlayerBlip.cs" caret="746" fromTop="15" />
+      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/d:Settings/f:Tracking.cs" caret="0" fromTop="0" />
+      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/d:Properties/f:Resources.resx" caret="0" fromTop="0" />
+      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/d:Blips/f:WowMeBlip.cs" caret="1723" fromTop="15" />
+      <File id="ECB797DC-902E-404A-B9BB-5356BC6AFFC4/d:Common/d:Objects/f:WowObject.cs" caret="1343" fromTop="21" />
+      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/d:Blips/f:WowUnitBlip.cs" caret="1022" fromTop="14" />
+      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/d:Blips/f:WowGOBlip.cs" caret="526" fromTop="16" />
+      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/d:Utilities/f:Tracking.cs" caret="509" fromTop="0" />
+      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/d:Tracking/f:TrackingList.cs" caret="1756" fromTop="22" />
       <File id="FF96B417-63D1-4226-858F-D766ABF989AF/d:Settings/f:Screen.cs" caret="562" fromTop="22" />
-      <File id="ECB797DC-902E-404A-B9BB-5356BC6AFFC4/d:Common/d:Objects/f:WowObject.cs" caret="3044" fromTop="20" />
-      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/d:Utilities/f:Radar.cs" caret="5342" fromTop="27" />
+      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/d:Blips/f:WowBlip.cs" caret="4819" fromTop="2" />
+      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/f:Program.cs" caret="419" fromTop="20" />
+      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/d:Screen/f:Radar.cs" caret="2602" fromTop="28" />
+      <File id="ECB797DC-902E-404A-B9BB-5356BC6AFFC4/d:Common/d:Objects/f:ObjectManager.cs" caret="6823" fromTop="28" />
+      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/d:Utilities/f:Radar.cs" caret="3983" fromTop="7" />
     </RecentFiles>
     <RecentEdits>
-      <File id="ECB797DC-902E-404A-B9BB-5356BC6AFFC4/d:Common/d:Objects/f:WowUnit.cs" caret="783" fromTop="341" />
-      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/d:Blips/f:WowBlip.cs" caret="4921" fromTop="30" />
-      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/d:Blips/f:WowUnitBlip.cs" caret="1774" fromTop="21" />
-      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/d:Blips/f:WowPlayerBlip.cs" caret="972" fromTop="30" />
-      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/d:Blips/f:WowMeBlip.cs" caret="684" fromTop="16" />
-      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/d:Blips/f:WowGOBlip.cs" caret="945" fromTop="30" />
-      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/d:Blips/f:WowBlip.cs" caret="4580" fromTop="20" />
-      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/d:Blips/f:WowBlip.cs" caret="4563" fromTop="20" />
-      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/d:Blips/f:WowBlip.cs" caret="2945" fromTop="16" />
-      <File id="ECB797DC-902E-404A-B9BB-5356BC6AFFC4/d:Common/d:Objects/f:WowUnit.cs" caret="783" fromTop="17" />
-      <File id="ECB797DC-902E-404A-B9BB-5356BC6AFFC4/d:Common/d:Objects/f:WowUnit.cs" caret="10875" fromTop="349" />
-      <File id="ECB797DC-902E-404A-B9BB-5356BC6AFFC4/d:Common/d:Objects/f:WowPlayer.cs" caret="3749" fromTop="45" />
-      <File id="ECB797DC-902E-404A-B9BB-5356BC6AFFC4/d:Common/d:Objects/f:WowPlayer.cs" caret="4040" fromTop="20" />
-      <File id="ECB797DC-902E-404A-B9BB-5356BC6AFFC4/d:Common/d:Objects/f:WowPlayer.cs" caret="3728" fromTop="40" />
-      <File id="ECB797DC-902E-404A-B9BB-5356BC6AFFC4/d:Common/d:Objects/f:WowObject.cs" caret="975" fromTop="26" />
-      <File id="ECB797DC-902E-404A-B9BB-5356BC6AFFC4/d:Common/d:Objects/f:WowObject.cs" caret="4640" fromTop="148" />
-      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/d:Utilities/f:Radar.cs" caret="3554" fromTop="23" />
-      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/d:Utilities/f:Radar.cs" caret="3424" fromTop="22" />
-      <File id="ECB797DC-902E-404A-B9BB-5356BC6AFFC4/d:Common/d:Objects/f:WowPlayer.cs" caret="2755" fromTop="22" />
-      <File id="ECB797DC-902E-404A-B9BB-5356BC6AFFC4/d:Common/d:Objects/f:WowPlayer.cs" caret="3446" fromTop="28" />
-      <File id="ECB797DC-902E-404A-B9BB-5356BC6AFFC4/d:Common/d:Objects/f:WowPlayer.cs" caret="2685" fromTop="19" />
-      <File id="ECB797DC-902E-404A-B9BB-5356BC6AFFC4/d:Common/d:Objects/f:WowPlayer.cs" caret="2986" fromTop="19" />
-      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/d:Settings/f:Screen.cs" caret="252" fromTop="13" />
-      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/d:Settings/f:Screen.cs" caret="552" fromTop="22" />
-      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/d:Blips/f:WowBlip.cs" caret="3566" fromTop="9" />
-      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/d:Blips/f:WowBlip.cs" caret="3646" fromTop="11" />
-      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/d:Utilities/f:Radar.cs" caret="1828" fromTop="15" />
-      <File id="ECB797DC-902E-404A-B9BB-5356BC6AFFC4/d:Common/d:Objects/f:ObjectManager.cs" caret="649" fromTop="24" />
       <File id="ECB797DC-902E-404A-B9BB-5356BC6AFFC4/d:Common/d:Objects/f:ObjectManager.cs" caret="17938" fromTop="455" />
       <File id="ECB797DC-902E-404A-B9BB-5356BC6AFFC4/d:Common/d:Objects/f:ObjectManager.cs" caret="6203" fromTop="16" />
+      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/d:Utilities/f:Radar.cs" caret="358" fromTop="15" />
+      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/d:Blips/f:WowMeBlip.cs" caret="867" fromTop="19" />
+      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/d:Blips/f:WowMeBlip.cs" caret="1889" fromTop="17" />
+      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/d:Blips/f:WowMeBlip.cs" caret="2099" fromTop="23" />
+      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/d:Utilities/f:Radar.cs" caret="358" fromTop="13" />
+      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/d:Utilities/f:Radar.cs" caret="358" fromTop="176" />
+      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/d:Utilities/f:Radar.cs" caret="100" fromTop="3" />
+      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/d:Utilities/f:Radar.cs" caret="358" fromTop="14" />
+      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/d:Utilities/f:Radar.cs" caret="358" fromTop="176" />
+      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/d:Utilities/f:Radar.cs" caret="358" fromTop="22" />
+      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/d:Utilities/f:Radar.cs" caret="358" fromTop="21" />
+      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/d:Utilities/f:Radar.cs" caret="358" fromTop="176" />
+      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/d:Utilities/f:Radar.cs" caret="358" fromTop="21" />
+      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/d:Blips/f:WowBlip.cs" caret="3623" fromTop="7" />
+      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/d:Blips/f:WowMeBlip.cs" caret="3908" fromTop="12" />
+      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/d:Utilities/f:Radar.cs" caret="358" fromTop="13" />
+      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/d:Utilities/f:Radar.cs" caret="358" fromTop="23" />
+      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/d:Utilities/f:Radar.cs" caret="358" fromTop="25" />
+      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/d:Utilities/f:Radar.cs" caret="358" fromTop="35" />
+      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/d:Utilities/f:Radar.cs" caret="358" fromTop="20" />
+      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/d:Utilities/f:Radar.cs" caret="358" fromTop="11" />
+      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/d:Utilities/f:Radar.cs" caret="358" fromTop="174" />
+      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/d:Utilities/f:Radar.cs" caret="358" fromTop="21" />
+      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/d:Utilities/f:Radar.cs" caret="358" fromTop="25" />
+      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/d:Utilities/f:Radar.cs" caret="358" fromTop="174" />
+      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/d:Utilities/f:Radar.cs" caret="358" fromTop="23" />
+      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/d:Utilities/f:Radar.cs" caret="358" fromTop="21" />
+      <File id="FF96B417-63D1-4226-858F-D766ABF989AF/d:Utilities/f:Radar.cs" caret="6912" fromTop="179" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
@@ -99,12 +99,12 @@
       <Item value="RadarToClear" priority="1" />
     </ItemStatistics>
     <ItemStatistics item="Default">
-      <Item value="new" priority="112" />
+      <Item value="new" priority="113" />
       <Item value="Brush`0" priority="1" />
       <Item value="SolidBrush`0" priority="13" />
       <Item value="Colors`0" priority="43" />
       <Item value="Rectangle" priority="3" />
-      <Item value="if" priority="62" />
+      <Item value="if" priority="67" />
       <Item value="Tracked" priority="6" />
       <Item value="string" priority="24" />
       <Item value="get" priority="3" />
@@ -114,10 +114,10 @@
       <Item value="SoundPlayer`0" priority="9" />
       <Item value="ITrackable`0" priority="0" />
       <Item value="protected" priority="32" />
-      <Item value="return" priority="69" />
-      <Item value="private" priority="35" />
+      <Item value="return" priority="72" />
+      <Item value="private" priority="36" />
       <Item value="_defaultSound" priority="2" />
-      <Item value="null" priority="30" />
+      <Item value="null" priority="33" />
       <Item value="SoundPlayer" priority="3" />
       <Item value="DefaultSoundFile" priority="0" />
       <Item value="abstract" priority="5" />
@@ -135,12 +135,12 @@
       <Item value="_types" priority="3" />
       <Item value="WowBlip`0" priority="5" />
       <Item value="this" priority="40" />
-      <Item value="BlipObject" priority="37" />
-      <Item value="true" priority="16" />
+      <Item value="BlipObject" priority="38" />
+      <Item value="true" priority="17" />
       <Item value="Names`0" priority="3" />
       <Item value="WowTypes`0" priority="6" />
       <Item value="override" priority="18" />
-      <Item value="void" priority="25" />
+      <Item value="void" priority="26" />
       <Item value="virtual" priority="1" />
       <Item value="TrackName`0" priority="1" />
       <Item value="NamePattern" priority="1" />
@@ -158,7 +158,7 @@
       <Item value="Patterns" priority="0" />
       <Item value="_patterns" priority="1" />
       <Item value="Pen" priority="6" />
-      <Item value="Settings" priority="52" />
+      <Item value="Settings" priority="56" />
       <Item value="BlipColor" priority="7" />
       <Item value="WowUnitBlip`0" priority="1" />
       <Item value="wowUnit" priority="2" />
@@ -174,14 +174,14 @@
       <Item value="Flags" priority="0" />
       <Item value="float" priority="2" />
       <Item value="_radarZoom" priority="3" />
-      <Item value="else" priority="7" />
-      <Item value="ObjectManager`0" priority="9" />
+      <Item value="else" priority="8" />
+      <Item value="ObjectManager`0" priority="10" />
       <Item value="RadarReady" priority="0" />
       <Item value="pRadarScreen" priority="11" />
-      <Item value="var" priority="60" />
+      <Item value="var" priority="61" />
       <Item value="ObjectType" priority="0" />
       <Item value="Offsets`0" priority="0" />
-      <Item value="as" priority="12" />
+      <Item value="as" priority="13" />
       <Item value="unit" priority="7" />
       <Item value="IsTarget" priority="0" />
       <Item value="_petDead" priority="1" />
@@ -189,7 +189,7 @@
       <Item value="_target" priority="1" />
       <Item value="_targetDead" priority="1" />
       <Item value="_unitDead" priority="1" />
-      <Item value="blip" priority="28" />
+      <Item value="blip" priority="33" />
       <Item value="RadarZoom" priority="1" />
       <Item value="x" priority="1" />
       <Item value="p" priority="5" />
@@ -212,7 +212,7 @@
       <Item value="named" priority="6" />
       <Item value="np" priority="0" />
       <Item value="tracked" priority="2" />
-      <Item value="is" priority="3" />
+      <Item value="is" priority="5" />
       <Item value="INamed`0" priority="5" />
       <Item value="Tracking" priority="5" />
       <Item value="GetTrackable`0" priority="2" />
@@ -224,9 +224,9 @@
       <Item value="wowBlip" priority="0" />
       <Item value="GetWowBlipByGuid`0" priority="1" />
       <Item value="ulong" priority="0" />
-      <Item value="Utilities" priority="14" />
-      <Item value="Radar`0" priority="8" />
-      <Item value="current" priority="4" />
+      <Item value="Utilities" priority="17" />
+      <Item value="Radar`0" priority="9" />
+      <Item value="current" priority="9" />
       <Item value="PlayTrackingSound`0" priority="0" />
       <Item value="BlackRain" priority="0" />
       <Item value="wowGameObject" priority="1" />
@@ -238,7 +238,7 @@
       <Item value="ToolTip`0" priority="2" />
       <Item value="ToolTip" priority="0" />
       <Item value="tp" priority="2" />
-      <Item value="false" priority="8" />
+      <Item value="false" priority="9" />
       <Item value="AntiAlias" priority="0" />
       <Item value="paintEventArgs" priority="7" />
       <Item value="trackType" priority="0" />
@@ -259,13 +259,13 @@
       <Item value="default" priority="0" />
       <Item value="break" priority="0" />
       <Item value="event" priority="5" />
-      <Item value="EventHandler`0" priority="4" />
+      <Item value="EventHandler`0" priority="5" />
       <Item value="ITrackables`0" priority="0" />
       <Item value="add" priority="0" />
       <Item value="lock" priority="0" />
       <Item value="NamesChanged" priority="2" />
       <Item value="e" priority="8" />
-      <Item value="EventArgs`0" priority="3" />
+      <Item value="EventArgs`0" priority="4" />
       <Item value="OnNamesChanged`0" priority="0" />
       <Item value="WowTypesChanged" priority="1" />
       <Item value="OnWowTypesChanged`0" priority="0" />
@@ -299,7 +299,7 @@
       <Item value="BackColor" priority="5" />
       <Item value="Image`0" priority="3" />
       <Item value="Bitmap`0" priority="1" />
-      <Item value="Screen`0" priority="10" />
+      <Item value="Screen`0" priority="12" />
       <Item value="bm" priority="14" />
       <Item value="toClear" priority="0" />
       <Item value="sb" priority="1" />
@@ -309,17 +309,17 @@
       <Item value="BackgroundImage" priority="0" />
       <Item value="rec" priority="1" />
       <Item value="Invalid" priority="0" />
-      <Item value="object" priority="1" />
-      <Item value="ToolStripMenuItem`0" priority="4" />
-      <Item value="Text" priority="3" />
+      <Item value="object" priority="2" />
+      <Item value="ToolStripMenuItem`0" priority="5" />
+      <Item value="Text" priority="4" />
       <Item value="process" priority="2" />
       <Item value="Click" priority="0" />
       <Item value="ProcessSelected`0" priority="1" />
       <Item value="EventHandler" priority="0" />
-      <Item value="Name" priority="6" />
+      <Item value="Name" priority="7" />
       <Item value="menuItem" priority="3" />
       <Item value="wowInstances" priority="1" />
-      <Item value="sender" priority="3" />
+      <Item value="sender" priority="4" />
       <Item value="Convert`0" priority="1" />
       <Item value="id" priority="1" />
       <Item value="old" priority="0" />
@@ -335,10 +335,10 @@
       <Item value="ToolStripItem`0" priority="0" />
       <Item value="ToolStripSeparator`0" priority="0" />
       <Item value="ToolStripSplitButton`0" priority="0" />
-      <Item value="ToolStripButton`0" priority="1" />
-      <Item value="CheckOnClick" priority="0" />
+      <Item value="ToolStripButton`0" priority="2" />
+      <Item value="CheckOnClick" priority="1" />
       <Item value="RightToLeft" priority="0" />
-      <Item value="Checked" priority="0" />
+      <Item value="Checked" priority="1" />
       <Item value="hudMode" priority="4" />
       <Item value="MousePosition" priority="0" />
       <Item value="delta" priority="0" />
@@ -390,7 +390,7 @@
       <Item value="Type`0" priority="0" />
       <Item value="GetType`0" priority="0" />
       <Item value="SaveTrackables`0" priority="0" />
-      <Item value="Tracking`0" priority="11" />
+      <Item value="Tracking`0" priority="14" />
       <Item value="InvariantCultureIgnoreCase" priority="0" />
       <Item value="TrackingList`0" priority="7" />
       <Item value="List&lt;TrackingList&gt;" priority="1" />
@@ -433,6 +433,12 @@
       <Item value="catch" priority="1" />
       <Item value="nOffset" priority="0" />
       <Item value="Me" priority="0" />
+      <Item value="WowMeBlip`0" priority="1" />
+      <Item value="toolStripButton" priority="3" />
+      <Item value="ToolStripButton" priority="0" />
+      <Item value="blipMenu" priority="0" />
+      <Item value="eventArgs" priority="0" />
+      <Item value="exMode" priority="1" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.String">
       <Item value="IsNullOrEmpty`0" priority="4" />
@@ -460,6 +466,7 @@
       <Item value="GUID" priority="4" />
       <Item value="Facing" priority="1" />
       <Item value="ToString`0" priority="0" />
+      <Item value="IsMe" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@Radar.Tracking.Names">
       <Item value="IsNameTracked`0" priority="2" />
@@ -534,7 +541,7 @@
       <Item value="GameObjects" priority="0" />
       <Item value="Units" priority="0" />
       <Item value="Initialized" priority="0" />
-      <Item value="Reset`0" priority="0" />
+      <Item value="Reset`0" priority="1" />
       <Item value="Initialize`0" priority="0" />
       <Item value="GetObjectsOfType`1" priority="0" />
     </ItemStatistics>
@@ -607,10 +614,10 @@
       <Item value="BackColor" priority="1" />
       <Item value="ForeColor" priority="0" />
       <Item value="_trackingMenu" priority="0" />
-      <Item value="Tracked" priority="0" />
+      <Item value="Tracked" priority="6" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@Radar.Utilities.Radar">
-      <Item value="CleanBlips`0" priority="0" />
+      <Item value="CleanBlips`0" priority="1" />
       <Item value="DrawWowBlip`0" priority="0" />
       <Item value="RefreshScreen`0" priority="0" />
       <Item value="ScreenImage`0" priority="3" />
@@ -630,7 +637,7 @@
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Windows.Forms.ContextMenuStrip">
       <Item value="ItemClicked" priority="0" />
-      <Item value="Items" priority="5" />
+      <Item value="Items" priority="6" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:Radar.FRadarScreen">
       <Item value="tp" priority="6" />
@@ -701,7 +708,7 @@
     <ItemStatistics item="Qualified:@Radar.Settings.Screen">
       <Item value="Zoom" priority="5" />
       <Item value="HUDMode" priority="1" />
-      <Item value="Exclusive" priority="2" />
+      <Item value="Exclusive" priority="4" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Drawing.Color">
       <Item value="ToArgb`0" priority="0" />
@@ -739,7 +746,7 @@
       <Item value="ToString`0" priority="3" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Windows.Forms.ToolStripItemCollection">
-      <Item value="Add`0" priority="6" />
+      <Item value="Add`0" priority="7" />
       <Item value="Clear`0" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.Convert">
@@ -770,8 +777,8 @@
       <Item value="Exit`0" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Windows.Forms.ToolStripButton">
-      <Item value="CheckedChanged" priority="0" />
-      <Item value="Checked" priority="1" />
+      <Item value="CheckedChanged" priority="1" />
+      <Item value="Checked" priority="2" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.Drawing.Drawing2D.FillMode">
       <Item value="Alternate" priority="2" />
@@ -857,7 +864,7 @@
     </ItemStatistics>
     <ItemStatistics item="Qualified:@Radar.Settings.Tracking">
       <Item value="Default" priority="2" />
-      <Item value="TrackingLists" priority="2" />
+      <Item value="TrackingLists" priority="4" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Windows.Forms.TextBox">
       <Item value="Text" priority="3" />

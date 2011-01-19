@@ -61,6 +61,15 @@ namespace Radar.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Exclusive Mode.
+        /// </summary>
+        internal static string WowMeBlip_FillContextMenu_Exclusive_Mode {
+            get {
+                return ResourceManager.GetString("WowMeBlip_FillContextMenu_Exclusive_Mode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to HUD Mode.
         /// </summary>
         internal static string WowMeBlip_FillContextMenu_HUD_Mode {

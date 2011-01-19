@@ -31,7 +31,7 @@ namespace Radar.Blips
         {
             blipMenu.Items.Add(new ToolStripSeparator());
             
-            var hudMode = new ToolStripButton
+            var toolStripButton = new ToolStripButton
                               {
                                   Name = "HUDMode",
                                   Text = Resources.WowMeBlip_FillContextMenu_HUD_Mode,
@@ -39,10 +39,27 @@ namespace Radar.Blips
                                   Checked = false
                               };
 
-            blipMenu.Items.Add(hudMode);
-            hudMode.CheckedChanged += SetHUDMode;
+            blipMenu.Items.Add(toolStripButton);
+            toolStripButton.CheckedChanged += SetHUDMode;
 
+            toolStripButton = new ToolStripButton
+                                  {
+                                      Name = "Exclusive",
+                                      Text = Resources.WowMeBlip_FillContextMenu_Exclusive_Mode,
+                                      CheckOnClick = true,
+                                      Checked = false
+                                  };
+            blipMenu.Items.Add(toolStripButton);
+            toolStripButton.CheckedChanged += SetExclusiveMode;
+        }
 
+        private static void SetExclusiveMode(object sender, EventArgs eventArgs)
+        {
+            var exMode = sender as ToolStripButton;
+
+            if (exMode == null) return;
+
+            Settings.Screen.Exclusive = exMode.Checked;
         }
 
         private void SetHUDMode(object sender, EventArgs e)
