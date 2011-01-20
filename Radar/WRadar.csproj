@@ -93,6 +93,7 @@
     <Compile Include="Screen\Radar.Designer.cs">
       <DependentUpon>Radar.cs</DependentUpon>
     </Compile>
+    <Compile Include="Screen\ScreenDrawer.cs" />
     <Compile Include="Settings\Colors.cs" />
     <Compile Include="Settings\Persistance.cs" />
     <Compile Include="Settings\Screen.cs" />
@@ -154,15 +155,6 @@
       <DependentUpon>WowObjectDetails.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
-    <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
     <Compile Include="Utilities\ObjectQueries.cs" />
     <Compile Include="Utilities\Radar.cs" />
   </ItemGroup>
