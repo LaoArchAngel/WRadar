@@ -150,5 +150,33 @@ namespace BlackRain.Common.Objects
         }
 
         #endregion
+                
+        #region Equals and GetHashCode implementation
+        public override bool Equals(object obj)
+		{
+			WowObject other = obj as WowObject;
+			if (other == null)
+				return false;
+			
+			//	WowObjects are equal if both their GUI and type are equal.  If only one of these is equal, chances
+			//	are that the GUID is being recycled.  This is HIGHLY UNLIKELY to happen, but it is not technically
+			//	impossible.
+			return (GUID == other.GUID) && (Type == other.Type);
+		}
+        
+		public static bool operator ==(WowObject lhs, WowObject rhs)
+		{
+			if (ReferenceEquals(lhs, rhs))
+				return true;
+			if (ReferenceEquals(lhs, null) || ReferenceEquals(rhs, null))
+				return false;
+			return lhs.Equals(rhs);
+		}
+        
+		public static bool operator !=(WowObject lhs, WowObject rhs)
+		{
+			return !(lhs == rhs);
+		}
+        #endregion
     }
 }
