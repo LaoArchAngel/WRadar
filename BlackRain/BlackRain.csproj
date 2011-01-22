@@ -42,6 +42,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Dependencies\fasmdll_managed.dll</HintPath>
     </Reference>
+    <Reference Include="MemoryIO, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dependencies\MemoryIO.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -52,18 +56,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Common\Contracts\INamed.cs" />
-    <Compile Include="Common\Logging.cs" />
-    <Compile Include="Common\Objects\ObjectManager.cs" />
-    <Compile Include="Common\Objects\WowContainer.cs" />
-    <Compile Include="Common\Objects\WowCorpse.cs" />
-    <Compile Include="Common\Objects\WowDynamicObject.cs" />
-    <Compile Include="Common\Objects\WowGameObject.cs" />
-    <Compile Include="Common\Objects\WowItem.cs" />
-    <Compile Include="Common\Objects\WowObject.cs" />
-    <Compile Include="Common\Objects\WowPlayer.cs" />
-    <Compile Include="Common\Objects\WowPlayerMe.cs" />
-    <Compile Include="Common\Objects\WowUnit.cs" />
+    <Compile Include="WowObjects\Contracts\INamed.cs" />
+    <Compile Include="ObjectManager.cs" />
+    <Compile Include="WowObjects\WowContainer.cs" />
+    <Compile Include="WowObjects\WowCorpse.cs" />
+    <Compile Include="WowObjects\WowDynamicObject.cs" />
+    <Compile Include="WowObjects\WowGameObject.cs" />
+    <Compile Include="WowObjects\WowItem.cs" />
+    <Compile Include="WowObjects\WowObject.cs" />
+    <Compile Include="WowObjects\WowPlayer.cs" />
+    <Compile Include="WowObjects\WowPlayerMe.cs" />
+    <Compile Include="WowObjects\WowUnit.cs" />
     <Compile Include="Common\Offsets.cs" />
     <Compile Include="Common\Point.cs" />
     <Compile Include="Common\Utilities.cs" />

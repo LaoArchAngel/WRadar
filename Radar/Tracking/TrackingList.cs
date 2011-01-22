@@ -6,6 +6,8 @@ using System.Media;
 using System.Text;
 using System.Xml.Serialization;
 using BlackRain.Common.Objects;
+using BlackRain.WowObject;
+using BlackRain.WowObjects;
 
 namespace Radar.Tracking
 {

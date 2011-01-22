@@ -5,6 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using BlackRain.Common.Objects;
+using BlackRain.WowObject;
+using BlackRain.WowObjects;
 using Radar.Properties;
 
 namespace Radar.Blips

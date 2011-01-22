@@ -10,11 +10,11 @@ namespace BlackRain.Common
         /// <summary>
         /// Memory locations specific to the ObjectManager.
         /// </summary>
-        public enum ObjectManager
+        public enum ObjectManager : uint 
         {
-            Tls = 0x8B3F78,
-            CurMgr = 0x462C,
-            LocalGuid = 0xB8,
+            ClientConnection = 0x8B3F78,
+            CurrentManager = 0x462C,
+            LocalGUID = 0xB8,
             FirstObject = 0xB4,
             NextObject = 0x3C,
         }

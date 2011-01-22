@@ -2,6 +2,8 @@
 using System.Media;
 using BlackRain.Common.Contracts;
 using BlackRain.Common.Objects;
+using BlackRain.WowObject;
+using BlackRain.WowObjects;
 
 namespace Radar.Tracking
 {

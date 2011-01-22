@@ -4,6 +4,8 @@ using System.Drawing.Drawing2D;
 using System.Windows.Forms;
 using BlackRain.Common.Contracts;
 using BlackRain.Common.Objects;
+using BlackRain.WowObject;
+using BlackRain.WowObjects;
 using Radar.Settings;
 using Radar.Tracking;
 

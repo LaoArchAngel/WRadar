@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Drawing;
+using BlackRain.WowObject;
+using BlackRain.WowObjects;
 
 namespace Radar.Settings
 {
@@ -47,7 +49,7 @@ namespace Radar.Settings
         }
 
         /// <summary>
-        /// Gets or sets the color to be applied to <see cref="Blips.WowPlayerBlip"/> controls when the <see cref="BlackRain.Common.Objects.WowPlayer"/> is dead.
+        /// Gets or sets the color to be applied to <see cref="Blips.WowPlayerBlip"/> controls when the <see cref="WowPlayer"/> is dead.
         /// </summary>
         public static Color PlayerDead
         {

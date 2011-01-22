@@ -1,6 +1,8 @@
 ﻿using System.Drawing;
 using System.Drawing.Drawing2D;
 using BlackRain.Common.Objects;
+using BlackRain.WowObject;
+using BlackRain.WowObjects;
 
 namespace Radar.Blips
 {
