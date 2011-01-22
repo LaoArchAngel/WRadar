@@ -1,6 +1,6 @@
 ﻿using BlackRain.WowObjects;
 
-namespace BlackRain.Common.Objects
+namespace BlackRain.WowObjects
 {
     /// <summary>
     /// Player corpses.

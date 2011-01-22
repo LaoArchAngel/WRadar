@@ -1,9 +1,8 @@
 using System;
 using BlackRain.Common;
-using BlackRain.Common.Objects;
-using BlackRain.WowObjects;
+using MemoryIO;
 
-namespace BlackRain.WowObject
+namespace BlackRain.WowObjects
 {
     /// <summary>
     /// Represents your player (character).
@@ -26,7 +25,7 @@ namespace BlackRain.WowObject
         {
             get
             {
-                return ObjectManager.Memory.ReadASCIIString(ObjectManager.ReadRelative<uint>((uint)Offsets.WowPlayerMe.Zone), 255);
+            	return Memory.Read<string>((IntPtr)(ObjectManager.CurrentManager.ToInt32() + (uint)Offsets.WowPlayerMe.Zone));
             }
         }
 

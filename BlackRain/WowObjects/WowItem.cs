@@ -1,6 +1,6 @@
 ﻿using BlackRain.Common;
 
-namespace BlackRain.WowObject
+namespace BlackRain.WowObjects
 {
     /// <summary>
     /// An item.

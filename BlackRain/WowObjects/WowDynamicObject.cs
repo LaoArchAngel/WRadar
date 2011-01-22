@@ -1,6 +1,6 @@
 ﻿using BlackRain.Common;
 
-namespace BlackRain.WowObject
+namespace BlackRain.WowObjects
 {
     /// <summary>
     /// A Dynamic Object, such as Death and Decay.

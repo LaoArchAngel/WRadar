@@ -1,4 +1,4 @@
-﻿namespace BlackRain.Common.Objects
+﻿namespace BlackRain.WowObjects
 {
     /// <summary>
     /// Contains information about WowContainers.

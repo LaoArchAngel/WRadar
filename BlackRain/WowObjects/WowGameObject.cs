@@ -2,7 +2,7 @@
 using BlackRain.Common;
 using BlackRain.Common.Contracts;
 
-namespace BlackRain.WowObject
+namespace BlackRain.WowObjects
 {
     /// <summary>
     /// A Game Object, such as a herb, but also a treasure box.

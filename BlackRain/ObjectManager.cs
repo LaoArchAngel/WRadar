@@ -27,9 +27,14 @@ namespace BlackRain
 
 		#region Private
 
-		private static IntPtr CurrentManager { get; set; }
 		private static Dictionary<ulong, WowObjects.WowObject> ObjectDictionary { get; set; }
 		private static Process WowProcess { get; set; }
+
+		#endregion
+
+		#region Internal
+
+		internal static IntPtr CurrentManager { get; private set; }
 
 		#endregion
 
