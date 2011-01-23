@@ -14,7 +14,7 @@ namespace BlackRain.WowObjects
         /// </summary>
         /// <param name="baseAddress"></param>
         public WowPlayerMe(IntPtr baseAddress)
-            : base (baseAddress)
+            : base(baseAddress)
         {
         }
 
@@ -23,10 +23,7 @@ namespace BlackRain.WowObjects
         /// </summary>
         public string Zone
         {
-            get
-            {
-            	return Memory.Read<string>((IntPtr)(ObjectManager.CurrentManager.ToInt32() + (uint)Offsets.WowPlayerMe.Zone));
-            }
+            get { return Memory.ReadRelative<string>((IntPtr) Offsets.WowPlayerMe.Zone); }
         }
 
         /// <summary>
@@ -34,10 +31,7 @@ namespace BlackRain.WowObjects
         /// </summary>
         public string SubZone
         {
-            get
-            {
-                return ObjectManager.Memory.ReadASCIIString(ObjectManager.ReadRelative<uint>((uint)Offsets.WowPlayerMe.SubZone), 255);
-            }
+            get { return Memory.ReadRelative<string>((IntPtr) Offsets.WowPlayerMe.SubZone); }
         }
 
         /// <summary>
@@ -45,7 +39,7 @@ namespace BlackRain.WowObjects
         /// </summary>
         public int Copper
         {
-            get { return GetStorageField<int>((uint)Offsets.WowPlayerFields.PLAYER_FIELD_COINAGE); }
+            get { return GetStorageField<int>((uint) Descriptors.WowPlayerFields.PLAYER_FIELD_COINAGE); }
         }
 
         /// <summary>
@@ -53,13 +47,19 @@ namespace BlackRain.WowObjects
         /// </summary>
         /// <value>The silver.</value>
         /// 19/10/2010 17:57
-        public int Silver { get { return Copper/100; } }
+        public int Silver
+        {
+            get { return Copper/100; }
+        }
 
         /// <summary>
         /// Gets the gold.
         /// </summary>
         /// <value>The gold.</value>
         /// 19/10/2010 17:57
-        public int Gold { get { return Silver/100; } }
+        public int Gold
+        {
+            get { return Silver/100; }
+        }
     }
 }

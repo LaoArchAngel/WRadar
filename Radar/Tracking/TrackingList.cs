@@ -1,12 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Media;
-using System.Text;
 using System.Xml.Serialization;
-using BlackRain.Common.Objects;
-using BlackRain.WowObject;
 using BlackRain.WowObjects;
 
 namespace Radar.Tracking
@@ -70,7 +65,10 @@ namespace Radar.Tracking
         {
             var serializer = new XmlSerializer(GetType());
 
-            using (TextWriter writer = new StreamWriter(string.Format("{0}\\{1}_{2}.xml",Settings.Persistance.SaveDir.FullName, GetType().Name, Name)))
+            using (
+                TextWriter writer =
+                    new StreamWriter(string.Format("{0}\\{1}_{2}.xml", Settings.Persistance.SaveDir.FullName,
+                                                   GetType().Name, Name)))
             {
                 serializer.Serialize(writer, this);
             }

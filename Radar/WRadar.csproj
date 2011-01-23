@@ -93,7 +93,6 @@
     <Compile Include="Screen\Radar.Designer.cs">
       <DependentUpon>Radar.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screen\ScreenDrawer.cs" />
     <Compile Include="Settings\Colors.cs" />
     <Compile Include="Settings\Persistance.cs" />
     <Compile Include="Settings\Screen.cs" />
@@ -110,6 +109,7 @@
     <Compile Include="Utilities\ReadOnlyPropertyGrid.Designer.cs">
       <DependentUpon>ReadOnlyPropertyGrid.cs</DependentUpon>
     </Compile>
+    <Compile Include="Utilities\Security.cs" />
     <Compile Include="Utilities\TrackableEditor.cs">
       <SubType>Form</SubType>
     </Compile>

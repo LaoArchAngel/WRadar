@@ -1,19 +1,20 @@
 ﻿using System;
 using BlackRain.Common;
-using BlackRain.Common.Contracts;
+using BlackRain.WowObjects.Contracts;
+using MemoryIO;
 
 namespace BlackRain.WowObjects
 {
     /// <summary>
     /// A Game Object, such as a herb, but also a treasure box.
     /// </summary>
-    public class WowGameObject : WowObjects.WowObject, INamed
+    public class WowGameObject : WowObject, INamed
     {
         /// <summary>
         /// Ctor.
         /// </summary>
         /// <param name="baseAddress"></param>
-        public WowGameObject(uint baseAddress)
+        public WowGameObject(IntPtr baseAddress)
             : base(baseAddress)
         {
         }
@@ -21,9 +22,9 @@ namespace BlackRain.WowObjects
         /// <summary>
         /// The GameObject's Display ID.
         /// </summary>
-        public int DisplayID
+        public int DisplayId
         {
-            get { return GetStorageField<int>((uint) Offsets.WowGameObjectFields.GAMEOBJECT_DISPLAYID); }
+            get { return GetStorageField<int>((uint) Descriptors.WowGameObjectFields.GAMEOBJECT_DISPLAYID); }
         }
 
         /// <summary>
@@ -31,7 +32,7 @@ namespace BlackRain.WowObjects
         /// </summary>
         public int Faction
         {
-            get { return GetStorageField<int>((uint) Offsets.WowGameObjectFields.GAMEOBJECT_FACTION); }
+            get { return GetStorageField<int>((uint) Descriptors.WowGameObjectFields.GAMEOBJECT_FACTION); }
         }
 
         /// <summary>
@@ -39,7 +40,7 @@ namespace BlackRain.WowObjects
         /// </summary>
         public new int Level
         {
-            get { return GetStorageField<int>((uint) Offsets.WowGameObjectFields.GAMEOBJECT_LEVEL); }
+            get { return GetStorageField<int>((uint) Descriptors.WowGameObjectFields.GAMEOBJECT_LEVEL); }
         }
 
         /// <summary>
@@ -58,17 +59,9 @@ namespace BlackRain.WowObjects
         {
             get
             {
-                try
-                {
-                    return ObjectManager.Memory.ReadASCIIString(
-                        ObjectManager.Memory.ReadUInt(
-                            ObjectManager.Memory.ReadUInt(BaseAddress + (uint) Offsets.WowGameObject.Name1) +
-                            (uint) Offsets.WowGameObject.Name2), 40);
-                }
-                catch (Exception)
-                {
-                    return string.Empty;
-                }
+                return
+                    Memory.Read<string>(Memory.Read<IntPtr>((IntPtr) (BaseAddress.ToInt64() + (uint) Offsets.WowGameObject.ObjectCache),
+                                        (IntPtr) ((uint) Offsets.WowGameObject.ObjectNameCache))) ?? string.Empty;
             }
         }
 
@@ -77,7 +70,7 @@ namespace BlackRain.WowObjects
         /// </summary>
         public override float X
         {
-            get { return ObjectManager.Memory.ReadFloat(BaseAddress + (uint) Offsets.WowObject.GameObjectX); }
+            get { return Memory.ReadAtOffset<float>(BaseAddress, (uint) Offsets.WowObject.GameObjectX); }
         }
 
         /// <summary>
@@ -85,7 +78,7 @@ namespace BlackRain.WowObjects
         /// </summary>
         public override float Y
         {
-            get { return ObjectManager.Memory.ReadFloat(BaseAddress + (uint) Offsets.WowObject.GameObjectY); }
+            get { return Memory.ReadAtOffset<float>(BaseAddress, (uint) Offsets.WowObject.GameObjectY); }
         }
 
         /// <summary>
@@ -93,7 +86,7 @@ namespace BlackRain.WowObjects
         /// </summary>
         public override float Z
         {
-            get { return ObjectManager.Memory.ReadFloat(BaseAddress + (uint) Offsets.WowObject.GameObjectZ); }
+            get { return Memory.ReadAtOffset<float>(BaseAddress, (uint) Offsets.WowObject.GameObjectZ); }
         }
 
         /// <summary>

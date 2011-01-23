@@ -1,15 +1,18 @@
-﻿namespace BlackRain.WowObjects
+﻿using System;
+using BlackRain.Common;
+
+namespace BlackRain.WowObjects
 {
     /// <summary>
     /// Contains information about WowContainers.
     /// </summary>
-    public class WowContainer : WowObjects.WowObject
+    public class WowContainer : WowObject
     {
         /// <summary>
         /// Ctor
         /// </summary>
         /// <param name="baseAddress"></param>
-        public WowContainer(uint baseAddress)
+        public WowContainer(IntPtr baseAddress)
             : base(baseAddress) { }
 
         /// <summary>
@@ -17,7 +20,7 @@
         /// </summary>
         public int Slots
         {
-            get { return GetStorageField<int>((uint)Offsets.WowContainerFields.CONTAINER_FIELD_NUM_SLOTS); }
+            get { return GetStorageField<int>((uint)Descriptors.WowContainerFields.CONTAINER_FIELD_NUM_SLOTS); }
         }
 
         /// <summary>
@@ -25,7 +28,7 @@
         /// </summary>
         public int InSlot
         {
-            get { return GetStorageField<int>((uint)Offsets.WowContainerFields.CONTAINER_FIELD_SLOT_1); }
+            get { return GetStorageField<int>((uint)Descriptors.WowContainerFields.CONTAINER_FIELD_SLOT_1); }
         }
     }
 }

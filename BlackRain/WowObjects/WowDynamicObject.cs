@@ -1,17 +1,18 @@
-﻿using BlackRain.Common;
+﻿using System;
+using BlackRain.Common;
 
 namespace BlackRain.WowObjects
 {
     /// <summary>
     /// A Dynamic Object, such as Death and Decay.
     /// </summary>
-    public class WowDynamicObject : WowObjects.WowObject
+    public class WowDynamicObject : WowObject
     {
         /// <summary>
         /// Ctor.
         /// </summary>
         /// <param name="baseAddress"></param>
-        public WowDynamicObject(uint baseAddress)
+        public WowDynamicObject(IntPtr baseAddress)
             : base(baseAddress)
         {
         }
@@ -21,7 +22,7 @@ namespace BlackRain.WowObjects
         /// </summary>
         public ulong Caster
         {
-            get { return GetStorageField<ulong>((uint)Offsets.WowDynamicObjectFields.DYNAMICOBJECT_CASTER); }
+            get { return GetStorageField<ulong>((uint) Descriptors.WowDynamicObjectFields.DYNAMICOBJECT_CASTER); }
         }
 
         /// <summary>
@@ -29,7 +30,7 @@ namespace BlackRain.WowObjects
         /// </summary>
         public int SpellID
         {
-            get { return GetStorageField<int>((uint)Offsets.WowDynamicObjectFields.DYNAMICOBJECT_SPELLID); }
+            get { return GetStorageField<int>((uint) Descriptors.WowDynamicObjectFields.DYNAMICOBJECT_SPELLID); }
         }
 
         /// <summary>
@@ -37,7 +38,7 @@ namespace BlackRain.WowObjects
         /// </summary>
         public int Radius
         {
-            get { return GetStorageField<int>((uint)Offsets.WowDynamicObjectFields.DYNAMICOBJECT_RADIUS); }
+            get { return GetStorageField<int>((uint) Descriptors.WowDynamicObjectFields.DYNAMICOBJECT_RADIUS); }
         }
     }
 }

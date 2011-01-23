@@ -33,7 +33,7 @@ namespace BlackRain.WowObjects
             {
                 try
                 {
-                    return GetStorageField<ulong>((uint) Offsets.WowObjectFields.OBJECT_FIELD_GUID);
+                    return GetStorageField<ulong>((uint) Descriptors.WowObjectFields.OBJECT_FIELD_GUID);
                 }
                 catch (Exception)
                 {
@@ -47,7 +47,7 @@ namespace BlackRain.WowObjects
         /// </summary>
         public int Type
         {
-            get { return ObjectManager.Memory.ReadInt(BaseAddress + 0x14); }
+            get { return Memory.ReadAtOffset<int>(BaseAddress, (uint)Offsets.ObjectManager.ObjectType); }
         }
 
         /// <summary>
@@ -55,7 +55,7 @@ namespace BlackRain.WowObjects
         /// </summary>
         public uint Entry
         {
-            get { return GetStorageField<uint>((uint) Offsets.WowObjectFields.OBJECT_FIELD_ENTRY); }
+            get { return GetStorageField<uint>((uint) Descriptors.WowObjectFields.OBJECT_FIELD_ENTRY); }
         }
 
         /// <summary>
@@ -63,7 +63,7 @@ namespace BlackRain.WowObjects
         /// </summary>
         public int Level
         {
-            get { return GetStorageField<int>((uint) Offsets.WowUnitFields.UNIT_FIELD_LEVEL); }
+            get { return GetStorageField<int>((uint) Descriptors.WowUnitFields.UNIT_FIELD_LEVEL); }
         }
 
         /// <summary>
@@ -71,7 +71,7 @@ namespace BlackRain.WowObjects
         /// </summary>
         public virtual float X
         {
-            get { return ObjectManager.Memory.ReadFloat(BaseAddress + (uint) Offsets.WowObject.X); }
+            get { return Memory.ReadAtOffset<float>(BaseAddress, (uint) Offsets.WowObject.X); }
         }
 
         /// <summary>
@@ -79,7 +79,7 @@ namespace BlackRain.WowObjects
         /// </summary>
         public virtual float Y
         {
-            get { return ObjectManager.Memory.ReadFloat(BaseAddress + (uint) Offsets.WowObject.Y); }
+            get { return Memory.ReadAtOffset<float>(BaseAddress, (uint) Offsets.WowObject.Y); }
         }
 
         /// <summary>
@@ -87,7 +87,7 @@ namespace BlackRain.WowObjects
         /// </summary>
         public virtual float Z
         {
-            get { return ObjectManager.Memory.ReadFloat(BaseAddress + (uint) Offsets.WowObject.Z); }
+            get { return Memory.ReadAtOffset<float>(BaseAddress, (uint) Offsets.WowObject.Z); }
         }
 
         /// <summary>
@@ -95,7 +95,7 @@ namespace BlackRain.WowObjects
         /// </summary>
         public virtual float Facing
         {
-            get { return ObjectManager.Memory.ReadFloat(BaseAddress + (uint) Offsets.WowObject.Facing); }
+            get { return Memory.ReadAtOffset<float>(BaseAddress, (uint) Offsets.WowObject.Facing); }
         }
 
         /// <summary>
@@ -109,9 +109,9 @@ namespace BlackRain.WowObjects
         /// <summary>
         /// OBJECT_FIELD_SCALE_X
         /// </summary>
-        public int Scale_X
+        public int ScaleX
         {
-            get { return GetStorageField<int>((uint) Offsets.WowObjectFields.OBJECT_FIELD_SCALE_X); }
+            get { return GetStorageField<int>((uint) Descriptors.WowObjectFields.OBJECT_FIELD_SCALE_X); }
         }
 
         /// <summary>
@@ -119,7 +119,7 @@ namespace BlackRain.WowObjects
         /// </summary>
         public int Padding
         {
-            get { return GetStorageField<int>((uint) Offsets.WowObjectFields.OBJECT_FIELD_PADDING); }
+            get { return GetStorageField<int>((uint) Descriptors.WowObjectFields.OBJECT_FIELD_PADDING); }
         }
 
         #region <Storage Field Methods>
@@ -132,11 +132,10 @@ namespace BlackRain.WowObjects
         /// <returns>Descriptor field</returns>
         protected T GetStorageField<T>(uint field) where T : struct
         {
-            field *= 4;
-            var m_pStorage = ObjectManager.Read<uint>(BaseAddress + 0x08);
+            var pStorage = Memory.ReadAtOffset<IntPtr>(BaseAddress, 0x08);
 
             // Uses legacy reading because of errors.
-            return (T) ObjectManager.Memory.ReadObject(m_pStorage + field, typeof (T));
+            return Memory.ReadAtOffset<T>(pStorage, field*4);
         }
 
         /// <summary>
@@ -146,24 +145,24 @@ namespace BlackRain.WowObjects
         /// <typeparam name="T">struct</typeparam>
         /// <param name="field">Descriptor field</param>
         /// <returns>Descriptor field</returns>
-        protected T GetStorageField<T>(Offsets.WowObjectFields field) where T : struct
+        protected T GetStorageField<T>(Descriptors.WowObjectFields field) where T : struct
         {
             return GetStorageField<T>((uint) field);
         }
 
-		/// <summary>
-		/// Gets the descriptor value of a WowObject
-		/// </summary>
-		/// <typeparam name="T">Descriptor struct</typeparam>
-		/// <param name="wowObjectPtr">Base address of any WowObject</param>
-		/// <param name="field">Descriptor field</param>
-		/// <returns>Value of the descriptor field in memory.</returns>
-		public static T GetStorageField<T>(IntPtr wowObjectPtr, uint field) where T : struct
-		{
-			var descriptors = Memory.Read<IntPtr>((IntPtr) (wowObjectPtr.ToInt64() + 0x8));
+        /// <summary>
+        /// Gets the descriptor value of a WowObject
+        /// </summary>
+        /// <typeparam name="T">Descriptor struct</typeparam>
+        /// <param name="wowObjectPtr">Base address of any WowObject</param>
+        /// <param name="field">Descriptor field</param>
+        /// <returns>Value of the descriptor field in memory.</returns>
+        public static T GetStorageField<T>(IntPtr wowObjectPtr, uint field) where T : struct
+        {
+            var descriptors = Memory.ReadAtOffset<IntPtr>(wowObjectPtr, 0x8);
 
-			return Memory.Read<T>((IntPtr) (descriptors.ToInt64() + (field*4)));
-		}
+            return Memory.ReadAtOffset<T>(descriptors, field*4);
+        }
 
         #endregion
     }

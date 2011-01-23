@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Diagnostics;
 using System.Windows.Forms;
-using BlackRain.Common.Objects;
 
 namespace BlackRain.GUI
 {
@@ -34,12 +33,12 @@ namespace BlackRain.GUI
             }
         }
 
-        private void btn_Refresh_Click(object sender, System.EventArgs e)
+        private void BtnRefreshClick(object sender, System.EventArgs e)
         {
             Refresh();
         }
 
-        private void btn_Attach_Click(object sender, System.EventArgs e)
+        private void BtnAttachClick(object sender, System.EventArgs e)
         {
             if (cmb_Processes.SelectedIndex != 0 && _processes.Count != 0)
             {

@@ -1,17 +1,18 @@
-﻿using BlackRain.Common;
+﻿using System;
+using BlackRain.Common;
 
 namespace BlackRain.WowObjects
 {
     /// <summary>
     /// An item.
     /// </summary>
-    public class WowItem : WowObjects.WowObject
+    public class WowItem : WowObject
     {
         /// <summary>
         /// Ctor.
         /// </summary>
         /// <param name="baseAddress"></param>
-        public WowItem(uint baseAddress)
+        public WowItem(IntPtr baseAddress)
             : base(baseAddress)
         {
         }
@@ -21,7 +22,7 @@ namespace BlackRain.WowObjects
         /// </summary>
         public int Durability
         {
-            get { return GetStorageField<int>((uint)Offsets.WowItemFields.ITEM_FIELD_DURABILITY); }
+            get { return GetStorageField<int>((uint) Descriptors.WowItemFields.ITEM_FIELD_DURABILITY); }
         }
 
         /// <summary>
@@ -29,7 +30,7 @@ namespace BlackRain.WowObjects
         /// </summary>
         public int MaximumDurability
         {
-            get { return GetStorageField<int>((uint)Offsets.WowItemFields.ITEM_FIELD_MAXDURABILITY); }
+            get { return GetStorageField<int>((uint) Descriptors.WowItemFields.ITEM_FIELD_MAXDURABILITY); }
         }
 
         /// <summary>
@@ -37,7 +38,7 @@ namespace BlackRain.WowObjects
         /// </summary>
         public int StackCount
         {
-            get { return GetStorageField<int>((uint)Offsets.WowItemFields.ITEM_FIELD_STACK_COUNT); }
+            get { return GetStorageField<int>((uint) Descriptors.WowItemFields.ITEM_FIELD_STACK_COUNT); }
         }
 
         /// <summary>
@@ -45,7 +46,7 @@ namespace BlackRain.WowObjects
         /// </summary>
         public int Charges
         {
-            get { return GetStorageField<int>((uint)Offsets.WowItemFields.ITEM_FIELD_SPELL_CHARGES); }
+            get { return GetStorageField<int>((uint) Descriptors.WowItemFields.ITEM_FIELD_SPELL_CHARGES); }
         }
 
         /// <summary>

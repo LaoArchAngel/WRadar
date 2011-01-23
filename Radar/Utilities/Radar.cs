@@ -5,10 +5,8 @@ using System.Drawing.Imaging;
 using System.Windows.Forms;
 using System.Linq;
 using BlackRain;
-using BlackRain.Common.Contracts;
-using BlackRain.Common.Objects;
-using BlackRain.WowObject;
 using BlackRain.WowObjects;
+using BlackRain.WowObjects.Contracts;
 using Radar.Blips;
 
 namespace Radar.Utilities

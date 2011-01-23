@@ -1,6 +1,4 @@
-﻿using System;
-using System.Drawing;
-using BlackRain.WowObject;
+﻿using System.Drawing;
 using BlackRain.WowObjects;
 
 namespace Radar.Settings
@@ -17,7 +15,7 @@ namespace Radar.Settings
         private static Color _playerOpposing = Color.DarkViolet;
         private static Color _playerSame = Color.GreenYellow;
         private static Color _radar = Color.LightGray;
-        private static Color _target = Color.Red;   
+        private static Color _target = Color.Red;
         private static Color _targetDead = Color.Gold;
         private static Color _tracked = Color.WhiteSmoke;
         private static Color _unit = Color.Blue;
@@ -83,7 +81,7 @@ namespace Radar.Settings
 
         public static Color RadarToClear
         {
-            get { return Settings.Colors.Radar == Color.White ? Color.Black : Color.White; }
+            get { return Radar == Color.White ? Color.Black : Color.White; }
         }
 
         public static Color Target

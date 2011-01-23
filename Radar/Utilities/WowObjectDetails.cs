@@ -1,6 +1,4 @@
 ﻿using System.Windows.Forms;
-using BlackRain.Common.Objects;
-using BlackRain.WowObject;
 using BlackRain.WowObjects;
 
 namespace Radar.Utilities

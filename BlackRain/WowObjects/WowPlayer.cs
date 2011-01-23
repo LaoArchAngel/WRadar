@@ -1,5 +1,6 @@
 ﻿using System;
 using BlackRain.Common;
+using MemoryIO;
 
 namespace BlackRain.WowObjects
 {
@@ -22,7 +23,7 @@ namespace BlackRain.WowObjects
         /// </summary>
         public int Experience
         {
-            get { return GetStorageField<int>((uint)Offsets.WowPlayerFields.PLAYER_XP); }
+            get { return GetStorageField<int>((uint) Descriptors.WowPlayerFields.PLAYER_XP); }
         }
 
         /// <summary>
@@ -30,13 +31,13 @@ namespace BlackRain.WowObjects
         /// </summary>
         public int NextLevel
         {
-            get { return GetStorageField<int>((uint)Offsets.WowPlayerFields.PLAYER_NEXT_LEVEL_XP); }
+            get { return GetStorageField<int>((uint) Descriptors.WowPlayerFields.PLAYER_NEXT_LEVEL_XP); }
         }
 
         /// <summary>
         /// The ID of the guild the player resides in.
         /// </summary>
-        public int GuildID
+        public int GuildId
         {
             get { return /*GetStorageField<int>((uint)Offsets.WowPlayerFields.PLAYER_GUILDID)*/ 0; }
         }
@@ -47,7 +48,7 @@ namespace BlackRain.WowObjects
         /// </summary>
         public int RestExperience
         {
-            get { return GetStorageField<int>((uint)Offsets.WowPlayerFields.PLAYER_REST_STATE_EXPERIENCE); }
+            get { return GetStorageField<int>((uint) Descriptors.WowPlayerFields.PLAYER_REST_STATE_EXPERIENCE); }
         }
 
         /// <summary>
@@ -63,7 +64,7 @@ namespace BlackRain.WowObjects
         /// </summary>
         public bool Combat
         {
-            get { return HasUnitFlag(Offsets.UnitFlags.Combat); }
+            get { return HasUnitFlag(Flags.Unit.Combat); }
         }
 
         /// <summary>
@@ -75,36 +76,38 @@ namespace BlackRain.WowObjects
             {
                 try
                 {
-                    var nMask = ObjectManager.ReadRelative<uint>((uint)Offsets.WowPlayer.NameStore + (uint)Offsets.WowPlayer.NameMask);
-                    var nBase = ObjectManager.ReadRelative<uint>((uint)Offsets.WowPlayer.NameStore + (uint)Offsets.WowPlayer.NameBase);
+                    var nMask =
+                        Memory.ReadRelative<uint>((IntPtr) ((uint) Offsets.WowPlayer.NameStore +
+                                                            (uint) Offsets.WowPlayer.NameMask));
+                    var nBase =
+                        Memory.ReadRelative<IntPtr>((IntPtr) ((uint) Offsets.WowPlayer.NameStore +
+                                                              (uint) Offsets.WowPlayer.NameBase));
 
-                    var nShortGUID = this.GUID & 0xFFFFFFFF; // only need part of the GUID
-                    var nOffset = 0xC * (nMask & nShortGUID);
+                    var nShortGUID = (uint) (GUID & 0xFFFFFFFF); // only need part of the GUID
+                    var nOffset = 0xC*(nMask & nShortGUID);
 
-                    var nCurrentObject = ObjectManager.Memory.ReadUInt((uint)(nBase + nOffset + 0x8));
-                    nOffset = ObjectManager.Memory.ReadUInt((uint)(nBase + nOffset));
+                    var nCurrentObject = Memory.ReadAtOffset<IntPtr>(nBase, nOffset + 0x8);
+                    nOffset = Memory.ReadAtOffset<uint>(nBase, nOffset);
 
-                    if ((nCurrentObject & 0x1) == 0x1)
+                    if (((uint) nCurrentObject & 0x1) == 0x1)
                         return "Unknown Player";
 
-                    var nTestAgainstGUID = ObjectManager.Memory.ReadUInt((nCurrentObject));
+                    var nTestAgainstGUID = Memory.Read<uint>(nCurrentObject);
 
                     while (nTestAgainstGUID != nShortGUID)
                     {
-                        nCurrentObject = ObjectManager.Memory.ReadUInt((uint)(nCurrentObject + nOffset + 0x4));
+                        nCurrentObject = Memory.ReadAtOffset<IntPtr>(nCurrentObject, nOffset + 0x4);
 
-                        if ((nCurrentObject & 0x1) == 0x1)
+                        if (((uint) nCurrentObject & 0x1) == 0x1)
                             return "Unknown Player";
 
-                        nTestAgainstGUID = ObjectManager.Memory.ReadUInt(nCurrentObject);
+                        nTestAgainstGUID = Memory.Read<uint>(nCurrentObject);
                     }
 
-                    return ObjectManager.Memory.ReadASCIIString(nCurrentObject + (uint)Offsets.WowPlayer.NameString, 40);
-
+                    return Memory.ReadAtOffset<string>(nCurrentObject, (uint) Offsets.WowPlayer.NameString);
                 }
                 catch (Exception)
                 {
-
                     return string.Empty;
                 }
             }
@@ -115,10 +118,7 @@ namespace BlackRain.WowObjects
         /// </summary>
         public bool Mounted
         {
-            get
-            {
-                return MountDisplayID > 0;
-            }
+            get { return MountDisplayId > 0; }
         }
     }
 }

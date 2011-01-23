@@ -1,4 +1,5 @@
-﻿using BlackRain.WowObjects;
+﻿using System;
+using BlackRain.Common;
 
 namespace BlackRain.WowObjects
 {
@@ -11,7 +12,7 @@ namespace BlackRain.WowObjects
         /// Ctor.
         /// </summary>
         /// <param name="baseAddress"></param>
-        public WowCorpse(uint baseAddress)
+        public WowCorpse(IntPtr baseAddress)
             : base(baseAddress)
         {
         }
@@ -21,15 +22,15 @@ namespace BlackRain.WowObjects
         /// </summary>
         public ulong Owner
         {
-            get { return GetStorageField<ulong>((uint) Offsets.WowCorpseFields.CORPSE_FIELD_OWNER); }
+            get { return GetStorageField<ulong>((uint) Descriptors.WowCorpseFields.CORPSE_FIELD_OWNER); }
         }
 
         /// <summary>
         /// The Corpses Display ID.
         /// </summary>
-        public new int DisplayID
+        public override int DisplayId
         {
-            get { return GetStorageField<int>((uint) Offsets.WowCorpseFields.CORPSE_FIELD_DISPLAY_ID); }
+            get { return GetStorageField<int>((uint) Descriptors.WowCorpseFields.CORPSE_FIELD_DISPLAY_ID); }
         }
     }
 }

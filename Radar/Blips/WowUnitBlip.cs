@@ -1,10 +1,7 @@
 ﻿using System.Drawing;
 using System.Drawing.Drawing2D;
-using System.Windows.Forms;
 using BlackRain;
-using BlackRain.Common.Objects;
 using BlackRain.WowObjects;
-using Radar.Tracking;
 
 namespace Radar.Blips
 {

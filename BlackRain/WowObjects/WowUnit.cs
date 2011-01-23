@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.Specialized;
 using BlackRain.Common;
-using BlackRain.Common.Contracts;
+using BlackRain.WowObjects.Contracts;
+using MemoryIO;
 
 namespace BlackRain.WowObjects
 {
@@ -24,7 +25,7 @@ namespace BlackRain.WowObjects
         /// </summary>
         private BitVector32 DynamicFlags
         {
-            get { return GetStorageField<BitVector32>((uint) Offsets.WowUnitFields.UNIT_DYNAMIC_FLAGS); }
+            get { return new BitVector32(GetStorageField<int>((uint) Descriptors.WowUnitFields.UNIT_DYNAMIC_FLAGS)); }
         }
 
         /// <summary>
@@ -32,7 +33,7 @@ namespace BlackRain.WowObjects
         /// </summary>
         private BitVector32 UnitFlags
         {
-            get { return GetStorageField<BitVector32>((uint) Offsets.WowUnitFields.UNIT_FIELD_FLAGS); }
+            get { return new BitVector32(GetStorageField<int>((uint) Descriptors.WowUnitFields.UNIT_FIELD_FLAGS)); }
         }
 
         /// <summary>
@@ -40,13 +41,13 @@ namespace BlackRain.WowObjects
         /// </summary>
         /// <param name="flags"></param>
         /// <returns></returns>
-        private bool HasFlag(Offsets.UnitDynamicFlags flags)
+        private bool HasFlag(Flags.UnitDynamic flags)
         {
             return DynamicFlags[(int) flags];
         }
 
 
-        internal bool HasUnitFlag(Offsets.UnitFlags flag)
+        internal bool HasUnitFlag(Flags.Unit flag)
         {
             return UnitFlags[(int) flag];
         }
@@ -56,7 +57,7 @@ namespace BlackRain.WowObjects
         /// </summary>
         public bool Critter
         {
-            get { return GetStorageField<int>((uint) Offsets.WowUnitFields.UNIT_FIELD_CRITTER) == 1 ? true : false; }
+            get { return GetStorageField<int>((uint) Descriptors.WowUnitFields.UNIT_FIELD_CRITTER) == 1 ? true : false; }
         }
 
         /// <summary>
@@ -81,7 +82,7 @@ namespace BlackRain.WowObjects
         /// </summary>
         public ulong CharmedBy
         {
-            get { return GetStorageField<ulong>((uint) Offsets.WowUnitFields.UNIT_FIELD_CHARMEDBY); }
+            get { return GetStorageField<ulong>((uint) Descriptors.WowUnitFields.UNIT_FIELD_CHARMEDBY); }
         }
 
         /// <summary>
@@ -89,7 +90,7 @@ namespace BlackRain.WowObjects
         /// </summary>
         public ulong SummonedBy
         {
-            get { return GetStorageField<ulong>((uint) Offsets.WowUnitFields.UNIT_FIELD_SUMMONEDBY); }
+            get { return GetStorageField<ulong>((uint) Descriptors.WowUnitFields.UNIT_FIELD_SUMMONEDBY); }
         }
 
         /// <summary>
@@ -97,7 +98,7 @@ namespace BlackRain.WowObjects
         /// </summary>
         public ulong CreatedBy
         {
-            get { return GetStorageField<ulong>((uint) Offsets.WowUnitFields.UNIT_FIELD_CREATEDBY); }
+            get { return GetStorageField<ulong>((uint) Descriptors.WowUnitFields.UNIT_FIELD_CREATEDBY); }
         }
 
         /// <summary>
@@ -105,7 +106,7 @@ namespace BlackRain.WowObjects
         /// </summary>
         public int Health
         {
-            get { return GetStorageField<int>((uint) Offsets.WowUnitFields.UNIT_FIELD_HEALTH); }
+            get { return GetStorageField<int>((uint) Descriptors.WowUnitFields.UNIT_FIELD_HEALTH); }
         }
 
         /// <summary>
@@ -113,7 +114,7 @@ namespace BlackRain.WowObjects
         /// </summary>
         public int MaximumHealth
         {
-            get { return GetStorageField<int>((uint) Offsets.WowUnitFields.UNIT_FIELD_MAXHEALTH); }
+            get { return GetStorageField<int>((uint) Descriptors.WowUnitFields.UNIT_FIELD_MAXHEALTH); }
         }
 
         /// <summary>
@@ -137,7 +138,7 @@ namespace BlackRain.WowObjects
         /// </summary>
         public int BaseHealth
         {
-            get { return GetStorageField<int>((uint) Offsets.WowUnitFields.UNIT_FIELD_BASE_HEALTH); }
+            get { return GetStorageField<int>((uint) Descriptors.WowUnitFields.UNIT_FIELD_BASE_HEALTH); }
         }
 
         /// <summary>
@@ -145,7 +146,7 @@ namespace BlackRain.WowObjects
         /// </summary>
         public int BaseMana
         {
-            get { return GetStorageField<int>((uint) Offsets.WowUnitFields.UNIT_FIELD_BASE_MANA); }
+            get { return GetStorageField<int>((uint) Descriptors.WowUnitFields.UNIT_FIELD_BASE_MANA); }
         }
 
         /// <summary>
@@ -153,7 +154,7 @@ namespace BlackRain.WowObjects
         /// </summary>
         public int Mana
         {
-            get { return GetStorageField<int>((uint) Offsets.WowUnitFields.UNIT_FIELD_POWER1); }
+            get { return GetStorageField<int>((uint) Descriptors.WowUnitFields.UNIT_FIELD_POWER1); }
         }
 
         /// <summary>
@@ -161,7 +162,7 @@ namespace BlackRain.WowObjects
         /// </summary>
         public int Rage
         {
-            get { return GetStorageField<int>((uint) Offsets.WowUnitFields.UNIT_FIELD_POWER2); }
+            get { return GetStorageField<int>((uint) Descriptors.WowUnitFields.UNIT_FIELD_POWER2); }
         }
 
         /// <summary>
@@ -169,7 +170,7 @@ namespace BlackRain.WowObjects
         /// </summary>
         public int Focus
         {
-            get { return GetStorageField<int>((uint) Offsets.WowUnitFields.UNIT_FIELD_POWER3); }
+            get { return GetStorageField<int>((uint) Descriptors.WowUnitFields.UNIT_FIELD_POWER3); }
         }
 
         /// <summary>
@@ -177,7 +178,7 @@ namespace BlackRain.WowObjects
         /// </summary>
         public int Energy
         {
-            get { return GetStorageField<int>((uint) Offsets.WowUnitFields.UNIT_FIELD_POWER4); }
+            get { return GetStorageField<int>((uint) Descriptors.WowUnitFields.UNIT_FIELD_POWER4); }
         }
 
         /// <summary>
@@ -185,7 +186,7 @@ namespace BlackRain.WowObjects
         /// </summary>
         public int Happinnes
         {
-            get { return GetStorageField<int>((uint) Offsets.WowUnitFields.UNIT_FIELD_POWER4); }
+            get { return GetStorageField<int>((uint) Descriptors.WowUnitFields.UNIT_FIELD_POWER4); }
         }
 
         /// <summary>
@@ -193,7 +194,7 @@ namespace BlackRain.WowObjects
         /// </summary>
         public int RunicPower
         {
-            get { return GetStorageField<int>((uint) Offsets.WowUnitFields.UNIT_FIELD_POWER5); }
+            get { return GetStorageField<int>((uint) Descriptors.WowUnitFields.UNIT_FIELD_POWER5); }
         }
 
         /// <summary>
@@ -201,7 +202,7 @@ namespace BlackRain.WowObjects
         /// </summary>
         public int Runes
         {
-            get { return GetStorageField<int>((uint) Offsets.WowUnitFields.UNIT_FIELD_POWER6); }
+            get { return GetStorageField<int>((uint) Descriptors.WowUnitFields.UNIT_FIELD_POWER6); }
         }
 
         /// <summary>
@@ -209,7 +210,7 @@ namespace BlackRain.WowObjects
         /// </summary>
         public int MaximumMana
         {
-            get { return GetStorageField<int>((uint) Offsets.WowUnitFields.UNIT_FIELD_MAXPOWER1); }
+            get { return GetStorageField<int>((uint) Descriptors.WowUnitFields.UNIT_FIELD_MAXPOWER1); }
         }
 
         /// <summary>
@@ -217,7 +218,7 @@ namespace BlackRain.WowObjects
         /// </summary>
         public int MaximumRage
         {
-            get { return GetStorageField<int>((uint) Offsets.WowUnitFields.UNIT_FIELD_MAXPOWER2); }
+            get { return GetStorageField<int>((uint) Descriptors.WowUnitFields.UNIT_FIELD_MAXPOWER2); }
         }
 
         /// <summary>
@@ -225,7 +226,7 @@ namespace BlackRain.WowObjects
         /// </summary>
         public int MaximumFocus
         {
-            get { return GetStorageField<int>((uint) Offsets.WowUnitFields.UNIT_FIELD_MAXPOWER3); }
+            get { return GetStorageField<int>((uint) Descriptors.WowUnitFields.UNIT_FIELD_MAXPOWER3); }
         }
 
         /// <summary>
@@ -233,7 +234,7 @@ namespace BlackRain.WowObjects
         /// </summary>
         public int MaximumEnergy
         {
-            get { return GetStorageField<int>((uint) Offsets.WowUnitFields.UNIT_FIELD_MAXPOWER4); }
+            get { return GetStorageField<int>((uint) Descriptors.WowUnitFields.UNIT_FIELD_MAXPOWER4); }
         }
 
         /// <summary>
@@ -241,7 +242,7 @@ namespace BlackRain.WowObjects
         /// </summary>
         public int MaximumRunicPower
         {
-            get { return GetStorageField<int>((uint) Offsets.WowUnitFields.UNIT_FIELD_MAXPOWER5); }
+            get { return GetStorageField<int>((uint) Descriptors.WowUnitFields.UNIT_FIELD_MAXPOWER5); }
         }
 
         /// <summary>
@@ -250,7 +251,7 @@ namespace BlackRain.WowObjects
         /// </summary>
         public int MaximumRunes
         {
-            get { return GetStorageField<int>((uint) Offsets.WowUnitFields.UNIT_FIELD_MAXPOWER6); }
+            get { return GetStorageField<int>((uint) Descriptors.WowUnitFields.UNIT_FIELD_MAXPOWER6); }
         }
 
         /// <summary>
@@ -258,7 +259,7 @@ namespace BlackRain.WowObjects
         /// </summary>
         public new int Level
         {
-            get { return GetStorageField<int>((uint) Offsets.WowUnitFields.UNIT_FIELD_LEVEL); }
+            get { return GetStorageField<int>((uint) Descriptors.WowUnitFields.UNIT_FIELD_LEVEL); }
         }
 
         /// <summary>
@@ -270,9 +271,8 @@ namespace BlackRain.WowObjects
             {
                 try
                 {
-                    return
-                        ObjectManager.Memory.ReadASCIIString(
-                            ObjectManager.Memory.ReadUInt(ObjectManager.Memory.ReadUInt(BaseAddress + 0xA24) + 0x60), 24);
+                    return Memory.Read<string>(Memory.Read<IntPtr>((IntPtr) (BaseAddress.ToInt32() + (uint) Offsets.WowUnit.UnitCache),
+                                               (IntPtr) ((uint) Offsets.WowUnit.UnitCacheNamePtr)));
                 }
                 catch (Exception)
                 {
@@ -284,17 +284,17 @@ namespace BlackRain.WowObjects
         /// <summary>
         /// The unit's DisplayID.
         /// </summary>
-        public int DisplayID
+        public virtual int DisplayId
         {
-            get { return GetStorageField<int>((uint) Offsets.WowUnitFields.UNIT_FIELD_DISPLAYID); }
+            get { return GetStorageField<int>((uint) Descriptors.WowUnitFields.UNIT_FIELD_DISPLAYID); }
         }
 
         /// <summary>
         /// The mount display of the mount the unit is mounted on.
         /// </summary>
-        public int MountDisplayID
+        public int MountDisplayId
         {
-            get { return GetStorageField<int>((uint) Offsets.WowUnitFields.UNIT_FIELD_MOUNTDISPLAYID); }
+            get { return GetStorageField<int>((uint) Descriptors.WowUnitFields.UNIT_FIELD_MOUNTDISPLAYID); }
         }
 
         /// <summary>
@@ -306,7 +306,7 @@ namespace BlackRain.WowObjects
             {
                 try
                 {
-                    return GetStorageField<ulong>((uint) Offsets.WowUnitFields.UNIT_FIELD_TARGET);
+                    return GetStorageField<ulong>((uint) Descriptors.WowUnitFields.UNIT_FIELD_TARGET);
                 }
                 catch (Exception)
                 {
@@ -328,7 +328,7 @@ namespace BlackRain.WowObjects
         /// </summary>
         public bool Lootable
         {
-            get { return HasFlag(Offsets.UnitDynamicFlags.Lootable); }
+            get { return HasFlag(Flags.UnitDynamic.Lootable); }
         }
 
         /// <summary>
@@ -351,12 +351,12 @@ namespace BlackRain.WowObjects
         /// <summary>
         /// Gets the race of the unit.
         /// </summary>
-        public Offsets.RaceFlags Race
+        public Flags.Race Race
         {
             get
             {
-                uint ret = GetStorageField<uint>((int) Offsets.WowUnitFields.UNIT_FIELD_BYTES_0);
-                return (Offsets.RaceFlags) (ret & 0xFF);
+                var ret = GetStorageField<uint>((int) Descriptors.WowUnitFields.UNIT_FIELD_BYTES_0);
+                return (Flags.Race) (ret & 0xFF);
             }
         }
 
@@ -364,12 +364,12 @@ namespace BlackRain.WowObjects
         /// <summary>
         /// Gets the class of the unit.
         /// </summary>
-        public Offsets.ClassFlags Class
+        public Flags.Class Class
         {
             get
             {
-                uint ret = GetStorageField<uint>((int) Offsets.WowUnitFields.UNIT_FIELD_BYTES_0);
-                return (Offsets.ClassFlags) ((ret >> 8) & 0xFF);
+                var ret = GetStorageField<uint>((int) Descriptors.WowUnitFields.UNIT_FIELD_BYTES_0);
+                return (Flags.Class) ((ret >> 8) & 0xFF);
             }
         }
     }
