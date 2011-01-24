@@ -37,7 +37,7 @@ namespace Radar.Blips
         /// <param name="g"><see cref="Graphics"/> object drawing the blip.</param>
 		protected override void DrawShape(GraphicsPath g)
 		{
-            g.AddRectangle(new Rectangle(TOTAL_WIDTH/4, TOTAL_HEIGHT/2, TOTAL_WIDTH/2, TOTAL_HEIGHT/2));
+            g.AddPath(Settings.Screen.ShapeGO, true);
 		}
 
 		#endregion

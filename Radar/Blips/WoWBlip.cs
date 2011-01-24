@@ -13,8 +13,8 @@ namespace Radar.Blips
     {
         #region Constants
 
-        protected const int TOTAL_WIDTH = 14;
-        protected const int TOTAL_HEIGHT = 14;
+        internal const int TOTAL_WIDTH = 14;
+        internal const int TOTAL_HEIGHT = 14;
 
         #endregion
 

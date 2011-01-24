@@ -87,6 +87,9 @@
     <Compile Include="Blips\WowUnitBlip.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Screen\BlipDrawer.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Screen\Radar.cs">
       <SubType>Form</SubType>
     </Compile>

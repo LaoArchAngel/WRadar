@@ -1,8 +1,6 @@
 ﻿using System.Drawing;
 using System.Drawing.Drawing2D;
-using System.Windows.Forms;
 using BlackRain.Common.Objects;
-using Radar.Tracking;
 
 namespace Radar.Blips
 {
@@ -64,7 +62,7 @@ namespace Radar.Blips
 
         protected override void DrawShape(GraphicsPath g)
         {
-            g.AddEllipse(TOTAL_WIDTH/4, TOTAL_HEIGHT/2, TOTAL_WIDTH/2, TOTAL_HEIGHT/2);
+            g.AddPath(Settings.Screen.ShapeUnit, true);
             //g.AddClosedCurve(new[]
             //                     {
             //                         new Point(0, TOTAL_HEIGHT/2 - 1), new Point(TOTAL_WIDTH/2, TOTAL_HEIGHT),

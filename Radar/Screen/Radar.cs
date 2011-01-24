@@ -1,19 +1,18 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Diagnostics;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
+using BlackRain.Common.Contracts;
 using BlackRain.Common.Objects;
+using Radar.Blips;
 
 namespace Radar.Screen
 {
     public partial class Radar : Form
     {
         #region Fields
+
+        public delegate void AddBlipCallback(WowBlip blip);
 
         #endregion
 
@@ -22,11 +21,44 @@ namespace Radar.Screen
         public Radar()
         {
             InitializeComponent();
+            
         }
 
         #endregion
 
         #region Event Handlers
+
+        internal void BlipDrawn(object sender, RunWorkerCompletedEventArgs completedEventArgs)
+        {
+            var results = completedEventArgs.Result as DrawerResults;
+
+            if (results == null) return;
+
+            //lock (results.Blip.BlipObject)
+            //{
+            if (results.Exists)
+            {
+                results.Blip.Location = results.Location;
+                results.Blip.Refresh();
+                return;
+            }
+
+            Controls.Add(results.Blip);
+
+            if (results.Blip.BlipObject is INamed)
+            {
+                tp.SetToolTip(results.Blip, ((INamed) results.Blip.BlipObject).Name);
+            }
+            //}
+        }
+
+        private void Pulsed(bool success)
+        {
+            if (success)
+                Utilities.Radar.RefreshScreen(this, tp);
+            
+            PulseTimer.Start();
+        }
 
         #region Controls
 

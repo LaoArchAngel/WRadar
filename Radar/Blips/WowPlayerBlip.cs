@@ -30,12 +30,7 @@ namespace Radar.Blips
 
         protected override void DrawShape(GraphicsPath g)
         {
-            g.AddPolygon(new[]
-                             {
-                                 new Point(TOTAL_WIDTH/2, TOTAL_HEIGHT/2),
-                                 new Point(TOTAL_WIDTH, TOTAL_HEIGHT),
-                                 new Point(0, TOTAL_HEIGHT)
-                             });
+            g.AddPath(Settings.Screen.ShapePlayer, true);
         }
 
         #endregion
