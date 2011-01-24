@@ -1,6 +1,5 @@
 ﻿using System.ComponentModel;
 using System.Windows.Forms;
-using BlackRain.Common.Contracts;
 
 namespace Radar.Blips
 {

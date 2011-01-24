@@ -112,6 +112,7 @@
     <Compile Include="Utilities\ReadOnlyPropertyGrid.Designer.cs">
       <DependentUpon>ReadOnlyPropertyGrid.cs</DependentUpon>
     </Compile>
+    <Compile Include="Utilities\Security.cs" />
     <Compile Include="Utilities\TrackableEditor.cs">
       <SubType>Form</SubType>
     </Compile>

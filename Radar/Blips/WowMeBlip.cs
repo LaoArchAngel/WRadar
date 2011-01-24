@@ -1,17 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
-using BlackRain.Common.Objects;
+using BlackRain.WowObjects;
 using Radar.Properties;
 
 namespace Radar.Blips
 {
     internal class WowMeBlip : WowPlayerBlip
     {
-        private Point mouseOffset;
+        private Point _mouseOffset;
 
         public WowMeBlip(WowPlayer unit) : base(unit)
         {
@@ -77,7 +74,7 @@ namespace Radar.Blips
 
         private void RecordPosition(object sender, MouseEventArgs e)
         {
-            mouseOffset = MousePosition;
+            _mouseOffset = MousePosition;
         }
 
         private void MoveScreen(object sender, MouseEventArgs e)
@@ -87,12 +84,12 @@ namespace Radar.Blips
             if (Parent == null) return;
 
             var pos = MousePosition;
-            var delta = new Point(pos.X - mouseOffset.X, pos.Y - mouseOffset.Y);
+            var delta = new Point(pos.X - _mouseOffset.X, pos.Y - _mouseOffset.Y);
             var current = Parent.Location;
             current.Offset(delta);
 
             Parent.Location = current;
-            mouseOffset = pos;
+            _mouseOffset = pos;
         }
     }
 }

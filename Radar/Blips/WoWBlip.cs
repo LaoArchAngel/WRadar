@@ -2,8 +2,8 @@
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;
-using BlackRain.Common.Contracts;
-using BlackRain.Common.Objects;
+using BlackRain.WowObjects;
+using BlackRain.WowObjects.Contracts;
 using Radar.Settings;
 using Radar.Tracking;
 
@@ -20,7 +20,7 @@ namespace Radar.Blips
 
         #region Fields
 
-        private bool _tracked = false;
+        private bool _tracked;
 
         #endregion
 
@@ -65,7 +65,7 @@ namespace Radar.Blips
             InitializeComponent();
             objectInfo.Text = string.Format("{0} | {1}",
                                             wowObject is INamed ? ((INamed) wowObject).Name : wowObject.ToString(),
-                                            wowObject.Type);
+                                            wowObject.Entry);
         }
 
         #endregion

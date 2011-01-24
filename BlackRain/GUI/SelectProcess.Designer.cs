@@ -60,7 +60,7 @@
             this.btn_Attach.TabIndex = 2;
             this.btn_Attach.Text = "Attach";
             this.btn_Attach.UseVisualStyleBackColor = true;
-            this.btn_Attach.Click += new System.EventHandler(this.btn_Attach_Click);
+            this.btn_Attach.Click += new System.EventHandler(this.BtnAttachClick);
             // 
             // btn_Refresh
             // 
@@ -71,7 +71,7 @@
             this.btn_Refresh.TabIndex = 2;
             this.btn_Refresh.Text = "Refresh";
             this.btn_Refresh.UseVisualStyleBackColor = true;
-            this.btn_Refresh.Click += new System.EventHandler(this.btn_Refresh_Click);
+            this.btn_Refresh.Click += new System.EventHandler(this.BtnRefreshClick);
             // 
             // SelectProcess
             // 

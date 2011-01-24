@@ -34,13 +34,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="BlackMagic, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Dependencies\BlackMagic.dll</HintPath>
-    </Reference>
     <Reference Include="fasmdll_managed, Version=1.0.3262.20709, Culture=neutral, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Dependencies\fasmdll_managed.dll</HintPath>
+    </Reference>
+    <Reference Include="MemoryIO, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dependencies\MemoryIO.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -52,27 +52,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Common\Contracts\INamed.cs" />
-    <Compile Include="Common\Logging.cs" />
-    <Compile Include="Common\Objects\ObjectManager.cs" />
-    <Compile Include="Common\Objects\WowContainer.cs" />
-    <Compile Include="Common\Objects\WowCorpse.cs" />
-    <Compile Include="Common\Objects\WowDynamicObject.cs" />
-    <Compile Include="Common\Objects\WowGameObject.cs" />
-    <Compile Include="Common\Objects\WowItem.cs" />
-    <Compile Include="Common\Objects\WowObject.cs" />
-    <Compile Include="Common\Objects\WowPlayer.cs" />
-    <Compile Include="Common\Objects\WowPlayerMe.cs" />
-    <Compile Include="Common\Objects\WowUnit.cs" />
+    <Compile Include="Common\Descriptors.cs" />
+    <Compile Include="Common\Flags.cs" />
+    <Compile Include="WowObjects\Contracts\INamed.cs" />
+    <Compile Include="ObjectManager.cs" />
+    <Compile Include="WowObjects\WowContainer.cs" />
+    <Compile Include="WowObjects\WowCorpse.cs" />
+    <Compile Include="WowObjects\WowDynamicObject.cs" />
+    <Compile Include="WowObjects\WowGameObject.cs" />
+    <Compile Include="WowObjects\WowItem.cs" />
+    <Compile Include="WowObjects\WowObject.cs" />
+    <Compile Include="WowObjects\WowPlayer.cs" />
+    <Compile Include="WowObjects\WowPlayerMe.cs" />
+    <Compile Include="WowObjects\WowUnit.cs" />
     <Compile Include="Common\Offsets.cs" />
     <Compile Include="Common\Point.cs" />
     <Compile Include="Common\Utilities.cs" />
-    <Compile Include="GUI\Log.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\Log.Designer.cs">
-      <DependentUpon>Log.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\SelectProcess.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,9 +77,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="GUI\Log.resx">
-      <DependentUpon>Log.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="GUI\SelectProcess.resx">
       <DependentUpon>SelectProcess.cs</DependentUpon>
     </EmbeddedResource>

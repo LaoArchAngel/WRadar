@@ -100,8 +100,8 @@ namespace Radar.Screen
             this.ContextMenuStrip = this.RadarMenu;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Radar";
-            this.Text = "Radar";
+            this.Name = Utilities.Security.RandomString(7);
+            this.Text = Name;
             this.TopMost = true;
             this.TransparencyKey = System.Drawing.Color.White;
             this.RadarMenu.ResumeLayout(false);

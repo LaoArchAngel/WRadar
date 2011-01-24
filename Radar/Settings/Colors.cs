@@ -1,5 +1,5 @@
-﻿using System;
-using System.Drawing;
+﻿using System.Drawing;
+using BlackRain.WowObjects;
 
 namespace Radar.Settings
 {
@@ -15,7 +15,7 @@ namespace Radar.Settings
         private static Color _playerOpposing = Color.DarkViolet;
         private static Color _playerSame = Color.GreenYellow;
         private static Color _radar = Color.LightGray;
-        private static Color _target = Color.Red;   
+        private static Color _target = Color.Red;
         private static Color _targetDead = Color.Gold;
         private static Color _tracked = Color.WhiteSmoke;
         private static Color _unit = Color.Blue;
@@ -47,7 +47,7 @@ namespace Radar.Settings
         }
 
         /// <summary>
-        /// Gets or sets the color to be applied to <see cref="Blips.WowPlayerBlip"/> controls when the <see cref="BlackRain.Common.Objects.WowPlayer"/> is dead.
+        /// Gets or sets the color to be applied to <see cref="Blips.WowPlayerBlip"/> controls when the <see cref="WowPlayer"/> is dead.
         /// </summary>
         public static Color PlayerDead
         {
@@ -81,7 +81,7 @@ namespace Radar.Settings
 
         public static Color RadarToClear
         {
-            get { return Settings.Colors.Radar == Color.White ? Color.Black : Color.White; }
+            get { return Radar == Color.White ? Color.Black : Color.White; }
         }
 
         public static Color Target

@@ -2,9 +2,11 @@
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
-using System.Linq;
 using System.Windows.Forms;
-using BlackRain.Common.Objects;
+using System.Linq;
+using BlackRain;
+using BlackRain.WowObjects;
+using BlackRain.WowObjects.Contracts;
 using Radar.Blips;
 using Radar.Screen;
 
