@@ -1,9 +1,11 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Diagnostics;
+using System.Linq;
+using System.Threading;
 using System.Windows.Forms;
 using BlackRain;
-using BlackRain.Objects.Contracts;
+using BlackRain.WowObjects.Contracts;
 using Radar.Blips;
 
 namespace Radar.Screen
@@ -12,7 +14,7 @@ namespace Radar.Screen
     {
         #region Fields
 
-        public delegate void AddBlipCallback(WowBlip blip);
+        private delegate void AddBlipCallback(DrawerResults results);
 
         #endregion
 
@@ -21,7 +23,7 @@ namespace Radar.Screen
         public Radar()
         {
             InitializeComponent();
-            
+            ObjectManager.Pulsed += Pulsed;
         }
 
         #endregion
@@ -47,17 +49,24 @@ namespace Radar.Screen
 
             if (results.Blip.BlipObject is INamed)
             {
-                tp.SetToolTip(results.Blip, ((INamed) results.Blip.BlipObject).Name);
+                //tp.SetToolTip(results.Blip, ((INamed) results.Blip.BlipObject).Name);
+            }
+
+            if (results.Blip.BlipObject.IsMe)
+            {
+                results.Blip.BringToFront();
             }
             //}
         }
 
         private void Pulsed(bool success)
         {
+            Action action = () => Utilities.Radar.RefreshScreen(this, tp);
             if (success)
-                Utilities.Radar.RefreshScreen(this, tp);
-            
-            PulseTimer.Start();
+                BeginInvoke(action);
+
+            action = () =>PulseTimer.Start();
+            BeginInvoke(action);
         }
 
         #region Controls
@@ -72,14 +81,12 @@ namespace Radar.Screen
             wowInstances.DropDownItems.Clear();
             var processes = Process.GetProcessesByName("Wow");
 
-            foreach (var process in processes)
+            foreach (var menuItem in processes.Select(process => new ToolStripMenuItem
+                                                                     {
+                                                                         Name = String.Format("wow{0}", process.Id),
+                                                                         Text = process.Id.ToString()
+                                                                     }))
             {
-                var menuItem = new ToolStripMenuItem
-                                   {
-                                       Name = String.Format("wow{0}", process.Id),
-                                       Text = process.Id.ToString()
-                                   };
-
                 menuItem.Click += ProcessSelected;
                 wowInstances.DropDownItems.Add(menuItem);
             }
@@ -122,8 +129,9 @@ namespace Radar.Screen
             }
 
             PulseTimer.Stop();
-            Utilities.Radar.RefreshScreen(this, tp);
-            PulseTimer.Start();
+            var pulse = new Thread(ObjectManager.Pulse);
+
+            pulse.Start();
         }
 
         #endregion

@@ -6,7 +6,6 @@ using System.Windows.Forms;
 using System.Linq;
 using BlackRain;
 using BlackRain.WowObjects;
-using BlackRain.WowObjects.Contracts;
 using Radar.Blips;
 using Radar.Screen;
 
@@ -118,12 +117,9 @@ namespace Radar.Utilities
 
             CleanBlips(screen);
 
-            WowUnitBlip me = null;
-            WowUnitBlip target = null;
-
-            foreach (var wowGameObject in ObjectManager.GameObjects)
+            foreach (var blipDrawer in
+                ObjectManager.GameObjects.Select(wowGameObject => new BlipDrawer(screen, new WowGOBlip(wowGameObject))))
             {
-                var blipDrawer = new BlipDrawer(screen, new WowGOBlip(wowGameObject));
                 blipDrawer.RunWorkerCompleted += screen.BlipDrawn;
 
                 blipDrawer.RunWorkerAsync();
@@ -148,7 +144,6 @@ namespace Radar.Utilities
                     if (blip.BlipObject.IsMe)
                     {
                         blip = new WowMeBlip((WowPlayer) unit);
-                        me = blip;
                     }
                 }
 
@@ -156,17 +151,7 @@ namespace Radar.Utilities
                 blipDrawer.RunWorkerCompleted += screen.BlipDrawn;
 
                 blipDrawer.RunWorkerAsync();
-
-                if (ObjectManager.Me.Target == unit.GUID) target = blip;
             }
-
-            if (target != null)
-                lock (target)
-                    target.BringToFront();
-
-            if (me != null)
-                lock (me)
-                    me.BringToFront();
         }
 
         /// <summary>

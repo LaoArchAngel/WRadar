@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace BlackRain.Common
+﻿namespace BlackRain.Common
 {
     public static class Descriptors
     {

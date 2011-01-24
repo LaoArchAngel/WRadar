@@ -29,6 +29,8 @@
 [Rr]elease*/
 obj/
 ipch/
+*.psess
+*.vsp
 
 #Tools
 _ReSharper*/

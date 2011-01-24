@@ -112,9 +112,9 @@ namespace BlackRain.Common
         /// <returns></returns>
         public double Distance(float toX, float toY, float toZ)
         {
-            float dX = X - toX;
-            float dY = Y - toY;
-            float dZ = Z - toZ;
+            var dX = X - toX;
+            var dY = Y - toY;
+            var dZ = Z - toZ;
             return Math.Sqrt(dX * dX + dY * dY + dZ * dZ);
         }
 

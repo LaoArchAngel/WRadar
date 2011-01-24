@@ -63,14 +63,5 @@ namespace Radar.Utilities
                     field.SetValue(attr, isReadOnly, BindingFlags.NonPublic | BindingFlags.Instance, null, null);
             }
         }
-
-        private void SetObjectAsReadOnly(bool isReadOnly)
-        {
-            if (SelectedObject == null) return;
-            
-            TypeDescriptor.AddAttributes(SelectedObject, new Attribute[] { new ReadOnlyAttribute(isReadOnly) });
-            Refresh();
-        }
-
     }
 }

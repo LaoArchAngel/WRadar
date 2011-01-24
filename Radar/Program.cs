@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Windows.Forms;
 
 namespace Radar
@@ -18,7 +16,7 @@ namespace Radar
 
             Settings.Sounds.List.Load();
 
-			Application.Run(new Radar.Screen.Radar());
+			Application.Run(new Screen.Radar());
 		}
 	}
 }

@@ -169,7 +169,7 @@ namespace BlackRain.WowObjects
         #region Equals and GetHashCode implementation
         public override bool Equals(object obj)
 		{
-			WowObject other = obj as WowObject;
+			var other = obj as WowObject;
 			if (other == null)
 				return false;
 			
@@ -179,6 +179,13 @@ namespace BlackRain.WowObjects
 			return (GUID == other.GUID) && (Type == other.Type);
 		}
         
+		///<summary>
+		/// Checks whether two <see cref="WowObject">WowObjects</see> are equal.  They are equal only if they have the
+		/// same <see cref="BaseAddress"/>.
+		///</summary>
+		///<param name="lhs"></param>
+		///<param name="rhs"></param>
+		///<returns><c>true</c> if equal</returns>
 		public static bool operator ==(WowObject lhs, WowObject rhs)
 		{
 			if (ReferenceEquals(lhs, rhs))
@@ -188,10 +195,32 @@ namespace BlackRain.WowObjects
 			return lhs.Equals(rhs);
 		}
         
+		///<summary>
+		/// <see cref="WowObject"/> types are not equal they have different <see cref="BaseAddress"/> values.
+		///</summary>
+		///<param name="lhs"></param>
+		///<param name="rhs"></param>
+		///<returns><c>true</c> if not equal</returns>
 		public static bool operator !=(WowObject lhs, WowObject rhs)
 		{
 			return !(lhs == rhs);
 		}
         #endregion
+
+        ///<summary>
+        /// Checks if two <see cref="WowObject">WowObjects</see> are equal.
+        ///</summary>
+        ///<param name="other"></param>
+        ///<returns></returns>
+        public bool Equals(WowObject other)
+        {
+            if (ReferenceEquals(null, other)) return false;
+            return ReferenceEquals(this, other) || other.BaseAddress.Equals(BaseAddress);
+        }
+
+        public override int GetHashCode()
+        {
+            return BaseAddress.GetHashCode();
+        }
     }
 }

@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 using System.Drawing;
-using BlackRain.Common.Objects;
+using BlackRain;
 using Radar.Blips;
 
 namespace Radar.Screen

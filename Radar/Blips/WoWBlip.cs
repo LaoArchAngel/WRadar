@@ -193,12 +193,11 @@ namespace Radar.Blips
                 return;
             }
 
-            if (clicked.Name == trackName.Name)
-            {
-                var named = BlipObject as INamed;
+            if (clicked.Name != trackName.Name) return;
 
-                if (named != null) Settings.Tracking.Default.Add(new Trackable {Pattern = named.Name, Name = named.Name});
-            }
+            var named = BlipObject as INamed;
+
+            if (named != null) Settings.Tracking.Default.Add(new Trackable {Pattern = named.Name, Name = named.Name});
         }
 
         #endregion
