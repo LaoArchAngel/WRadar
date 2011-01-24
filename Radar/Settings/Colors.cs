@@ -3,117 +3,141 @@ using BlackRain.WowObjects;
 
 namespace Radar.Settings
 {
-    public static class Colors
-    {
-        #region Fields
+	public static class Colors
+	{
+		#region Properties
 
-        private static Color _gameObject = Color.OrangeRed;
-        private static Color _pet = Color.Cyan;
-        private static Color _petDead = Color.LightCyan;
-        private static Color _playerDead = Color.PaleVioletRed;
-        private static Color _playerMe = Color.Black;
-        private static Color _playerOpposing = Color.DarkViolet;
-        private static Color _playerSame = Color.GreenYellow;
-        private static Color _radar = Color.LightGray;
-        private static Color _target = Color.Red;
-        private static Color _targetDead = Color.Gold;
-        private static Color _tracked = Color.WhiteSmoke;
-        private static Color _unit = Color.Blue;
-        private static Color _unitDead = Color.LightBlue;
+		/// <summary>
+		/// Gets or sets the color to be applied to <see cref="Blips.WowGOBlip"/> controls.
+		/// </summary>
+		public static Color GameObject
+		{
+			get { return Properties.Colors.Default.GameObject; }
+			set
+			{
+				Properties.Colors.Default.GameObject = value;
+				Properties.Colors.Default.Save();
+			}
+		}
 
-        #endregion
+		public static Color Pet
+		{
+			get { return Properties.Colors.Default.Pet; }
+			set
+			{
+				Properties.Colors.Default.Pet = value;
+				Properties.Colors.Default.Save();
+			}
+		}
 
-        #region Properties
+		public static Color PetDead
+		{
+			get { return Properties.Colors.Default.PetDead; }
+			set
+			{
+				Properties.Colors.Default.PetDead = value;
+				Properties.Colors.Default.Save();
+			}
+		}
 
-        /// <summary>
-        /// Gets or sets the color to be applied to <see cref="Blips.WowGOBlip"/> controls.
-        /// </summary>
-        public static Color GameObject
-        {
-            get { return _gameObject; }
-            set { _gameObject = value; }
-        }
+		/// <summary>
+		/// Gets or sets the color to be applied to <see cref="Blips.WowPlayerBlip"/> controls when the <see cref="WowPlayer"/> is dead.
+		/// </summary>
+		public static Color PlayerDead
+		{
+			get { return Properties.Colors.Default.PlayerDead; }
+			set
+			{
+				Properties.Colors.Default.PlayerDead = value;
+				Properties.Colors.Default.Save();
+			}
+		}
 
-        public static Color Pet
-        {
-            get { return _pet; }
-            set { _pet = value; }
-        }
+		public static Color PlayerMe
+		{
+			get { return Properties.Colors.Default.PlayerMe; }
+			set
+			{
+				Properties.Colors.Default.PlayerMe = value;
+				Properties.Colors.Default.Save();
+			}
+		}
 
-        public static Color PetDead
-        {
-            get { return _petDead; }
-            set { _petDead = value; }
-        }
+		public static Color PlayerOpposing
+		{
+			get { return Properties.Colors.Default.PlayerOpposing; }
+			set
+			{
+				Properties.Colors.Default.PlayerOpposing = value;
+				Properties.Colors.Default.Save();
+			}
+		}
 
-        /// <summary>
-        /// Gets or sets the color to be applied to <see cref="Blips.WowPlayerBlip"/> controls when the <see cref="WowPlayer"/> is dead.
-        /// </summary>
-        public static Color PlayerDead
-        {
-            get { return _playerDead; }
-            set { _playerDead = value; }
-        }
+		public static Color PlayerSame
+		{
+			get { return Properties.Colors.Default.PlayerSame; }
+			set
+			{
+				Properties.Colors.Default.PlayerSame = value;
+				Properties.Colors.Default.Save();
+			}
+		}
 
-        public static Color PlayerMe
-        {
-            get { return _playerMe; }
-            set { _playerMe = value; }
-        }
+		public static Color Radar
+		{
+			get { return Properties.Colors.Default.Radar; }
+			set
+			{
+				Properties.Colors.Default.Radar = value;
+				Properties.Colors.Default.Save();
+			}
+		}
 
-        public static Color PlayerOpposing
-        {
-            get { return _playerOpposing; }
-            set { _playerOpposing = value; }
-        }
+		public static Color RadarToClear
+		{
+			get { return Radar == Color.White ? Color.Black : Color.White; }
+		}
 
-        public static Color PlayerSame
-        {
-            get { return _playerSame; }
-            set { _playerSame = value; }
-        }
+		public static Color Target
+		{
+			get { return Properties.Colors.Default.Target; }
+			set
+			{
+				Properties.Colors.Default.Target = value;
+				Properties.Colors.Default.Save();
+			}
+		}
 
-        public static Color Radar
-        {
-            get { return _radar; }
-            set { _radar = value; }
-        }
+		public static Color TargetDead
+		{
+			get { return Properties.Colors.Default.TargetDead; }
+			set
+			{
+				Properties.Colors.Default.TargetDead = value;
+				Properties.Colors.Default.Save();
+			}
+		}
 
-        public static Color RadarToClear
-        {
-            get { return Radar == Color.White ? Color.Black : Color.White; }
-        }
+		public static Color Unit
+		{
+			get { return Properties.Colors.Default.Unit; }
+			set
+			{
+				Properties.Colors.Default.Unit = value;
+				Properties.Colors.Default.Save();
+			}
+		}
 
-        public static Color Target
-        {
-            get { return _target; }
-            set { _target = value; }
-        }
+		public static Color UnitDead
+		{
+			get { return Properties.Colors.Default.UnitDead; }
+			set
+			{
+				Properties.Colors.Default.UnitDead = value;
+				Properties.Colors.Default.Save();
+			}
+		}
 
-        public static Color TargetDead
-        {
-            get { return _targetDead; }
-            set { _targetDead = value; }
-        }
-
-        public static Color Tracked
-        {
-            get { return _tracked; }
-            set { _tracked = value; }
-        }
-
-        public static Color Unit
-        {
-            get { return _unit; }
-            set { _unit = value; }
-        }
-
-        public static Color UnitDead
-        {
-            get { return _unitDead; }
-            set { _unitDead = value; }
-        }
-
-        #endregion
-    }
+		#endregion
+	}
 }
