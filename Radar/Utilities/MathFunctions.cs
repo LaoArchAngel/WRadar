@@ -1,4 +1,5 @@
 ﻿using System;
+using RadarSettings = Radar.Settings;
 
 namespace Radar.Utilities
 {
@@ -11,7 +12,7 @@ namespace Radar.Utilities
 
 		public static int RelativeCoordinate(float myCoord, float otherCoord, float centerOffset)
 		{
-			return (int)((myCoord - otherCoord) * Settings.Screen.Zoom + centerOffset);
+			return (int)((myCoord - otherCoord) * RadarSettings.Screen.Zoom + centerOffset);
 		}
 	}
 }

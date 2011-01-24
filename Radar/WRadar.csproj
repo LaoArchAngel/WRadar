@@ -87,6 +87,11 @@
     <Compile Include="Blips\WowUnitBlip.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Properties\Colors.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Colors.settings</DependentUpon>
+    </Compile>
     <Compile Include="Screen\BlipDrawer.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -113,6 +118,12 @@
       <DependentUpon>ReadOnlyPropertyGrid.cs</DependentUpon>
     </Compile>
     <Compile Include="Utilities\Security.cs" />
+    <Compile Include="Utilities\Settings\Colors.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Utilities\Settings\Colors.Designer.cs">
+      <DependentUpon>Colors.cs</DependentUpon>
+    </Compile>
     <Compile Include="Utilities\TrackableEditor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,6 +159,9 @@
     <EmbeddedResource Include="Screen\Radar.resx">
       <DependentUpon>Radar.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Utilities\Settings\Colors.resx">
+      <DependentUpon>Colors.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Utilities\TrackableEditor.resx">
       <DependentUpon>TrackableEditor.cs</DependentUpon>
     </EmbeddedResource>
@@ -158,6 +172,10 @@
       <DependentUpon>WowObjectDetails.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
+    <None Include="Properties\Colors.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Colors.Designer.cs</LastGenOutput>
+    </None>
     <Compile Include="Utilities\ObjectQueries.cs" />
     <Compile Include="Utilities\Radar.cs" />
   </ItemGroup>

@@ -166,7 +166,7 @@ namespace Radar.Blips
         {
             if (!Tracked) return;
 
-            using (var b = new SolidBrush(Colors.Tracked))
+            using (var b = new SolidBrush(Color.Black))
             {
                 graphics.FillEllipse(b, 0, TOTAL_HEIGHT/2, TOTAL_WIDTH, TOTAL_HEIGHT/2);
             }

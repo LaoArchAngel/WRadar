@@ -8,6 +8,7 @@ using BlackRain;
 using BlackRain.WowObjects;
 using Radar.Blips;
 using Radar.Screen;
+using RadarSettings = Radar.Settings;
 
 namespace Radar.Utilities
 {
@@ -30,7 +31,7 @@ namespace Radar.Utilities
                 screen.Controls.OfType<WowBlip>().Where(
                     x =>
                     !ObjectManager.Objects.Exists(y => (y.GUID == x.BlipObject.GUID)) ||
-                    (Settings.Screen.Exclusive && !x.Tracked) && !(x is WowMeBlip));
+                    (RadarSettings.Screen.Exclusive && !x.Tracked) && !(x is WowMeBlip));
 
             foreach (var wowBlip in blips)
             {
@@ -161,21 +162,21 @@ namespace Radar.Utilities
         /// <returns>Image to be set as the <see cref="Form.BackgroundImage"/> of our screen.</returns>
         public static Image ScreenImage(float zoom)
         {
-            var bm = new Bitmap((int) (542/2.5F*Settings.Screen.Zoom), (int) (542/2.5F*Settings.Screen.Zoom),
+			var bm = new Bitmap((int)(542 / 2.5F * RadarSettings.Screen.Zoom), (int)(542 / 2.5F * RadarSettings.Screen.Zoom),
                                 PixelFormat.Format24bppRgb);
             var rec = new Rectangle(0, 0, bm.Width, bm.Height);
 
             using (var g = Graphics.FromImage(bm))
             {
-                g.Clear(Settings.Colors.RadarToClear);
+				g.Clear(RadarSettings.Colors.RadarToClear);
                 g.SmoothingMode = SmoothingMode.None;
-                using (var sb = new SolidBrush(Settings.Colors.RadarToClear))
+				using (var sb = new SolidBrush(RadarSettings.Colors.RadarToClear))
                 {
                     g.FillRectangle(sb, rec);
                 }
 
-                if (!Settings.Screen.HUDMode)
-                    using (var sb = new SolidBrush(Settings.Colors.Radar))
+				if (!RadarSettings.Screen.HUDMode)
+					using (var sb = new SolidBrush(RadarSettings.Colors.Radar))
                     {
                         g.FillEllipse(sb, rec);
                     }

@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Windows.Forms;
 using Radar.Tracking;
+using RadarSettings = Radar.Settings;
 
 namespace Radar.Utilities
 {
@@ -17,8 +18,8 @@ namespace Radar.Utilities
         {
             InitializeComponent();
 
-            SelectedList = Settings.Tracking.Default;
-            _listsCombo.DataSource = Settings.Tracking.TrackingLists;
+            SelectedList = RadarSettings.Tracking.Default;
+            _listsCombo.DataSource = RadarSettings.Tracking.TrackingLists;
             _listsCombo.DisplayMember = "Name";
             _listsCombo.SelectedItem = SelectedList;
 

@@ -51,7 +51,7 @@ namespace Radar.Blips
         {
             if (Target)
             {
-                using (var p = new Pen(Settings.Colors.Tracked, 2))
+                using (var p = new Pen(Color.Black, 2))
                 {
                     graphicsPath.Widen(p);
                 }
