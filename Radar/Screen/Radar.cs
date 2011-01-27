@@ -143,15 +143,22 @@ namespace Radar.Screen
 
         #endregion
 
-        private static void LoadMenu(object sender, KeyEventArgs e)
+        private void LoadMenu(object sender, KeyEventArgs e)
         {
             switch (e.KeyCode)
             {
+                case Keys.H:
+                    Settings.Screen.HUDMode = !Settings.Screen.HUDMode;
+                    BackgroundImage = Utilities.Radar.ScreenImage(Settings.Screen.Zoom);
+                    break;
+                case Keys.Q:
+                    if (e.Control) QuitRadar(null, EventArgs.Empty);
+                    break;
                 case Keys.T:
                     Utilities.Tracking.ListEditor.ShowDialog();
                     break;
                 case Keys.X:
-                    if (e.Control) QuitRadar(null, EventArgs.Empty);
+                    Settings.Screen.Exclusive = !Settings.Screen.Exclusive;
                     break;
             }
         }

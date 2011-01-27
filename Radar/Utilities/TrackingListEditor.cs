@@ -94,5 +94,33 @@ namespace Radar.Utilities
             _trackablesLstBx.DisplayMember = "Name";
             _trackablesLstBx.Refresh();
         }
+
+        private void KeyboardShortcuts(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.N:
+                    if (e.Control && !e.Alt)
+                    {
+                        NewTrackable(this, EventArgs.Empty);
+                        break;
+                    }
+                    break;
+                case Keys.D:
+                    if (e.Control && !e.Alt)
+                    {
+                        DeleteTrackables(this, EventArgs.Empty);
+                        break;
+                    }
+                    break;
+                case Keys.E:
+                    if (e.Control && !e.Alt)
+                    {
+                        EditTrackable(this, EventArgs.Empty);
+                        break;
+                    }
+                    break;
+            }
+        }
     }
 }

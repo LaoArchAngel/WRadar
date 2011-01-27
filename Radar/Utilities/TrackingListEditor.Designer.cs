@@ -130,10 +130,12 @@
             this.Controls.Add(this._listsCombo);
             this.Controls.Add(this._listsLabel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.KeyPreview = true;
             this.Name = "TrackingListEditor";
             this.Text = "TrackingListEditor";
             this.TopMost = true;
             this.Shown += new System.EventHandler(this.ReloadInfo);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyboardShortcuts);
             this.ResumeLayout(false);
             this.PerformLayout();
 
