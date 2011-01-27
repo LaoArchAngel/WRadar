@@ -106,19 +106,11 @@ namespace Radar.Utilities
                         break;
                     }
                     break;
-                case Keys.D:
-                    if (e.Control && !e.Alt)
-                    {
-                        DeleteTrackables(this, EventArgs.Empty);
-                        break;
-                    }
+                case Keys.Delete:
+                    DeleteTrackables(this, EventArgs.Empty);
                     break;
-                case Keys.E:
-                    if (e.Control && !e.Alt)
-                    {
-                        EditTrackable(this, EventArgs.Empty);
-                        break;
-                    }
+                case Keys.Enter:
+                    EditTrackable(this, EventArgs.Empty);
                     break;
             }
         }

@@ -4,3 +4,20 @@ If you're using Visual Studio 2010, please open the Radarv10.sln solution file.
 If you're using Visual Studio 2008, please open the Radar.sln solution file.
 
 .NET Version 4.0 is necessary.
+
+KEYBOARD SHORTCUTS:
+
+Main Form:
+H - Toggle HUD Mode
+T - Open Tracking List Editor
+X - Toggle Exclusive Mode
+Ctrl + Q - Quit
+
+Tracking List Editor:
+Ctrl + N - New Tracking Pattern
+Enter - Edit selected Tracking Pattern
+Delete - Delete selected Tracking Patterns
+
+Tracking Pattern Editor:
+Enter - Save / close current tracking pattern (Validates).
+Esc - Cancel creationg / edit of the current tracking pattern.
