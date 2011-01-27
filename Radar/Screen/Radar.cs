@@ -65,7 +65,7 @@ namespace Radar.Screen
             if (success)
                 BeginInvoke(action);
 
-            action = () =>PulseTimer.Start();
+            action = () => PulseTimer.Start();
             BeginInvoke(action);
         }
 
@@ -142,5 +142,18 @@ namespace Radar.Screen
         }
 
         #endregion
+
+        private static void LoadMenu(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.T:
+                    Utilities.Tracking.ListEditor.ShowDialog();
+                    break;
+                case Keys.X:
+                    if (e.Control) QuitRadar(null, EventArgs.Empty);
+                    break;
+            }
+        }
     }
 }

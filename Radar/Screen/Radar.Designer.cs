@@ -1,4 +1,5 @@
 ﻿using System.Drawing;
+using System.Windows.Forms;
 
 namespace Radar.Screen
 {
@@ -100,10 +101,12 @@ namespace Radar.Screen
             this.ContextMenuStrip = this.RadarMenu;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = Utilities.Security.RandomString(7);
-            this.Text = Name;
+            this.KeyPreview = true;
+            this.Name = "Radar";
+            this.Text = this.Name;
             this.TopMost = true;
             this.TransparencyKey = System.Drawing.Color.White;
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(LoadMenu);
             this.RadarMenu.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -118,5 +121,6 @@ namespace Radar.Screen
         private System.Windows.Forms.ToolStripMenuItem resetMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem ExitMenuItem;
+
     }
 }
