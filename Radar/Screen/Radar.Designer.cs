@@ -79,6 +79,7 @@ namespace Radar.Screen
             this.resetMenuItem.Name = "resetMenuItem";
             this.resetMenuItem.Size = new System.Drawing.Size(155, 22);
             this.resetMenuItem.Text = "Reset!";
+            this.resetMenuItem.Click += ResetObjectManager;
             // 
             // toolStripSeparator1
             // 
@@ -106,7 +107,7 @@ namespace Radar.Screen
             this.Text = this.Name;
             this.TopMost = true;
             this.TransparencyKey = System.Drawing.Color.White;
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(LoadMenu);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.LoadMenu);
             this.RadarMenu.ResumeLayout(false);
             this.ResumeLayout(false);
 

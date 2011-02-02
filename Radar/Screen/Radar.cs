@@ -18,6 +18,12 @@ namespace Radar.Screen
 
         #endregion
 
+        #region Properties
+
+        private Process WowProcess { get; set; }
+
+        #endregion
+
         #region Constructors
 
         public Radar()
@@ -97,22 +103,22 @@ namespace Radar.Screen
         /// </summary>
         /// <param name="sender">A menu item under <see cref="wowInstances"/></param>
         /// <param name="e">Arguments</param>
-        private static void ProcessSelected(object sender, EventArgs e)
+        private void ProcessSelected(object sender, EventArgs e)
         {
             var menuItem = sender as ToolStripMenuItem;
 
             if (menuItem == null) return;
 
             var id = Convert.ToInt32(menuItem.Text);
-            var proc = Process.GetProcessById(id);
+            WowProcess = Process.GetProcessById(id);
 
-            if (ObjectManager.Me.BaseAddress == IntPtr.Zero)
+            if (ObjectManager.Me.BaseAddress == IntPtr.Zero && !ObjectManager.Initialized)
             {
-                ObjectManager.Initialize(proc);
+                ObjectManager.Initialize(WowProcess);
             }
             else
             {
-                ObjectManager.Reset(proc);
+                ObjectManager.Reset(WowProcess);
             }
         }
 
@@ -132,6 +138,11 @@ namespace Radar.Screen
             var pulse = new Thread(ObjectManager.Pulse);
 
             pulse.Start();
+        }
+
+        private void ResetObjectManager(object sender, EventArgs e)
+        {
+            ObjectManager.Reset(WowProcess);
         }
 
         #endregion
