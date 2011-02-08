@@ -37,6 +37,9 @@ namespace Radar.Screen
             this.RadarMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.wowInstances = new System.Windows.Forms.ToolStripMenuItem();
             this.resetMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tslSettings = new System.Windows.Forms.ToolStripLabel("Settings");
+            this.tsmiStColors = new System.Windows.Forms.ToolStripMenuItem("Colors...");
+            this.tss2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.ExitMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.RadarMenu.SuspendLayout();
@@ -62,6 +65,9 @@ namespace Radar.Screen
             this.wowInstances,
             this.resetMenuItem,
             this.toolStripSeparator1,
+            this.tslSettings,
+            this.tsmiStColors,
+            this.tss2,
             this.ExitMenuItem});
             this.RadarMenu.Name = "RadarMenu";
             this.RadarMenu.Size = new System.Drawing.Size(156, 98);
@@ -83,6 +89,10 @@ namespace Radar.Screen
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(152, 6);
+            //
+            //
+            //
+            this.tsmiStColors.Click += ShowColorSettings;
             // 
             // ExitMenuItem
             // 
@@ -118,5 +128,8 @@ namespace Radar.Screen
         private System.Windows.Forms.ToolStripMenuItem resetMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem ExitMenuItem;
+        private System.Windows.Forms.ToolStripSeparator tss2;
+        private System.Windows.Forms.ToolStripLabel tslSettings;
+        private System.Windows.Forms.ToolStripMenuItem tsmiStColors;
     }
 }

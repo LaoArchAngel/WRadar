@@ -17,7 +17,7 @@ namespace Radar.Screen
         private delegate void AddBlipCallback(DrawerResults results);
 
         #endregion
-
+        
         #region Constructors
 
         public Radar()
@@ -132,6 +132,11 @@ namespace Radar.Screen
             var pulse = new Thread(ObjectManager.Pulse);
 
             pulse.Start();
+        }
+        
+        private static void ShowColorSettings(object sender, EventArgs e)
+        {
+        	Utilities.Forms.Settings.Colors.ColorSettings.ShowDialog();
         }
 
         #endregion

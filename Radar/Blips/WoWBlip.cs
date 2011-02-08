@@ -174,7 +174,7 @@ namespace Radar.Blips
 
         protected void OpenTrackingMenu(object caller, EventArgs args)
         {
-            Utilities.Tracking.ListEditor.ShowDialog();
+            Utilities.Forms.Tracking.TrackableEditor.ListEditor.ShowDialog();
         }
 
         /// <summary>
@@ -208,8 +208,8 @@ namespace Radar.Blips
 
         private void ShowDetails(object sender, EventArgs e)
         {
-            Utilities.Radar.DetailForm.DetailObject = BlipObject;
-            Utilities.Radar.DetailForm.ShowDialog();
+            Utilities.Forms.Blips.WowObjectDetails.DetailForm.DetailObject = BlipObject;
+            Utilities.Forms.Blips.WowObjectDetails.DetailForm.ShowDialog();
         }
 
         #endregion

@@ -1,6 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
+# SharpDevelop 4.0.0.7070
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4D0C4B19-1F29-4965-8348-E0CAA6373DBB}"
+	ProjectSection(SolutionItems) = preProject
+		Local.testsettings = Local.testsettings
+		Performance1.psess = Performance1.psess
+		Radarv10.vsmdi = Radarv10.vsmdi
+		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
+	EndProjectSection
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WRadar", "Radar\WRadar.csproj", "{FF96B417-63D1-4226-858F-D766ABF989AF}"
 	ProjectSection(ProjectDependencies) = postProject
 		{ECB797DC-902E-404A-B9BB-5356BC6AFFC4} = {ECB797DC-902E-404A-B9BB-5356BC6AFFC4}
@@ -9,14 +18,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlackRain", "BlackRain\BlackRain.csproj", "{ECB797DC-902E-404A-B9BB-5356BC6AFFC4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTests\UnitTests.csproj", "{5A5A4FC5-3619-4D3D-92A4-F4CA5A4E062E}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4D0C4B19-1F29-4965-8348-E0CAA6373DBB}"
-	ProjectSection(SolutionItems) = preProject
-		Local.testsettings = Local.testsettings
-		Performance1.psess = Performance1.psess
-		Radarv10.vsmdi = Radarv10.vsmdi
-		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(TestCaseManagementSettings) = postSolution

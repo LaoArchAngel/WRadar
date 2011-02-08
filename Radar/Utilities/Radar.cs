@@ -14,13 +14,6 @@ namespace Radar.Utilities
 {
     public static class Radar
     {
-        private static readonly WowObjectDetails _detailForm = new WowObjectDetails();
-
-        public static WowObjectDetails DetailForm
-        {
-            get { return _detailForm; }
-        }
-
         /// <summary>
         /// Clears out all blips no longer in range.
         /// </summary>

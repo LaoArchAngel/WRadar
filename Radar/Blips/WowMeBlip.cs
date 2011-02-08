@@ -26,6 +26,7 @@ namespace Radar.Blips
 
         private void FillContextMenu()
         {
+        	#region Modes
             blipMenu.Items.Add(new ToolStripSeparator());
             
             var toolStripButton = new ToolStripButton
@@ -48,6 +49,20 @@ namespace Radar.Blips
                                   };
             blipMenu.Items.Add(toolStripButton);
             toolStripButton.CheckedChanged += SetExclusiveMode;
+            #endregion
+            
+            #region Settings
+            blipMenu.Items.Add(new ToolStripSeparator());
+            
+            var tsmiNewItem = new ToolStripMenuItem
+            {
+            	Name = "ColorSettings",
+            	Text = "Colors..."
+            };
+            tsmiNewItem.Click += delegate { Utilities.Forms.Settings.Colors.ColorSettings.ShowDialog(); };
+
+            blipMenu.Items.Add(tsmiNewItem);
+            #endregion
         }
 
         private static void SetExclusiveMode(object sender, EventArgs eventArgs)

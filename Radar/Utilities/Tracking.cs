@@ -4,8 +4,6 @@ namespace Radar.Utilities
 {
     internal static class Tracking
     {
-        public static TrackingListEditor ListEditor = new TrackingListEditor();
-        
         /// <summary>
         /// Gets if a string matches a wildcard pattern.
         /// </summary>

@@ -2,10 +2,22 @@
 using System.Windows.Forms;
 using RadarSettings = Radar.Settings;
 
-namespace Radar.Utilities.Settings
+namespace Radar.Utilities.Forms.Settings
 {
 	public partial class Colors : Form
 	{
+		#region Fields
+		
+		private static Colors _colorSettings = new Colors();
+		
+		#endregion
+		
+		#region	Properties
+		
+		public static Colors ColorSettings { get {return _colorSettings;} }
+		
+		#endregion
+		
 		#region Constructors
 
 		public Colors()
@@ -24,10 +36,10 @@ namespace Radar.Utilities.Settings
 			if (btn == null) return;
 
 			var colorDiag = new ColorDialog
-			                	{
-			                			AnyColor = true,
-			                			SolidColorOnly = true
-			                	};
+			{
+				AnyColor = true,
+				SolidColorOnly = true
+			};
 
 			if (colorDiag.ShowDialog() != DialogResult.OK)
 			{

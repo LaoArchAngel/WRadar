@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
@@ -108,40 +108,40 @@
     <Compile Include="Settings\Tracking.cs" />
     <Compile Include="Tracking\Trackable.cs" />
     <Compile Include="Tracking\TrackingList.cs" />
+    <Compile Include="Utilities\Forms\Blips\ReadOnlyPropertyGrid.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Utilities\Forms\Blips\ReadOnlyPropertyGrid.Designer.cs">
+      <DependentUpon>ReadOnlyPropertyGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities\Forms\Blips\WowObjectDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Utilities\Forms\Blips\WowObjectDetails.Designer.cs">
+      <DependentUpon>WowObjectDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities\Forms\Tracking\TrackingListEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Utilities\Forms\Tracking\TrackingListEditor.Designer.cs">
+      <DependentUpon>TrackingListEditor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Utilities\MathFunctions.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Utilities\ReadOnlyPropertyGrid.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Utilities\ReadOnlyPropertyGrid.Designer.cs">
-      <DependentUpon>ReadOnlyPropertyGrid.cs</DependentUpon>
-    </Compile>
     <Compile Include="Utilities\Security.cs" />
-    <Compile Include="Utilities\Settings\Colors.cs">
+    <Compile Include="Utilities\Forms\Settings\Colors.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Utilities\Settings\Colors.Designer.cs">
+    <Compile Include="Utilities\Forms\Settings\Colors.Designer.cs">
       <DependentUpon>Colors.cs</DependentUpon>
     </Compile>
-    <Compile Include="Utilities\TrackableEditor.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Utilities\TrackableEditor.Designer.cs">
-      <DependentUpon>TrackableEditor.cs</DependentUpon>
-    </Compile>
     <Compile Include="Utilities\Tracking.cs" />
-    <Compile Include="Utilities\TrackingListEditor.cs">
+    <Compile Include="Utilities\Forms\Tracking\TrackableEditor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Utilities\TrackingListEditor.Designer.cs">
-      <DependentUpon>TrackingListEditor.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Utilities\WowObjectDetails.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Utilities\WowObjectDetails.Designer.cs">
-      <DependentUpon>WowObjectDetails.cs</DependentUpon>
+    <Compile Include="Utilities\Forms\Tracking\TrackableEditor.Designer.cs">
+      <DependentUpon>TrackableEditor.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Blips\WowBlip.resx">
       <DependentUpon>WowBlip.cs</DependentUpon>
@@ -159,17 +159,17 @@
     <EmbeddedResource Include="Screen\Radar.resx">
       <DependentUpon>Radar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Utilities\Settings\Colors.resx">
+    <EmbeddedResource Include="Utilities\Forms\Blips\WowObjectDetails.resx">
+      <DependentUpon>WowObjectDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Utilities\Forms\Settings\Colors.resx">
       <DependentUpon>Colors.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Utilities\TrackableEditor.resx">
-      <DependentUpon>TrackableEditor.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Utilities\TrackingListEditor.resx">
+    <EmbeddedResource Include="Utilities\Forms\Tracking\TrackingListEditor.resx">
       <DependentUpon>TrackingListEditor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Utilities\WowObjectDetails.resx">
-      <DependentUpon>WowObjectDetails.cs</DependentUpon>
+    <EmbeddedResource Include="Utilities\Forms\Tracking\TrackableEditor.resx">
+      <DependentUpon>TrackableEditor.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
     <None Include="Properties\Colors.settings">
@@ -213,6 +213,11 @@
       <Project>{ECB797DC-902E-404A-B9BB-5356BC6AFFC4}</Project>
       <Name>BlackRain</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Utilities\Forms" />
+    <Folder Include="Utilities\Forms\Blips" />
+    <Folder Include="Utilities\Forms\Tracking" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

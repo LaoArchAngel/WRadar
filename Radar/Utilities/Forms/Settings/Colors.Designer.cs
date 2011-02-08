@@ -1,4 +1,4 @@
-﻿namespace Radar.Utilities.Settings
+﻿namespace Radar.Utilities.Forms.Settings
 {
 	partial class Colors
 	{
