@@ -48,6 +48,7 @@ namespace BlackRain.WowObjects
         public int Type
         {
             get { return Memory.ReadAtOffset<int>(BaseAddress, (uint)Offsets.ObjectManager.ObjectType); }
+            //get { return GetStorageField<int>((uint)Descriptors.WowObjectFields.OBJECT_FIELD_TYPE); }
         }
 
         /// <summary>
