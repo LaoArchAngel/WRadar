@@ -6,6 +6,7 @@ using BlackRain.WowObjects;
 
 namespace Radar.Tracking
 {
+	[XmlRoot("TrackingList")]
     internal class TrackingList : List<Trackable>
     {
         #region Properties
@@ -59,30 +60,38 @@ namespace Radar.Tracking
         }
 
         /// <summary>
-        /// Saves this TrackingList and the saves each of its Trackables.
+        /// Saves this TrackingList and then saves each of its Trackables.
         /// </summary>
-        internal void Save()
+        /// <param name="list">The TrackingList to be saved out to a file.</param>
+        internal static void Save(TrackingList list)
         {
-            var serializer = new XmlSerializer(GetType());
+        	var serializer = new XmlSerializer(list.GetType());
 
             using (
                 TextWriter writer =
                     new StreamWriter(string.Format("{0}\\{1}_{2}.xml", Settings.Persistance.SaveDir.FullName,
-                                                   GetType().Name, Name)))
+                                               list.GetType().Name, list.Name)))
             {
-                serializer.Serialize(writer, this);
+                serializer.Serialize(writer, list);
             }
-
-            SaveTrackables();
         }
-
+        
         /// <summary>
-        /// Saves each of its <see cref="Trackable"/> objects to an XML file.
+        /// Loads a TrackingList from the given file.
         /// </summary>
-        internal void SaveTrackables()
+        /// <param name="listFile">The filename (including path) of the serialized TrackingList.</param>
+        /// <returns>Deserialized TrackingList.</returns>
+        internal static TrackingList Load(string listFile)
         {
-            // TODO: Save each trackable into its own serialized xml file.
-            throw new NotImplementedException();
+        	TrackingList loaded;
+        	
+        	using(var fs = new FileStream(listFile, FileMode.Open))
+        	{
+        		var serializer = new XmlSerializer(typeof(TrackingList));
+        		loaded = (TrackingList)serializer.Deserialize(fs);
+        	}
+        	
+        	return loaded;
         }
 
         #endregion
