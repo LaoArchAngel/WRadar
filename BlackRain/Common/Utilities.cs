@@ -2,6 +2,8 @@
 using System.IO;
 using System.Reflection;
 
+using log4net;
+
 namespace BlackRain.Common
 {
     /// <summary>
@@ -28,6 +30,14 @@ namespace BlackRain.Common
                 return Assembly.GetExecutingAssembly().
                     GetName().Version;
             }
+        }
+        
+        public static ILog Log
+        {
+        	get
+        	{
+        		return LogManager.GetLogger("Mem");
+        	}
         }
     }
 }

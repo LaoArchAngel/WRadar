@@ -106,8 +106,9 @@ namespace BlackRain.WowObjects
 
                     return Memory.ReadAtOffset<string>(nCurrentObject, (uint) Offsets.WowPlayer.NameString);
                 }
-                catch (Exception)
+                catch (Exception x)
                 {
+                	Utilities.Log.Error(x);
                     return string.Empty;
                 }
             }

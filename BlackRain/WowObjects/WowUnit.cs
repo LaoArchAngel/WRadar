@@ -274,8 +274,9 @@ namespace BlackRain.WowObjects
                     return Memory.Read<string>(Memory.Read<IntPtr>((IntPtr) (BaseAddress.ToInt32() + (uint) Offsets.WowUnit.UnitCache),
                                                (IntPtr) ((uint) Offsets.WowUnit.UnitCacheNamePtr)));
                 }
-                catch (Exception)
+                catch (Exception x)
                 {
+                	Utilities.Log.Error(x);
                     return string.Empty;
                 }
             }
@@ -308,8 +309,9 @@ namespace BlackRain.WowObjects
                 {
                     return GetStorageField<ulong>((uint) Descriptors.WowUnitFields.UNIT_FIELD_TARGET);
                 }
-                catch (Exception)
+                catch (Exception x)
                 {
+                	Utilities.Log.Error(x);
                     return 0;
                 }
             }

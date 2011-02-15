@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Text;
+using log4net;
 
 namespace Radar.Utilities
 {
@@ -23,6 +24,11 @@ namespace Radar.Utilities
             }
 
             return builder.ToString();
+        }
+        
+        public static ILog Log
+        {
+        	get {return LogManager.GetLogger("Radar");}
         }
     }
 }

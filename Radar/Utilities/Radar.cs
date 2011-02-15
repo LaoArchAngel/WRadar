@@ -94,8 +94,9 @@ namespace Radar.Utilities
             {
                 return blips.FirstOrDefault(blip => blip.BlipObject.GUID == guid);
             }
-            catch (Exception)
+            catch (Exception x)
             {
+            	Security.Log.Error(x);
                 return null;
             }
         }
@@ -111,6 +112,7 @@ namespace Radar.Utilities
             if (ObjectManager.Me == null) return;
             if (ObjectManager.Me.GUID == 0)
             {
+            	Utilities.Security.Log.Warn("RESETTING RADAR");
                 ObjectManager.Reset();
                 return;
             }

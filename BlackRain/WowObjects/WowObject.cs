@@ -35,8 +35,9 @@ namespace BlackRain.WowObjects
                 {
                     return GetStorageField<ulong>((uint) Descriptors.WowObjectFields.OBJECT_FIELD_GUID);
                 }
-                catch (Exception)
+                catch (Exception x)
                 {
+                	Utilities.Log.Error(x);
                     return 0;
                 }
             }

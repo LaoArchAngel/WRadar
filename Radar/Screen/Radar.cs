@@ -149,6 +149,7 @@ namespace Radar.Screen
 
         private static void QuitRadar(object sender, EventArgs e)
         {
+        	Utilities.Security.Log.Info("Quitting.");
             Application.Exit();
         }
 

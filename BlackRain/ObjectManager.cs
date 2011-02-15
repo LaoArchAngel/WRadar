@@ -142,10 +142,14 @@ namespace BlackRain
         {
             WowProcess = wowProc;
             Memory.OpenProcess(wowProc.Id, AccessRights.Read);
+            
+            Utilities.Log.InfoFormat("WoW Process Id: {0}", wowProc.Id);
 
             CurrentManager =
                 Memory.ReadRelative<IntPtr>(new IntPtr((uint) Offsets.ObjectManager.ClientConnection),
                                             new IntPtr((uint) Offsets.ObjectManager.CurrentManager));
+            
+            Utilities.Log.InfoFormat("CurrentManager: {0}", CurrentManager);
         }
 
         /// <summary>
@@ -192,6 +196,9 @@ namespace BlackRain
 
                 if (Me.BaseAddress == IntPtr.Zero || remove.Length == ObjectDictionary.Count)
                 {
+                	Utilities.Log.ErrorFormat(
+                		"Object List Invalid. Me.BaseAddress: {0} | ObjectDictionary.Count: {1} | remove.Length: {2}",
+                		Me.BaseAddress, ObjectDictionary.Count, remove.Length);
                     InvokePulsed(false);
                     return;
                 }
@@ -216,6 +223,7 @@ namespace BlackRain
 
             if (current == IntPtr.Zero || ((uint) current & 1) == 1)
             {
+            	Utilities.Log.Warn("RESETTING RADAR");
                 Reset(WowProcess);
                 return;
             }

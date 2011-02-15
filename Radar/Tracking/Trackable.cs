@@ -24,7 +24,7 @@ namespace Radar.Tracking
             if (named == null) return false;
 
             return (named.Name.Equals(Pattern, StringComparison.InvariantCultureIgnoreCase) ||
-                    Utilities.Tracking.WildCardMatches(named.Name.ToUpperInvariant(), Pattern.ToUpperInvariant()));
+                    Utilities.Tracking.WildCardMatches(named.Name, Pattern));
         }
     }
 }

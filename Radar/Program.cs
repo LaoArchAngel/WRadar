@@ -18,25 +18,21 @@ namespace Radar
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
+            Utilities.Security.Log.Info("Initializing Sound Settings.");
             Settings.Sounds.List.Load();
 
+            Utilities.Security.Log.Info("Loading Radar.");
             Application.Run(new Screen.Radar());
         }
 
         private static void PrintError(object sender, ThreadExceptionEventArgs args)
         {
-            using (var writer = new StreamWriter("error.log", false))
-            {
-                writer.Write(args.Exception.ToString());
-            }
+        	Utilities.Security.Log.Error(args.Exception);
         }
 
         private static void PrintError(object sender, UnhandledExceptionEventArgs args)
         {
-            using (var writer = new StreamWriter("error.log", false))
-            {
-                writer.Write(((Exception)args.ExceptionObject).ToString());
-            }
+        	Utilities.Security.Log.Error((Exception)args.ExceptionObject);
         }
     }
 }

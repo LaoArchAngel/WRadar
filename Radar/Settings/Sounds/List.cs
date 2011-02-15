@@ -41,11 +41,19 @@ namespace Radar.Settings.Sounds
                 name = string.Format("{0}_{1:D3}.wav", name.Remove(-4), index++);
             }
 
-            newSound = newSound.CopyTo(string.Format("{0}\\{1}", SOUND_DIRECTORY, name));
-            var sound = new SoundPlayer(newSound.FullName);
-            sound.LoadAsync();
-
-            Sounds.Add(name, sound);
+            try
+            {
+	            newSound = newSound.CopyTo(string.Format("{0}\\{1}", SOUND_DIRECTORY, name));
+	            var sound = new SoundPlayer(newSound.FullName);
+	            sound.LoadAsync();
+	            
+				Sounds.Add(name, sound);
+            }
+            catch(Exception ex)
+            {
+            	Utilities.Security.Log.Error(ex);
+            	throw;
+            }
         }
 
         /// <summary>
@@ -61,12 +69,20 @@ namespace Radar.Settings.Sounds
 
             var dir = new DirectoryInfo(SOUND_DIRECTORY);
 
-            foreach (var fileInfo in dir.GetFiles("*.wav"))
+            try
             {
-                var s = new SoundPlayer(fileInfo.FullName);
-                s.LoadAsync();
-
-                Sounds.Add(fileInfo.Name, s);
+	            foreach (var fileInfo in dir.GetFiles("*.wav"))
+	            {
+	                var s = new SoundPlayer(fileInfo.FullName);
+	                s.LoadAsync();
+	
+	                Sounds.Add(fileInfo.Name, s);
+	            }
+            }
+            catch(Exception ex)
+            {
+            	Utilities.Security.Log.Error(ex);
+            	throw;
             }
 
             if (Sounds.Count > 0)
