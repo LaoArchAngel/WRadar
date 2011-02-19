@@ -108,6 +108,26 @@ namespace Radar.Utilities.Forms.Tracking
             _trackablesLstBx.DisplayMember = "Name";
             _trackablesLstBx.Refresh();
         }
+
+        private void KeyboardShortcuts(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.N:
+                    if (e.Control && !e.Alt)
+                    {
+                        NewTrackable(this, EventArgs.Empty);
+                        break;
+                    }
+                    break;
+                case Keys.Delete:
+                    DeleteTrackables(this, EventArgs.Empty);
+                    break;
+                case Keys.Enter:
+                    EditTrackable(this, EventArgs.Empty);
+                    break;
+            }
+        }
         
         /// <summary>
         /// Handles the closing event for the list editor.

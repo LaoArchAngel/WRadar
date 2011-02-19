@@ -78,9 +78,11 @@
             this.Controls.Add(this._namePatternTxtBx);
             this.Controls.Add(this._patternLbl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.KeyPreview = true;
             this.Name = "TrackableEditor";
             this.Text = "Trackable";
             this.TopMost = true;
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TryClose);
             this.ResumeLayout(false);
             this.PerformLayout();
 

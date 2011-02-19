@@ -241,12 +241,6 @@ namespace BlackRain
                             wowObject = new WowObject(current);
                             break;
                         case Offsets.ObjectType.Player:
-                            //  Keep the local player's GUID up-to-date
-                            if (localPlayerGuid == guid)
-                            {
-                                Me.BaseAddress = current;
-                            }
-
                             wowObject = new WowPlayer(current);
                             break;
                         case Offsets.ObjectType.Unit:
@@ -264,6 +258,12 @@ namespace BlackRain
                 else
                 {
                     ObjectDictionary[guid].BaseAddress = current;
+                }
+
+                //  Keep the local player's GUID up-to-date
+                if (localPlayerGuid == guid)
+                {
+                    Me.BaseAddress = current;
                 }
 
                 current = Memory.ReadAtOffset<IntPtr>(current, (uint) Offsets.ObjectManager.NextObject);

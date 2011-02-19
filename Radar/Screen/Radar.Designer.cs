@@ -1,4 +1,5 @@
 ﻿using System.Drawing;
+using System.Windows.Forms;
 
 namespace Radar.Screen
 {
@@ -84,6 +85,7 @@ namespace Radar.Screen
             this.resetMenuItem.Name = "resetMenuItem";
             this.resetMenuItem.Size = new System.Drawing.Size(155, 22);
             this.resetMenuItem.Text = "Reset!";
+            this.resetMenuItem.Click += ResetObjectManager;
             // 
             // toolStripSeparator1
             // 
@@ -110,10 +112,12 @@ namespace Radar.Screen
             this.ContextMenuStrip = this.RadarMenu;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.Name = Utilities.Security.RandomString(7);
             this.Text = Name;
             this.TopMost = true;
             this.TransparencyKey = System.Drawing.Color.White;
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.LoadMenu);
             this.RadarMenu.ResumeLayout(false);
             this.ResumeLayout(false);
 

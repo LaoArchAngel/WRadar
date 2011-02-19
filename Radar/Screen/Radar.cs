@@ -18,6 +18,12 @@ namespace Radar.Screen
 
         #endregion
         
+        #region Properties
+
+        private Process WowProcess { get; set; }
+
+        #endregion
+
         #region Constructors
 
         public Radar()
@@ -65,7 +71,7 @@ namespace Radar.Screen
             if (success)
                 BeginInvoke(action);
 
-            action = () =>PulseTimer.Start();
+            action = () => PulseTimer.Start();
             BeginInvoke(action);
         }
 
@@ -97,22 +103,22 @@ namespace Radar.Screen
         /// </summary>
         /// <param name="sender">A menu item under <see cref="wowInstances"/></param>
         /// <param name="e">Arguments</param>
-        private static void ProcessSelected(object sender, EventArgs e)
+        private void ProcessSelected(object sender, EventArgs e)
         {
             var menuItem = sender as ToolStripMenuItem;
 
             if (menuItem == null) return;
 
             var id = Convert.ToInt32(menuItem.Text);
-            var proc = Process.GetProcessById(id);
+            WowProcess = Process.GetProcessById(id);
 
-            if (ObjectManager.Me.BaseAddress == IntPtr.Zero)
+            if (ObjectManager.Me.BaseAddress == IntPtr.Zero && !ObjectManager.Initialized)
             {
-                ObjectManager.Initialize(proc);
+                ObjectManager.Initialize(WowProcess);
             }
             else
             {
-                ObjectManager.Reset(proc);
+                ObjectManager.Reset(WowProcess);
             }
         }
 
@@ -139,6 +145,11 @@ namespace Radar.Screen
         	Utilities.Forms.Settings.Colors.ColorSettings.ShowDialog();
         }
 
+        private void ResetObjectManager(object sender, EventArgs e)
+        {
+            ObjectManager.Reset(WowProcess);
+        }
+
         #endregion
 
         private static void QuitRadar(object sender, EventArgs e)
@@ -147,5 +158,25 @@ namespace Radar.Screen
         }
 
         #endregion
+
+        private void LoadMenu(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.H:
+                    Settings.Screen.HUDMode = !Settings.Screen.HUDMode;
+                    BackgroundImage = Utilities.Radar.ScreenImage(Settings.Screen.Zoom);
+                    break;
+                case Keys.Q:
+                    if (e.Control) QuitRadar(null, EventArgs.Empty);
+                    break;
+                case Keys.T:
+                    Utilities.Tracking.ListEditor.ShowDialog();
+                    break;
+                case Keys.X:
+                    Settings.Screen.Exclusive = !Settings.Screen.Exclusive;
+                    break;
+            }
+        }
     }
 }
