@@ -51,7 +51,7 @@ namespace Radar.Utilities.Forms.Tracking
             }
 
             _trackablesLstBx.DataSource = null;
-            _trackablesLstBx.DataSource = SelectedList;
+            _trackablesLstBx.DataSource = SelectedList.Trackables;
             _trackablesLstBx.DisplayMember = "Name";
             _trackablesLstBx.Refresh();
         }
@@ -66,7 +66,7 @@ namespace Radar.Utilities.Forms.Tracking
 
             te.ShowDialog();
             _trackablesLstBx.DataSource = null;
-            _trackablesLstBx.DataSource = SelectedList;
+            _trackablesLstBx.DataSource = SelectedList.Trackables;
             _trackablesLstBx.DisplayMember = "Name";
             _trackablesLstBx.Refresh();
         }
