@@ -2,7 +2,7 @@
 
 namespace Radar.Settings
 {
-    internal static class Persistance
+    public static class Persistance
     {
         #region Constants
 
@@ -18,7 +18,7 @@ namespace Radar.Settings
 
         #region Properties
 
-        internal static DirectoryInfo SaveDir
+        public static DirectoryInfo SaveDir
         {
             get
             {

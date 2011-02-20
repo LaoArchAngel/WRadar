@@ -57,7 +57,7 @@ namespace Radar.Blips
             var tsmiNewItem = new ToolStripMenuItem
             {
             	Name = "ColorSettings",
-            	Text = "Colors..."
+            	Text = @"Colors..."
             };
             tsmiNewItem.Click += delegate { Utilities.Forms.Settings.Colors.ColorSettings.ShowDialog(); };
 

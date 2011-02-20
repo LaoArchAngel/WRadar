@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.IO;
 using Radar.Tracking;
 
 namespace Radar.Settings
@@ -22,6 +23,23 @@ namespace Radar.Settings
         public static TrackingList Default
         {
             get { return _default ?? (_default = new TrackingList("Default")); }
+        }
+
+        #endregion
+
+        #region Methods
+
+        public static void LoadTrackingLists()
+        {
+            foreach (var file in Directory.GetFiles(Persistance.SaveDir.ToString()))
+            {
+                var tlist = TrackingList.Load(file);
+
+                if (tlist.Name == "Default")
+                {
+                    _default = tlist;
+                }
+            }
         }
 
         #endregion

@@ -79,11 +79,16 @@
   <ItemGroup>
     <Compile Include="ObjectManagerTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TrackingTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BlackRain\BlackRain.csproj">
       <Project>{ECB797DC-902E-404A-B9BB-5356BC6AFFC4}</Project>
       <Name>BlackRain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Radar\WRadar.csproj">
+      <Project>{FF96B417-63D1-4226-858F-D766ABF989AF}</Project>
+      <Name>WRadar</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

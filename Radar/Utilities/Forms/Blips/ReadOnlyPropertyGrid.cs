@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Globalization;
 using System.Reflection;
 using System.Windows.Forms;
 
@@ -60,7 +61,9 @@ namespace Radar.Utilities.Forms.Blips
                 var field = attr.GetType().GetField("isReadOnly",
                                                     BindingFlags.NonPublic | BindingFlags.Instance);
                 if (field != null)
-                    field.SetValue(attr, isReadOnly, BindingFlags.NonPublic | BindingFlags.Instance, null, null);
+// ReSharper disable AssignNullToNotNullAttribute
+                    field.SetValue(attr, isReadOnly, BindingFlags.NonPublic | BindingFlags.Instance, null, CultureInfo.CurrentCulture);
+// ReSharper restore AssignNullToNotNullAttribute
             }
         }
     }

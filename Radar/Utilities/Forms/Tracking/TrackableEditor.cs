@@ -4,41 +4,79 @@ using Radar.Tracking;
 
 namespace Radar.Utilities.Forms.Tracking
 {
-	internal partial class TrackableEditor : Form
-	{
-		#region Fields
-		private static TrackingListEditor _listEditor = new TrackingListEditor();
-		#endregion
-		
-		#region Properties
-		public static TrackingListEditor ListEditor {
-			get { return _listEditor; }
-		}
-		
-		private Trackable ToEdit { get; set; }
-		#endregion
+    internal partial class TrackableEditor : Form
+    {
+        #region Properties
 
-		#region Constructors
-		public TrackableEditor(Trackable toEdit)
-		{
-			InitializeComponent();
+        private string OriginalName { get; set; }
+        private string OriginalPattern { get; set; }
+        private Trackable ToEdit { get; set; }
 
-			ToEdit = toEdit;
-			_namePatternTxtBx.Text = toEdit.Pattern;
-			_nameTxtBx.Text = string.IsNullOrEmpty(toEdit.Name) ? "NameMe!" : toEdit.Name;
-		}
-		#endregion
+        #endregion
 
-		#region Methods
-		private void PatternChanged(object sender, EventArgs e)
-		{
-			ToEdit.Pattern = _namePatternTxtBx.Text;
-		}
+        #region Constructors
 
-		private void NameChanged(object sender, EventArgs e)
-		{
-			ToEdit.Name = _nameTxtBx.Text;
-		}
-		#endregion
-	}
+        public TrackableEditor(Trackable toEdit)
+        {
+            InitializeComponent();
+
+            ToEdit = toEdit;
+            OriginalName = toEdit.Name;
+            OriginalPattern = toEdit.Pattern;
+            _namePatternTxtBx.Text = toEdit.Pattern;
+            _nameTxtBx.Text = string.IsNullOrEmpty(toEdit.Name) ? "NameMe!" : toEdit.Name;
+        }
+
+        #endregion
+
+        #region Events
+
+        private void PatternChanged(object sender, EventArgs e)
+        {
+            ToEdit.Pattern = _namePatternTxtBx.Text;
+        }
+
+        private void NameChanged(object sender, EventArgs e)
+        {
+            ToEdit.Name = _nameTxtBx.Text;
+        }
+
+        private void TryClose(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.Enter:
+                    if (ValidateValues()) Close();
+                    break;
+                case Keys.Escape:
+                    ToEdit.Pattern = OriginalPattern;
+                    ToEdit.Name = OriginalName;
+                    Close();
+                    break;
+            }
+        }
+
+        #region Methods
+
+        private bool ValidateValues()
+        {
+            if (String.IsNullOrEmpty(_nameTxtBx.Text))
+            {
+                _nameTxtBx.Select();
+                return false;
+            }
+
+            if (string.IsNullOrEmpty(_namePatternTxtBx.Text))
+            {
+                _namePatternTxtBx.Select();
+                return false;
+            }
+
+            return true;
+        }
+
+        #endregion
+
+        #endregion
+    }
 }

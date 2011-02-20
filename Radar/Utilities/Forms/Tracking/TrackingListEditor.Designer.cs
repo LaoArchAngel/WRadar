@@ -136,6 +136,7 @@
             this.TopMost = true;
             this.Shown += new System.EventHandler(this.ReloadInfo);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyboardShortcuts);
+            this.Closing += SaveLists;
             this.ResumeLayout(false);
             this.PerformLayout();
 

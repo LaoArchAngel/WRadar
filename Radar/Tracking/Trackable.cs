@@ -7,7 +7,7 @@ namespace Radar.Tracking
     /// <summary>
     /// This abstract class contains defining behavior and default values for all trackable objects.
     /// </summary>
-    internal class Trackable
+    public class Trackable
     {
         #region Properties
 

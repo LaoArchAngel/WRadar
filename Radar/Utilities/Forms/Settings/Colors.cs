@@ -8,7 +8,7 @@ namespace Radar.Utilities.Forms.Settings
 	{
 		#region Fields
 		
-		private static Colors _colorSettings = new Colors();
+		private static readonly Colors _colorSettings = new Colors();
 		
 		#endregion
 		

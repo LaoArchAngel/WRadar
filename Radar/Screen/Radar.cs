@@ -6,18 +6,11 @@ using System.Threading;
 using System.Windows.Forms;
 using BlackRain;
 using BlackRain.WowObjects.Contracts;
-using Radar.Blips;
 
 namespace Radar.Screen
 {
     public partial class Radar : Form
-    {
-        #region Fields
-
-        private delegate void AddBlipCallback(DrawerResults results);
-
-        #endregion
-        
+    {       
         #region Properties
 
         private Process WowProcess { get; set; }
@@ -171,7 +164,7 @@ namespace Radar.Screen
                     if (e.Control) QuitRadar(null, EventArgs.Empty);
                     break;
                 case Keys.T:
-                    Utilities.Tracking.ListEditor.ShowDialog();
+                    Utilities.Forms.Tracking.TrackingListEditor.ListEditor.ShowDialog();
                     break;
                 case Keys.X:
                     Settings.Screen.Exclusive = !Settings.Screen.Exclusive;

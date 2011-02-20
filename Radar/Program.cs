@@ -19,6 +19,7 @@ namespace Radar
             Application.SetCompatibleTextRenderingDefault(false);
 
             Settings.Sounds.List.Load();
+            Settings.Tracking.LoadTrackingLists();
 
             Application.Run(new Screen.Radar());
         }
@@ -35,7 +36,7 @@ namespace Radar
         {
             using (var writer = new StreamWriter("error.log", false))
             {
-                writer.Write(((Exception)args.ExceptionObject).ToString());
+                writer.Write(args.ExceptionObject.ToString());
             }
         }
     }

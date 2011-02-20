@@ -4,7 +4,6 @@ using System.Drawing.Drawing2D;
 using System.Windows.Forms;
 using BlackRain.WowObjects;
 using BlackRain.WowObjects.Contracts;
-using Radar.Settings;
 using Radar.Tracking;
 
 namespace Radar.Blips
@@ -174,7 +173,7 @@ namespace Radar.Blips
 
         protected void OpenTrackingMenu(object caller, EventArgs args)
         {
-            Utilities.Forms.Tracking.TrackableEditor.ListEditor.ShowDialog();
+            Utilities.Forms.Tracking.TrackingListEditor.ListEditor.ShowDialog();
         }
 
         /// <summary>
@@ -197,7 +196,7 @@ namespace Radar.Blips
 
             var named = BlipObject as INamed;
 
-            if (named != null) Settings.Tracking.Default.Add(new Trackable {Pattern = named.Name, Name = named.Name});
+            if (named != null) Settings.Tracking.Default.Trackables.Add(new Trackable {Pattern = named.Name, Name = named.Name});
         }
 
         #endregion
