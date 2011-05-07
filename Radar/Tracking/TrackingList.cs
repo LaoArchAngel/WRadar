@@ -43,7 +43,7 @@ namespace Radar.Tracking
 
         #region Constructors
 
-        private TrackingList() : this("NewList")
+        public TrackingList() : this("NewList")
         {
             
         }

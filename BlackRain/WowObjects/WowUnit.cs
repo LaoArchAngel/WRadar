@@ -202,7 +202,7 @@ namespace BlackRain.WowObjects
         /// </summary>
         public int Runes
         {
-            get { return GetStorageField<int>((uint) Descriptors.WowUnitFields.UNIT_FIELD_POWER6); }
+            get { return GetStorageField<int>((uint) Descriptors.WowUnitFields.UNIT_FIELD_POWER5); }
         }
 
         /// <summary>
@@ -251,7 +251,7 @@ namespace BlackRain.WowObjects
         /// </summary>
         public int MaximumRunes
         {
-            get { return GetStorageField<int>((uint) Descriptors.WowUnitFields.UNIT_FIELD_MAXPOWER6); }
+            get { return GetStorageField<int>((uint) Descriptors.WowUnitFields.UNIT_FIELD_MAXPOWER5); }
         }
 
         /// <summary>

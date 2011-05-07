@@ -10,8 +10,8 @@
         /// </summary>
         public enum ObjectManager : uint
         {
-            ClientConnection = 0x8BF1A8,
-            CurrentManager = 0x462C,
+            ClientConnection = 0x903F00,
+            CurrentManager = 0x463C,
             LocalGUID = 0xB8,
             FirstObject = 0xB4,
             NextObject = 0x3C,
@@ -49,7 +49,7 @@
         /// </summary>
         public enum WowObject : uint
         {
-            X = 0x898,
+            X = 0x790,
             Y = X + 4,
             Z = X + 8,
             Facing = X + 0x10,
@@ -65,7 +65,7 @@
         /// </summary>
         public enum WowPlayer : uint
         {
-            NameStore = 0x89ACC0 + 0x8,
+            NameStore = 0x8DD9A8 + 0x8,
             NameMask = 0x024,
             NameBase = 0x01c,
             NameString = 0x020
@@ -76,13 +76,13 @@
         /// </summary>
         public enum WowPlayerMe : uint
         {
-            Zone = 0x99C690,
+            Zone = 0xA1DD74,
             SubZone = Zone - 0x4
         }
 
         public enum WowUnit : uint
         {
-            UnitCache = 0xA24,
+            UnitCache = 0x91C,
             UnitCacheNamePtr = 0x60,
         }
     }
