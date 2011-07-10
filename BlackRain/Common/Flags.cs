@@ -32,6 +32,7 @@ namespace BlackRain.Common
         [Flags]
         public enum Corpse : uint
         {
+// ReSharper disable InconsistentNaming
             CORPSE_FLAG_NONE = 0x00,
             CORPSE_FLAG_BONES = 0x01,
             CORPSE_FLAG_UNK1 = 0x02,
@@ -39,6 +40,7 @@ namespace BlackRain.Common
             CORPSE_FLAG_HIDE_HELM = 0x08,
             CORPSE_FLAG_HIDE_CLOAK = 0x10,
             CORPSE_FLAG_LOOTABLE = 0x20
+// ReSharper restore InconsistentNaming
         }
 
         ///<summary>

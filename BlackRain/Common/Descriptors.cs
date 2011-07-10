@@ -4,6 +4,7 @@
     {
         public enum WowObjectFields
         {
+// ReSharper disable InconsistentNaming
             OBJECT_FIELD_GUID = 0x0,
             OBJECT_FIELD_TYPE = 0x2,
             OBJECT_FIELD_ENTRY = 0x3,
