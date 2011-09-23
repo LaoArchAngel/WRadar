@@ -10,7 +10,7 @@
         /// </summary>
         public enum ObjectManager : uint
         {
-            ClientConnection = 0x97DA48,
+            ClientConnection = 0x980558,
             CurrentManager = 0x463C,
             LocalGUID = 0xB8,
             FirstObject = 0xB4,
@@ -65,7 +65,7 @@
         /// </summary>
         public enum WowPlayer : uint
         {
-            NameStore = 0x9573D8 + 0x8,
+            NameStore = 0x959EE0 + 0x8,
             NameMask = 0x024,
             NameBase = 0x01c,
             NameString = 0x020

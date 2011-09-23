@@ -82,7 +82,7 @@
             this._trackablesLstBx.FormattingEnabled = true;
             this._trackablesLstBx.Location = new System.Drawing.Point(15, 33);
             this._trackablesLstBx.Name = "_trackablesLstBx";
-            this._trackablesLstBx.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
+            this._trackablesLstBx.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
             this._trackablesLstBx.Size = new System.Drawing.Size(256, 186);
             this._trackablesLstBx.TabIndex = 4;
             // 
@@ -136,7 +136,6 @@
             this.TopMost = true;
             this.Shown += new System.EventHandler(this.ReloadInfo);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyboardShortcuts);
-            this.Closing += SaveLists;
             this.ResumeLayout(false);
             this.PerformLayout();
 

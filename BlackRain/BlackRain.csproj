@@ -75,6 +75,7 @@
   <ItemGroup>
     <Compile Include="Common\Descriptors.cs" />
     <Compile Include="Common\Flags.cs" />
+    <Compile Include="WowObjectFactory.cs" />
     <Compile Include="WowObjects\Contracts\INamed.cs" />
     <Compile Include="ObjectManager.cs" />
     <Compile Include="WowObjects\WowContainer.cs" />

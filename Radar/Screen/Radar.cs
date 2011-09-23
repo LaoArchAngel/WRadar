@@ -169,6 +169,9 @@ namespace Radar.Screen
                 case Keys.X:
                     Settings.Screen.Exclusive = !Settings.Screen.Exclusive;
                     break;
+                case Keys.M:
+                    TopMost = !TopMost;
+                    break;
             }
         }
     }
